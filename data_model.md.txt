@@ -1,0 +1,9 @@
+The initial migration creates users, sessions, addresses, aliases, conversations, conversation_members, messages, message_recipients, attachments, and user_message_state, plus schema_migrations.
+
+Users have a unique normalized phone and primary canonical address (digits@phonemail.com). Direct conversations have a unique sorted pair key; group conversations have no pair key. Members are keyed by conversation and address. Messages belong to conversations and may reference one parent reply. Recipients are to or cc only. Read/favorite/folder flags are per user and message; this keeps drafts, spam, and trash mailbox-local. Aliases are non-phone names owned by their creating user and never act as unverified phone identities.
+
+Indexes cover normalized phones, addresses, session expiry, conversation membership, message recency, recipients, and attachment lookup. Binary attachment storage is intentionally not implemented; only metadata exists.
+
+Migration 004 adds idempotency_keys, unique per authenticated user and operation key, with a request fingerprint, resource identity, and expiry (24 hours). Message creation writes the key and message identity in the same transaction so a lost response can be reconciled without duplicate mail. Migration startup is serialized with a PostgreSQL advisory lock.
+
+Migration 005 adds private drafts with integer revisions, account_changes for bounded incremental sync, staged/ready upload metadata, and an outbox_jobs table for future provider workers. Sync cursors are account-scoped through the user filter and return compact event payloads.

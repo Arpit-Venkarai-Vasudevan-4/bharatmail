@@ -1,0 +1,64 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: phonemail_test
+      POSTGRES_PASSWORD: stage3-only-db-password
+      POSTGRES_DB: phonemail_test
+    ports:
+      - "127.0.0.1:3330:5432"
+    volumes:
+      - stage3_acceptance_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phonemail_test -d phonemail_test"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build: .
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgresql://phonemail_test:stage3-only-db-password@db:5432/phonemail_test
+      MAIL_DOMAIN: phonemail.com
+      AUTH_METHOD: password
+      JWT_SECRET: stage3-test-only-jwt-secret-not-for-use-outside-fixture
+      OTP_CODE_HASH_SECRET: stage3-test-only-otp-code-hash-secret
+      OTP_WEBHOOK_SECRET: stage3-test-only-otp-webhook-secret
+      OTP_PROVIDER: local
+      PHONE_DEFAULT_COUNTRY: IN
+      NODE_ENV: development
+      CORS_ORIGIN: http://127.0.0.1:8080,http://127.0.0.1:8081
+      STORAGE_DIR: /app/storage
+      LOCAL_MAIL_DIR: /app/local-mail
+      OUTBOX_WORKER_ENABLED: "false"
+      TWILIO_ACCOUNT_SID: ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      TWILIO_AUTH_TOKEN: isolated-twilio-fixture-token
+      TWILIO_PUBLIC_URL: http://127.0.0.1:3331
+      DB_POOL_MAX: "10"
+      DB_STATEMENT_TIMEOUT_MS: "10000"
+    ports:
+      - "127.0.0.1:3331:3000"
+    volumes:
+      - stage3_acceptance_storage:/app/storage
+      - stage3_acceptance_mail:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 15s
+
+volumes:
+  stage3_acceptance_db:
+  stage3_acceptance_storage:
+  stage3_acceptance_mail:

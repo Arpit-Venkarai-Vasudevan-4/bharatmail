@@ -1,0 +1,7 @@
+Password authentication is the locally runnable MVP because OTP/Twilio is deferred. The AuthProvider abstraction remains for later OTP integration. JWT claims use a random persisted session ID so logout and revocation are effective. Phone numbers are normalized to 10-15 digits without country-specific assumptions. Direct conversation identity is the sorted pair of canonical addresses; group creation never changes an existing direct conversation. Web projects remain scaffolds.
+
+Existing-thread recipients are immutable on the server, even if a client is modified. Per-user mailbox state avoids leaking one user's drafts or folder changes to other participants. Alias names are deliberately non-phone identifiers until a future ownership-verification flow exists.
+
+Stage 1 adds an explicit cookie transport over the same persisted sessions as bearer auth, with CSRF protection and an exact CORS allowlist. Message sends use account-scoped 24-hour idempotency keys and expose an authenticated operation-result lookup. Migration startup uses a PostgreSQL advisory lock; readiness is separate from liveness.
+
+Stage 2 keeps provider integrations opt-in. Local tests verify durable internal behavior, upload ownership/ranges, sync cursors, drafts, and outbox lease fencing without contacting real SMTP/SMS providers. External transport and telecom workflows are reported as unavailable until credentials, callback URLs, and a local SMTP test harness are supplied.

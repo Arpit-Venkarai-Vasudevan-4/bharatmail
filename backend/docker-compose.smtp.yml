@@ -1,0 +1,76 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: phonemail_smtp_demo
+      POSTGRES_PASSWORD: smtp-demo-only-password
+      POSTGRES_DB: phonemail_smtp_demo
+    volumes:
+      - smtp_demo_db:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${SMTP_DEMO_DB_PORT:-3363}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phonemail_smtp_demo -d phonemail_smtp_demo"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  mailpit:
+    image: axllent/mailpit:v1.31.2
+    environment:
+      MP_MAX_MESSAGES: 1000
+    ports:
+      - "127.0.0.1:${SMTP_DEMO_MAILPIT_PORT:-3362}:8025"
+
+  backend:
+    build: .
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgres://phonemail_smtp_demo:smtp-demo-only-password@db:5432/phonemail_smtp_demo
+      MAIL_DOMAIN: phonemail.test
+      AUTH_METHOD: password
+      JWT_SECRET: smtp-demo-only-jwt-secret-change-before-use
+      OTP_CODE_HASH_SECRET: smtp-demo-only-otp-secret
+      OTP_WEBHOOK_SECRET: smtp-demo-only-webhook-secret
+      OTP_PROVIDER: local
+      PHONE_DEFAULT_COUNTRY: US
+      NODE_ENV: development
+      CORS_ORIGIN: http://127.0.0.1:8080,http://127.0.0.1:8081
+      STORAGE_DIR: /app/storage
+      LOCAL_MAIL_DIR: /app/local-mail
+      MAIL_TRANSPORT_MODE: smtp
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      SMTP_TLS_MODE: plain
+      SMTP_TIMEOUT_MS: 5000
+      SMTP_MAX_CONNECTIONS: 2
+      SMTP_MAX_MESSAGE_BYTES: 10485760
+      SMTP_INBOUND_ENABLED: "true"
+      SMTP_INBOUND_HOST: 0.0.0.0
+      SMTP_INBOUND_PORT: 2525
+      SMTP_INBOUND_MAX_CLIENTS: 10
+      OUTBOX_WORKER_ENABLED: "true"
+      OUTBOX_WORKER_INTERVAL_MS: 500
+      DB_POOL_MAX: "5"
+    ports:
+      - "127.0.0.1:${SMTP_DEMO_API_PORT:-3361}:3000"
+      - "127.0.0.1:${SMTP_DEMO_INBOUND_PORT:-3364}:2525"
+    volumes:
+      - smtp_demo_storage:/app/storage
+      - smtp_demo_mail:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+      start_period: 20s
+
+volumes:
+  smtp_demo_db:
+  smtp_demo_storage:
+  smtp_demo_mail:

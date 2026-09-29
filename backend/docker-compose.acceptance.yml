@@ -1,0 +1,154 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: phonemail_test
+      POSTGRES_PASSWORD: stage3-disposable-only-db-password
+      POSTGRES_DB: phonemail_test
+    ports:
+      - "127.0.0.1:3350:5432"
+    volumes:
+      - acceptance_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U phonemail_test -d phonemail_test"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    image: phonemail-stage3-disposable-backend:latest
+    build: .
+    environment: &api_environment
+      PORT: 3000
+      DATABASE_URL: postgresql://phonemail_test:stage3-disposable-only-db-password@db:5432/phonemail_test
+      MAIL_DOMAIN: phonemail.com
+      AUTH_METHOD: password
+      JWT_SECRET: stage3-disposable-only-jwt-secret
+      OTP_CODE_HASH_SECRET: stage3-disposable-only-otp-secret
+      OTP_WEBHOOK_SECRET: stage3-disposable-only-webhook-secret
+      OTP_PROVIDER: local
+      PHONE_DEFAULT_COUNTRY: IN
+      NODE_ENV: development
+      CORS_ORIGIN: http://127.0.0.1:8080,http://127.0.0.1:8081,http://127.0.0.1:5173
+      STORAGE_DIR: /app/storage
+      LOCAL_MAIL_DIR: /app/local-mail
+      OUTBOX_WORKER_ENABLED: "false"
+      TWILIO_ACCOUNT_SID: ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      TWILIO_AUTH_TOKEN: isolated-twilio-fixture-token
+      TWILIO_PUBLIC_URL: http://127.0.0.1:3351
+      DB_POOL_MAX: "5"
+      DB_STATEMENT_TIMEOUT_MS: "10000"
+    ports:
+      - "127.0.0.1:3351:3000"
+    volumes:
+      - acceptance_storage:/app/storage
+      - acceptance_mail:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+      start_period: 15s
+
+  backend2:
+    image: phonemail-stage3-disposable-backend:latest
+    environment:
+      <<: *api_environment
+      TWILIO_PUBLIC_URL: http://127.0.0.1:3352
+    ports:
+      - "127.0.0.1:3352:3000"
+    volumes:
+      - acceptance_storage2:/app/storage
+      - acceptance_mail2:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+      start_period: 15s
+
+  backendpool:
+    image: phonemail-stage3-disposable-backend:latest
+    profiles: ["pool"]
+    environment:
+      <<: *api_environment
+      DB_POOL_MAX: "2"
+      TWILIO_PUBLIC_URL: http://127.0.0.1:3354
+    ports:
+      - "127.0.0.1:3354:3000"
+    volumes:
+      - acceptance_storage_pool:/app/storage
+      - acceptance_mail_pool:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+      start_period: 15s
+
+  worker:
+    image: phonemail-stage3-disposable-backend:latest
+    profiles: ["worker"]
+    environment:
+      <<: *api_environment
+      OUTBOX_WORKER_ENABLED: "true"
+      OUTBOX_WORKER_INTERVAL_MS: "500"
+      TWILIO_PUBLIC_URL: http://127.0.0.1:3353
+    ports:
+      - "127.0.0.1:3353:3000"
+    volumes:
+      - acceptance_storage_worker:/app/storage
+      - acceptance_mail_worker:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+      start_period: 15s
+
+volumes:
+  acceptance_db:
+  acceptance_storage:
+  acceptance_mail:
+  acceptance_storage2:
+  acceptance_mail2:
+  acceptance_storage_worker:
+  acceptance_mail_worker:
+  acceptance_storage_pool:
+  acceptance_mail_pool:

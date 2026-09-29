@@ -1,0 +1,12 @@
+.env
+node_modules/
+dist/
+.expo/
+.DS_Store
+*.log
+web-client/dist/
+web-portal/dist/
+backend/dist/
+mobile/.expo/
+mobile/dist/
+*.tsbuildinfo

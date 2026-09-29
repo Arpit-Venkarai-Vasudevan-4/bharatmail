@@ -1,0 +1,56 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #17212b;
+  background: #f2f6f8;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+section {
+  background: white;
+  border: 1px solid #d9e2e8;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  padding: 1.2rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 0.55rem;
+}
+
+button {
+  cursor: pointer;
+  margin-right: 0.4rem;
+}
+
+.warning {
+  background: #fff3cd;
+  padding: 0.8rem;
+}
+
+#qr img {
+  width: 220px;
+  height: 220px;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

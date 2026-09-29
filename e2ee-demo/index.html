@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhoneMail encrypted identity demo</title>
+  </head>
+  <body>
+    <main id="app">
+      <h1>PhoneMail encrypted identity demo</h1>
+      <p class="warning">Local demonstration only. Both identities share this page; the existing PhoneMail web applications are not connected to it. Browser storage contains only passphrase-encrypted private keys and is not a secure hardware boundary.</p>
+      <section>
+        <h2>Connect two test accounts</h2>
+        <label>API base URL <input id="api-base" value="http://127.0.0.1:3351" /></label>
+        <label>Identity A phone <input id="phone-a" autocomplete="tel" /></label>
+        <label>Identity A password <input id="api-pass-a" type="password" autocomplete="current-password" /></label>
+        <button id="login-a">Authenticate A</button><button id="register-a" disabled>Register A public key</button>
+        <label>Identity B phone <input id="phone-b" autocomplete="tel" /></label>
+        <label>Identity B password <input id="api-pass-b" type="password" autocomplete="current-password" /></label>
+        <button id="login-b">Authenticate B</button><button id="register-b" disabled>Register B public key</button>
+        <p id="api-status">Bearer tokens are held only in this page's memory. The backend origin must explicitly allow this demo's CORS origin.</p>
+      </section>
+      <section>
+        <h2>1. Create two client-side keys</h2>
+        <label>Identity A user UUID <input id="user-a" value="11111111-1111-4111-8111-111111111111" /></label>
+        <label>A key passphrase <input id="pass-a" type="password" autocomplete="new-password" /></label>
+        <button id="generate-a">Generate A key</button>
+        <button id="load-a">Load saved A key</button>
+        <button id="rotate-a">Rotate A key</button><button id="revoke-a">Revoke A key</button>
+        <label>Identity B user UUID <input id="user-b" value="22222222-2222-4222-8222-222222222222" /></label>
+        <label>B key passphrase <input id="pass-b" type="password" autocomplete="new-password" /></label>
+        <button id="generate-b">Generate B key</button>
+        <button id="load-b">Load saved B key</button>
+        <button id="rotate-b">Rotate B key</button><button id="revoke-b">Revoke B key</button>
+        <label><input id="rotation-backup" type="checkbox" /> Before rotating, I verified an offline backup of the old passphrase-protected key. Revoking/replacing it can make older encrypted messages unrecoverable.</label>
+        <label>Import a passphrase-encrypted private key <input id="import-key" type="file" accept=".asc,.pgp,text/plain" /></label>
+        <button id="import-a">Import as A</button><button id="import-b">Import as B</button>
+        <button id="export-a" disabled>Export A encrypted private key</button>
+        <button id="export-b" disabled>Export B encrypted private key</button>
+      </section>
+      <section>
+        <h2>2. Verify a QR identity</h2>
+        <label>Optional public PhoneMail address <input id="qr-address" placeholder="phone-number@phonemail.com" /></label>
+        <label><input id="qr-confirm" type="checkbox" /> I confirm this QR shares only the public key. If I add an address, it exposes my phone-derived PhoneMail address. A matching fingerprint is not independent identity verification.</label>
+        <button id="show-qr-a" disabled>Show A QR</button><button id="show-qr" disabled>Show B QR</button>
+        <div id="qr"></div>
+        <label>Paste scanned QR payload <textarea id="qr-input" rows="4"></textarea></label>
+        <button id="verify-qr">Validate identity</button>
+        <div id="qr-reader" aria-label="Camera QR scanner"></div>
+        <button id="start-scanner">Start camera QR scanner</button><button id="stop-scanner" disabled>Stop camera</button>
+        <p id="trust"></p>
+      </section>
+      <section>
+        <h2>3. Sign, encrypt, decrypt</h2>
+        <label>Subject <input id="subject" value="Local encrypted demo" /></label>
+        <label>Message <textarea id="message" rows="4">This content is signed and encrypted in this browser.</textarea></label>
+        <label>Attachment <input id="attachment" type="file" /></label>
+        <button id="send" disabled>Encrypt for A and B</button>
+        <button id="receive" disabled>Decrypt as B</button>
+        <pre id="result"></pre>
+      </section>
+      <section>
+        <h2>4. Send and receive through the isolated PhoneMail API</h2>
+        <label>Recipient B user UUID <input id="recipient-id" /></label>
+        <label><input id="trust-recipient" type="checkbox" /> I compared the QR fingerprint with the recipient through an independent trusted channel. The application cannot prove a QR's human identity.</label>
+        <button id="api-send" disabled>Encrypt and send as A</button>
+        <label>Message UUID <input id="message-id" /></label>
+        <label><input id="trust-sender" type="checkbox" /> I compared the sender's full QR fingerprint through an independent trusted channel.</label>
+        <button id="api-receive" disabled>Fetch and decrypt as B</button>
+        <button id="save-draft" disabled>Save encrypted draft as A</button>
+        <button id="send-draft" disabled>Send saved draft as A</button>
+        <pre id="api-result"></pre>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  db:
+    ports: !override
+      - "5433:5432"
+  backend:
+    ports: !override
+      - "3001:3000"
+    environment:
+      JWT_SECRET: isolated-test-secret-32-characters-minimum
+      STORAGE_DIR: /tmp/phonemail-test-storage
+      LOCAL_MAIL_DIR: /tmp/phonemail-test-mail

@@ -1,0 +1,120 @@
+# PhoneMail — start the stack with: docker compose up -d
+# Services: PostgreSQL, API, Gmail-style web client, registration portal.
+# Mobile is Expo (./mobile). It is not started by default because it needs
+# a device or emulator. Optional: docker compose --profile mobile up -d
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-phonemail}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-phonemail}
+      POSTGRES_DB: ${POSTGRES_DB:-phonemail}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-phonemail} -d ${POSTGRES_DB:-phonemail}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgres://${POSTGRES_USER:-phonemail}:${POSTGRES_PASSWORD:-phonemail}@db:5432/${POSTGRES_DB:-phonemail}
+      MAIL_DOMAIN: ${MAIL_DOMAIN:-phonemail.com}
+      AUTH_METHOD: ${AUTH_METHOD:-password}
+      JWT_SECRET: ${JWT_SECRET:-local-development-secret-change-this-32chars}
+      NODE_ENV: ${NODE_ENV:-development}
+      PHONE_DEFAULT_COUNTRY: ${PHONE_DEFAULT_COUNTRY:-}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080,http://localhost:8081}
+      STORAGE_DIR: /app/storage
+      LOCAL_MAIL_DIR: /app/local-mail
+      MAIL_TRANSPORT_MODE: ${MAIL_TRANSPORT_MODE:-disabled}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_TLS_MODE: ${SMTP_TLS_MODE:-starttls}
+      SMTP_USERNAME: ${SMTP_USERNAME:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_TIMEOUT_MS: ${SMTP_TIMEOUT_MS:-10000}
+      SMTP_MAX_CONNECTIONS: ${SMTP_MAX_CONNECTIONS:-2}
+      SMTP_MAX_MESSAGE_BYTES: ${SMTP_MAX_MESSAGE_BYTES:-10485760}
+      SMTP_INBOUND_ENABLED: ${SMTP_INBOUND_ENABLED:-false}
+      SMTP_INBOUND_HOST: ${SMTP_INBOUND_HOST:-0.0.0.0}
+      SMTP_INBOUND_PORT: ${SMTP_INBOUND_PORT:-2525}
+      SMTP_INBOUND_MAX_CLIENTS: ${SMTP_INBOUND_MAX_CLIENTS:-20}
+      SMTP_INBOUND_AUTH_USER: ${SMTP_INBOUND_AUTH_USER:-}
+      SMTP_INBOUND_AUTH_PASSWORD: ${SMTP_INBOUND_AUTH_PASSWORD:-}
+      SMTP_INBOUND_TRUSTED_PEERS: ${SMTP_INBOUND_TRUSTED_PEERS:-}
+      SMTP_INBOUND_TLS_KEY: ${SMTP_INBOUND_TLS_KEY:-}
+      SMTP_INBOUND_TLS_CERT: ${SMTP_INBOUND_TLS_CERT:-}
+      OUTBOX_WORKER_ENABLED: ${OUTBOX_WORKER_ENABLED:-true}
+      OUTBOX_WORKER_INTERVAL_MS: ${OUTBOX_WORKER_INTERVAL_MS:-5000}
+      TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID:-}
+      TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN:-}
+      TWILIO_PHONE_NUMBER: ${TWILIO_PHONE_NUMBER:-}
+      TWILIO_PUBLIC_URL: ${TWILIO_PUBLIC_URL:-}
+      TWILIO_VERIFY_SERVICE_SID: ${TWILIO_VERIFY_SERVICE_SID:-}
+      TWILIO_API_KEY_SID: ${TWILIO_API_KEY_SID:-}
+      TWILIO_API_KEY_SECRET: ${TWILIO_API_KEY_SECRET:-}
+      TWILIO_MESSAGING_SERVICE_SID: ${TWILIO_MESSAGING_SERVICE_SID:-}
+      TWILIO_APPROVED_TEMPLATE_SID: ${TWILIO_APPROVED_TEMPLATE_SID:-}
+      TWILIO_TIMEOUT_MS: ${TWILIO_TIMEOUT_MS:-10000}
+    ports:
+      - "3000:3000"
+      - "127.0.0.1:${SMTP_INBOUND_PORT:-2525}:${SMTP_INBOUND_PORT:-2525}"
+    volumes:
+      - backend_storage:/app/storage
+      - backend_mail:/app/local-mail
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://localhost:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  web-client:
+    build: ./web-client
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+  web-portal:
+    build: ./web-portal
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+
+  mobile:
+    profiles: ["mobile"]
+    build: ./mobile
+    restart: unless-stopped
+    ports:
+      - "8082:8081"
+    environment:
+      EXPO_PUBLIC_API_BASE_URL: http://backend:3000
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  backend_storage:
+  backend_mail:

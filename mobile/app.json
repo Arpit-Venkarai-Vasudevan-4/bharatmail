@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "PhoneMail",
+    "slug": "phonemail",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "phonemail",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.phonemail.app"
+    },
+    "android": {
+      "package": "com.phonemail.app"
+    },
+    "plugins": [
+      "expo-asset"
+    ]
+  }
+}
