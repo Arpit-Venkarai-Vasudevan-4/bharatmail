@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-29T09:02:31.179028+00:00",
+  "live": {
+    "status": "live",
+    "service": "phonemail-api"
+  },
+  "ready": {
+    "status": "ready",
+    "service": "phonemail-api"
+  },
+  "capabilities": {
+    "notifications": {
+      "sms": {
+        "supported": true,
+        "configured": false,
+        "simulated": true,
+        "liveTested": false
+      },
+      "ivr": {
+        "supported": true,
+        "configured": false,
+        "simulated": true,
+        "liveTested": false
+      },
+      "provider": "local_simulation"
+    },
+    "otpVerification": {
+      "sms": {
+        "supported": true,
+        "configured": false,
+        "simulated": true,
+        "liveTested": false
+      },
+      "ivr": {
+        "supported": true,
+        "configured": false,
+        "simulated": false,
+        "liveTested": false
+      },
+      "provider": "local_mock",
+      "localMock": true
+    }
+  }
+}

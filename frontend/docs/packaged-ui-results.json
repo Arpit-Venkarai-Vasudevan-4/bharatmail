@@ -1,0 +1,35 @@
+{
+  "started": "2026-09-29T08:58:23.470Z",
+  "clientOrigin": "http://localhost:18080",
+  "portalOrigin": "http://localhost:18081",
+  "checks": [
+    "Container API proxy login returned cookie session and CSRF cookies",
+    "Settings profile update succeeded through cookie/CSRF proxy",
+    "SPA deep-link fallback served the authenticated app",
+    "Client and portal security headers, shell/API/portal cache policies, immutable gzip-compressed assets with Vary, and relative portal redirect verified",
+    "Portal API calls omit mailbox cookies in the same browser profile and preserve the existing mailbox login; registration stays gated without approved legal configuration",
+    "Actual service-worker startup cache contains the shell and excludes optional encryption, scanner, security, contacts and introduction chunks"
+  ],
+  "cachedShellPaths": [
+    "/index.html",
+    "/favicon.svg",
+    "/fonts.css",
+    "/assets/main-DInBGqkI.js",
+    "/assets/styles-CDnwgsQR.js",
+    "/assets/styles-a8q9RO1X.css",
+    "/assets/runtime-Cpj98o6Y.js",
+    "/assets/AuthScreen-BXPSJR-1.js",
+    "/assets/AuthScreen-BtcyaTtT.css",
+    "/assets/PhoneField-DnhzXD2I.js",
+    "/assets/Composer-D91moezW.js",
+    "/assets/check-CYrZyAgQ.js"
+  ],
+  "portalRegistrationEnabled": false,
+  "ivrDefault": "unavailable; no dial link",
+  "interfaceLanguage": "English only",
+  "pageErrors": [],
+  "limitations": [
+    "Local Docker proxy test used an isolated temporary Nginx template that forwarded Origin as the configured local service alias because the running backend allow-list contains ports 8080 and 8081, while test containers used 18080 and 18081. Production Nginx configuration was separately checked for headers and routing."
+  ],
+  "finished": "2026-09-29T08:58:24.289Z"
+}

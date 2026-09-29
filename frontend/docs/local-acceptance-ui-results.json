@@ -1,0 +1,101 @@
+{
+  "started": "2026-09-29T08:52:58.800Z",
+  "origin": "http://localhost:18082",
+  "engines": [
+    {
+      "name": "Chromium",
+      "version": "154.0.8037.58",
+      "status": "passed"
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "status": "passed"
+    },
+    {
+      "name": "WebKit",
+      "version": "26.6",
+      "status": "passed"
+    }
+  ],
+  "checks": [
+    {
+      "engine": "Chromium",
+      "value": "Password authentication renders mailbox"
+    },
+    {
+      "engine": "Chromium",
+      "value": "Compose, saved draft actual reload, send and Sent reading"
+    },
+    {
+      "engine": "Chromium",
+      "value": "Browser cryptography enrolls, rejects wrong passphrase, and unlocks retained keys"
+    },
+    {
+      "engine": "Chromium",
+      "value": "Valid portal OTP registration, wrong-code feedback, revocation retry, revoked bearer session, next-registrant reset and signed-in mailbox cookie isolation"
+    },
+    {
+      "engine": "Firefox",
+      "value": "Password authentication renders mailbox"
+    },
+    {
+      "engine": "Firefox",
+      "value": "Compose, saved draft actual reload, send and Sent reading"
+    },
+    {
+      "engine": "Firefox",
+      "value": "Browser cryptography enrolls, rejects wrong passphrase, and unlocks retained keys"
+    },
+    {
+      "engine": "Firefox",
+      "value": "Valid portal OTP registration, wrong-code feedback, revocation retry, revoked bearer session, next-registrant reset and signed-in mailbox cookie isolation"
+    },
+    {
+      "engine": "WebKit",
+      "value": "Password authentication renders mailbox"
+    },
+    {
+      "engine": "WebKit",
+      "value": "Compose, saved draft actual reload, send and Sent reading"
+    },
+    {
+      "engine": "WebKit",
+      "value": "Browser cryptography enrolls, rejects wrong passphrase, and unlocks retained keys"
+    },
+    {
+      "engine": "WebKit",
+      "value": "Valid portal OTP registration, wrong-code feedback, revocation retry, revoked bearer session, next-registrant reset and signed-in mailbox cookie isolation"
+    },
+    {
+      "engine": "Chromium",
+      "value": "Real elapsed proof expiry is explained in portal UI; resend clears stale code"
+    }
+  ],
+  "a11y": [
+    {
+      "engine": "Chromium",
+      "view": "portal reset",
+      "violations": []
+    },
+    {
+      "engine": "Firefox",
+      "view": "portal reset",
+      "violations": []
+    },
+    {
+      "engine": "WebKit",
+      "view": "portal reset",
+      "violations": []
+    },
+    {
+      "engine": "Chromium",
+      "view": "portal expired-code recovery",
+      "violations": []
+    }
+  ],
+  "limitations": [
+    "Development portal uses explicitly labeled development consent. Production legal gating remains separately tested. No provider traffic or physical device acceptance."
+  ],
+  "finished": "2026-09-29T08:56:02.550Z"
+}

@@ -1,0 +1,28 @@
+{
+  "started": "2026-09-29T08:57:33.147Z",
+  "finished": "2026-09-29T08:57:34.454Z",
+  "api": "http://localhost:3000",
+  "runtime": "v24.21.0",
+  "passed": [
+    "Real frontend upload: lost committed chunk response reconciles offset; exact bytes; ready upload reuse",
+    "Frontend upload cancellation and explicit retry resume the existing server upload",
+    "Real portal module uses credentials:omit for register/logout and leaves the main cookie session intact",
+    "Frontend sync applies live snapshot and incremental revision strings without deleting local drafts (memory cache)",
+    "Two cookie-authenticated identities enroll using password reauthentication and signed challenges",
+    "Live key lookup, full fingerprint match, explicit independent trust consent",
+    "Encrypted message and file: recipient signature verification and sender Sent decryption",
+    "Signed durable operation restored in a new client: exact ciphertext retry commits once",
+    "Encrypted reply retains thread; duplicate reply is rejected",
+    "Encrypted drafts: revision conflict, recipient restoration, atomic send of saved content",
+    "Protected backup import and key rotation retain historical verified mail and sender Sent access",
+    "Signed revocation blocks revoked identity QR"
+  ],
+  "timings": {
+    "twoKeyCreationAndEnrollmentMs": 290
+  },
+  "limitations": [
+    "Live local API, no real provider delivery.",
+    "Durable crypto restoration uses a new client instance, not a browser reload.",
+    "Camera and QR image decoding need separate browser checks."
+  ]
+}

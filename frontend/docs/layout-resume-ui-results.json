@@ -1,0 +1,282 @@
+{
+  "started": "2026-09-29T08:56:53.717Z",
+  "checks": [
+    "Keyboard-only login, compose opening, Tab containment, Escape and return focus",
+    "Tablet 768/1024, emulated content zoom 200% and settings text 150% fit; changed screens scanned",
+    "Actual mail arriving during 120-second CDP lifecycle freeze appears on visible resume with opted-in status announcement",
+    "Trash confirmation cancel prevents mutation; confirmed trash can be restored through the UI"
+  ],
+  "a11y": [
+    {
+      "view": "settings 200%",
+      "violations": []
+    },
+    {
+      "view": "compose 200%",
+      "violations": []
+    },
+    {
+      "view": "settings larger text",
+      "violations": []
+    }
+  ],
+  "layouts": [
+    {
+      "view": "mailbox tablet 768",
+      "width": 768,
+      "scroll": 768,
+      "dialog": []
+    },
+    {
+      "view": "compose tablet 768",
+      "width": 768,
+      "scroll": 768,
+      "dialog": [
+        {
+          "x": 17,
+          "y": 90.21875,
+          "width": 734,
+          "height": 843.5625,
+          "scroll": 732,
+          "client": 732
+        }
+      ]
+    },
+    {
+      "view": "settings tablet 768",
+      "width": 768,
+      "scroll": 768,
+      "dialog": [
+        {
+          "x": 17,
+          "y": 20,
+          "width": 734,
+          "height": 984,
+          "scroll": 732,
+          "client": 732
+        }
+      ]
+    },
+    {
+      "view": "mailbox tablet 1024",
+      "width": 1024,
+      "scroll": 1024,
+      "dialog": []
+    },
+    {
+      "view": "compose tablet 1024",
+      "width": 1024,
+      "scroll": 1024,
+      "dialog": [
+        {
+          "x": 132,
+          "y": 90.21875,
+          "width": 760,
+          "height": 843.5625,
+          "scroll": 758,
+          "client": 758
+        }
+      ]
+    },
+    {
+      "view": "settings tablet 1024",
+      "width": 1024,
+      "scroll": 1024,
+      "dialog": [
+        {
+          "x": 132,
+          "y": 20,
+          "width": 760,
+          "height": 984,
+          "scroll": 758,
+          "client": 758
+        }
+      ]
+    },
+    {
+      "view": "mailbox CSS 200% zoom",
+      "width": 1280,
+      "scroll": 1280,
+      "dialog": []
+    },
+    {
+      "view": "settings CSS 200% zoom",
+      "width": 1280,
+      "scroll": 1280,
+      "dialog": [
+        {
+          "x": 34,
+          "y": 40,
+          "width": 1212,
+          "height": 920,
+          "scroll": 604,
+          "client": 604
+        }
+      ]
+    },
+    {
+      "view": "compose CSS 200% zoom",
+      "width": 1280,
+      "scroll": 1280,
+      "dialog": [
+        {
+          "x": 34,
+          "y": 40,
+          "width": 1212,
+          "height": 920,
+          "scroll": 604,
+          "client": 604
+        }
+      ]
+    },
+    {
+      "view": "settings 150% text",
+      "width": 1280,
+      "scroll": 1280,
+      "dialog": [
+        {
+          "x": 260,
+          "y": 20,
+          "width": 760,
+          "height": 960,
+          "scroll": 758,
+          "client": 758
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "CSS zoom 200% emulates enlarged/reflowed page content; browser chrome and OS display scaling are not changed. Larger text explicitly scales computed text sizes by 150%. Tablet viewports are emulation, not physical devices.",
+    "CDP lifecycle freeze plus visibility boundary simulation is not OS eviction or a multi-day background soak.",
+    "Automated axe and keyboard checks do not replace human screen-reader review."
+  ],
+  "focusOrder": [
+    {
+      "tag": "SELECT",
+      "label": "Interface language",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "INPUT",
+      "label": "to",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "SELECT",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "SUMMARY",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "INPUT",
+      "label": "subject",
+      "within": true
+    },
+    {
+      "tag": "TEXTAREA",
+      "label": "Message",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "INPUT",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Use end-to-end encryption",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Discard draft",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "Close dialog",
+      "within": true
+    },
+    {
+      "tag": "SELECT",
+      "label": "Interface language",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "INPUT",
+      "label": "to",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "SELECT",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "SUMMARY",
+      "label": "",
+      "within": true
+    },
+    {
+      "tag": "INPUT",
+      "label": "subject",
+      "within": true
+    },
+    {
+      "tag": "TEXTAREA",
+      "label": "Message",
+      "within": true
+    },
+    {
+      "tag": "BUTTON",
+      "label": "",
+      "within": true
+    }
+  ],
+  "freezeElapsedMs": 120081,
+  "finished": "2026-09-29T08:58:56.167Z"
+}

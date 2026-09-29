@@ -1,0 +1,1139 @@
+{
+  "blueprintSections": 68,
+  "requirements": [
+    {
+      "id": "1.01",
+      "requirement": "Phone-number public identity; backend UUID retained internally; no VPA/UPI replacement",
+      "implementation": "Phone identity and rural website foundation",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Phone/address/contact entry and ordinary UI UUID checks passed; backend architecture unchanged."
+    },
+    {
+      "id": "1.02",
+      "requirement": "Rural comprehension, accessibility, low-bandwidth and smaller-screen usability",
+      "implementation": "Phone identity and rural website foundation",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "Rendered/emulated checks support the website; rural user research and physical low-end hardware acceptance remain."
+    },
+    {
+      "id": "2.01",
+      "requirement": "Inspect/reuse existing React, Vite, TypeScript and backend contracts; preserve versions and architecture",
+      "implementation": "Existing React/Vite/TS preserved; native source inspected",
+      "source": "package.json; vite.config.ts; ../frontrepo/mobile/App.tsx",
+      "evidence": "NATIVE-SCOPE.md",
+      "status": "implemented and tested",
+      "remaining": "Existing client and portal remain entry points in this project, without duplicated scaffolds."
+    },
+    {
+      "id": "2.02",
+      "requirement": "Expo 52 / React Native 0.76.9 native surface and appropriate native persistence",
+      "implementation": "Existing React/Vite/TS preserved; native source inspected",
+      "source": "package.json; vite.config.ts; ../frontrepo/mobile/App.tsx",
+      "evidence": "NATIVE-SCOPE.md",
+      "status": "outside current delivery",
+      "remaining": "Authoritative product decision: native Expo, iOS/Android apps, APKs and stores are outside this website/portal delivery; no owner scope decision is pending. Historical source assessment only."
+    },
+    {
+      "id": "3.01",
+      "requirement": "Native app: onboarding, verification, authentication, folders, compose/read/reply/forward, contacts/search, profile/privacy/notices/blocking/security and phone change; one-handed UX",
+      "implementation": "Website and isolated registration portal implemented; native partial reference only",
+      "source": "src/App.tsx; src/features/auth/AuthScreen.tsx; src/portal.tsx; ../frontrepo/mobile/App.tsx",
+      "evidence": "packaged-ui-results.json; responsive-ui-results.json; NATIVE-SCOPE.md; otp-continuity-ui-results.json",
+      "status": "outside current delivery",
+      "remaining": "Authoritative product decision: native Expo, iOS/Android apps, APKs and stores are outside this website/portal delivery; no owner scope decision is pending. Historical source assessment only."
+    },
+    {
+      "id": "3.02",
+      "requirement": "Responsive web: same backend/account model; single column/touch navigation on small screens; persistent split-pane sidebar on desktop",
+      "implementation": "Website and isolated registration portal implemented; native partial reference only",
+      "source": "src/App.tsx; src/features/auth/AuthScreen.tsx; src/portal.tsx; ../frontrepo/mobile/App.tsx",
+      "evidence": "packaged-ui-results.json; responsive-ui-results.json; NATIVE-SCOPE.md; otp-continuity-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Chromium web acceptance covers both widths. No separate incompatible domain model introduced."
+    },
+    {
+      "id": "3.03",
+      "requirement": "Public portal: phone formatting, OTP registration, success/failure and transition, without a second mailbox or internal IDs",
+      "implementation": "Website and isolated registration portal implemented; native partial reference only",
+      "source": "src/App.tsx; src/features/auth/AuthScreen.tsx; src/portal.tsx; ../frontrepo/mobile/App.tsx",
+      "evidence": "packaged-ui-results.json; responsive-ui-results.json; NATIVE-SCOPE.md; otp-continuity-ui-results.json; local-acceptance-ui-results.json; packaged-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Valid portal OTP signup, wrong-code UI, revocation failure/retry, revoked bearer token, next-registrant reset and mailbox-cookie isolation pass in Chromium/Firefox/WebKit against isolated local sink. Real provider and approved production legal inputs remain separate release gates."
+    },
+    {
+      "id": "4.01",
+      "requirement": "Familiar Compose, unread state, navigation/back, cards, search, reply and ordinary forward; established branding",
+      "implementation": "Established cream/green visual system and ordinary mail workflows",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Actual rendered workflows passed; no unrelated redesign."
+    },
+    {
+      "id": "4.02",
+      "requirement": "Plain language, no unnecessary animation, visual clutter, jargon or hidden critical controls",
+      "implementation": "Established cream/green visual system and ordinary mail workflows",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "partial",
+      "remaining": "New guidance and labels added. Advanced encryption still needs rural comprehension review; desktop secondary icons have accessible labels but not all visible text."
+    },
+    {
+      "id": "5.01",
+      "requirement": "Semantic web controls, labeled dialogs, visible focus, keyboard return, validation/live regions and representative text contrast",
+      "implementation": "Native HTML dialogs, focus return, labels, measured contrast and touch targets",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Seven axe scans have zero violations; Escape focus restoration and mobile controls exercised. Automated coverage is limited to named views."
+    },
+    {
+      "id": "5.02",
+      "requirement": "Scalable text, comfortable targets everywhere, logical tab order, icon-plus-text comprehension and screen-reader use",
+      "implementation": "Native HTML dialogs, focus return, labels, measured contrast and touch targets",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; layout-resume-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "partial",
+      "remaining": "Keyboard login, dialog Tab wrap/Escape/focus return, tablet widths, emulated content zoom 200% and text scaling 150% tested. Human assistive technology, browser-chrome zoom and physical touch/keyboard acceptance remain."
+    },
+    {
+      "id": "6.01",
+      "requirement": "Central catalogs, real runtime selector, English interface, persisted preference/backend sync; invariant addresses and fingerprints",
+      "implementation": "English-only launch selector; validated lazy catalog framework; unsupported preference fallback",
+      "source": "src/i18n/index.ts; src/i18n/en.json; src/i18n/ta.draft.json; src/i18n/LanguageSelector.tsx",
+      "evidence": "auth-final-ui-results.json; tests/i18n.test.ts; TRANSLATION-REVIEW.md",
+      "status": "implemented and tested",
+      "remaining": "Ordinary development and production offer English only. Stored Tamil falls back to English; profile save preserves backend language. Optional review overlay requires explicit flag."
+    },
+    {
+      "id": "6.02",
+      "requirement": "Tamil as an approved launch interface",
+      "implementation": "English and complete Tamil DRAFT; runtime selector and account preference sync",
+      "source": "src/i18n/index.ts; src/i18n/en.json; src/i18n/ta.draft.json; src/i18n/LanguageSelector.tsx",
+      "evidence": "blueprint-ui-results.json; tests/blueprint.test.ts; TRANSLATION-REVIEW.md; locale-ui-results.json",
+      "status": "outside current delivery",
+      "remaining": "English is the only launch language. Tamil remains an unapproved optional review overlay behind VITE_TRANSLATION_PREVIEW=true; review/approval is future work, not a launch requirement."
+    },
+    {
+      "id": "6.03",
+      "requirement": "Additional languages through lazy catalog loaders",
+      "implementation": "English and complete Tamil DRAFT; runtime selector and account preference sync",
+      "source": "src/i18n/index.ts; src/i18n/en.json; src/i18n/ta.draft.json; src/i18n/LanguageSelector.tsx",
+      "evidence": "blueprint-ui-results.json; tests/blueprint.test.ts; TRANSLATION-REVIEW.md; locale-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Lazy loader and token validation retained; additional available languages require reviewed catalogs and focused acceptance when added. No dummy choices."
+    },
+    {
+      "id": "7.01",
+      "requirement": "Local OTP signup journey: enter phone, request/verify, create account, display real address, enter mailbox; short skippable explanation",
+      "implementation": "OTP registration, resulting address guidance and mailbox transition",
+      "source": "src/features/auth/AuthScreen.tsx; src/lib/api.ts",
+      "evidence": "otp-continuity-ui-results.json; multitab-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Legitimate isolated sink proofs used through rendered controls. Home is the mailbox entry point."
+    },
+    {
+      "id": "7.02",
+      "requirement": "Public registration/onboarding launch",
+      "implementation": "OTP registration, resulting address guidance and mailbox transition",
+      "source": "src/features/auth/AuthScreen.tsx; src/lib/api.ts",
+      "evidence": "otp-continuity-ui-results.json; multitab-ui-results.json",
+      "status": "external-input-dependent",
+      "remaining": "Approved Terms/Privacy URLs, content and matching version required. Production gate remains active; actual provider delivery separate."
+    },
+    {
+      "id": "7.03",
+      "requirement": "Configurable inbound call-registration website entry, safe unavailable default, normalized tel/copy and normal sign-in continuation",
+      "implementation": "Public number validation, activation/legal/sign-in-readiness gates; no provider secrets or browser webhook calls",
+      "source": "src/features/auth/IvrRegistration.tsx; src/features/auth/registration.ts; .env.example; Dockerfile",
+      "evidence": "auth-final-ui-results.json; auth-edge-ui-results.json; tests/registration.test.ts",
+      "status": "partial",
+      "remaining": "Unavailable and configured UI states verified locally without a call. Official number/provider/consent and backend call-created account sign-in need owner activation; website scaffold is not live IVR acceptance."
+    },
+    {
+      "id": "8.01",
+      "requirement": "Country/international prefix, formatting tolerance, obvious invalid-input checks, human errors and backend canonical normalization",
+      "implementation": "Explicit country/international prefix with conservative syntax/length checks",
+      "source": "src/features/auth/contracts.ts; src/features/auth/PhoneField.tsx; src/lib/recipients.ts",
+      "evidence": "tests/blueprint.test.ts; blueprint-ui-results.json; otp-continuity-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "US/India-compatible parser and actual canonical phone resolution exercised; frontend validation is not authorization."
+    },
+    {
+      "id": "8.02",
+      "requirement": "Comprehensive region/autofill input behavior",
+      "implementation": "Explicit country/international prefix with conservative syntax/length checks",
+      "source": "src/features/auth/contracts.ts; src/features/auth/PhoneField.tsx; src/lib/recipients.ts",
+      "evidence": "tests/blueprint.test.ts; blueprint-ui-results.json; otp-continuity-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Physical keyboards, SMS autofill and broader country-number examples remain unverified."
+    },
+    {
+      "id": "9.01",
+      "requirement": "OTP input/focus, wrong-code correction, resend control/countdown, loading and interrupted-request/reload recovery",
+      "implementation": "Actual local OTP proofs, pasteable single input, feedback and cooldown",
+      "source": "src/features/auth/AuthScreen.tsx; src/lib/api.ts",
+      "evidence": "otp-continuity-ui-results.json; multitab-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Real sink-backed signup/login, wrong-code, resend and interrupted-request acceptance retained. New challenge ownership, timestamp expiry/resend, Retry-After, late response and channel reset tests distinguish live from controlled fixtures."
+    },
+    {
+      "id": "9.02",
+      "requirement": "Expiry/attempt-limit feedback and platform paste/autofill",
+      "implementation": "Actual local OTP proofs, pasteable single input, feedback and cooldown",
+      "source": "src/features/auth/AuthScreen.tsx; src/lib/api.ts",
+      "evidence": "otp-continuity-ui-results.json; multitab-ui-results.json; local-acceptance-ui-results.json",
+      "status": "partial",
+      "remaining": "Wrong, expired and exhausted-attempt codes have rendered local UI evidence; Retry-After/timestamp edge cases use controlled responses. Paste uses a single ordinary input; real device SMS autofill remains unverified."
+    },
+    {
+      "id": "10.01",
+      "requirement": "Central logged-out/authenticating/authenticated/refreshing/expired/failure/logout states, cookie cleanup and backend authorization",
+      "implementation": "Central cookie session state, Web Locks refresh and invalid-session cleanup",
+      "source": "src/features/auth/AuthScreen.tsx; src/lib/api.ts",
+      "evidence": "otp-continuity-ui-results.json; multitab-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Password default stays stable across delayed/failed capability discovery; exact password bytes, wrong credentials, signup/login/logout/restoration and account switching tested. OTP works for passwordless accounts; valid OTP for password accounts is rejected by current backend. Password setup/reset absent; proposals 6\u20137."
+    },
+    {
+      "id": "10.02",
+      "requirement": "Account-appropriate password/OTP alternatives and secure password recovery",
+      "implementation": "Actual supported login endpoints with account-type guidance; no invented credential setup",
+      "source": "src/features/auth/AuthScreen.tsx; ../frontrepo/backend/src/services/userService.ts; ../frontrepo/backend/src/services/telecomService.ts",
+      "evidence": "auth-final-ui-results.json; auth-edge-ui-results.json; REMAINING-BACKEND-CONTRACTS.md",
+      "status": "backend-dependent",
+      "remaining": "Passwordless OTP succeeds; password-backed OTP fails even with valid proof. IVR uses undisclosed random password. No secure setup/change/reset routes; proposals 6\u20137 define missing contracts."
+    },
+    {
+      "id": "11.01",
+      "requirement": "Inbox/Sent-first mobile primary navigation",
+      "implementation": "Unified Home remains primary on mobile; folders in navigation",
+      "source": "src/App.tsx; src/styles.css",
+      "evidence": "NATIVE-SCOPE.md; responsive-ui-results.json; blueprint-ui-results.json",
+      "status": "resolved product decision",
+      "remaining": "Unified Home is the approved primary mobile mailbox. Inbox, Sent and other supported folders remain accessible. This supersedes historical Inbox/Sent-first wording; no decision is pending."
+    },
+    {
+      "id": "11.02",
+      "requirement": "Prominent Compose; access to Inbox/Sent/Drafts/Contacts/settings and Archive/Spam/Trash; back/Escape navigation",
+      "implementation": "Unified Home remains primary on mobile; folders in navigation",
+      "source": "src/App.tsx; src/styles.css",
+      "evidence": "NATIVE-SCOPE.md; responsive-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Inbox and Sent now accessible in mobile drawer; representative back/focus behavior tested."
+    },
+    {
+      "id": "12.01",
+      "requirement": "Sender, subject, preview, date, unread weight/count, large rows, refresh/paging/loading/empty/error/retry/cache",
+      "implementation": "Paged lists, unread states, refresh gesture, cache recovery",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Live mailbox, 126-message paging and offline suites exercise these behaviors."
+    },
+    {
+      "id": "12.02",
+      "requirement": "Reliable attachment indicator on every list row",
+      "implementation": "Paged lists, unread states, refresh gesture, cache recovery",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "backend-dependent",
+      "remaining": "Backend list response omits selected attachment metadata. Show only authorized actual metadata; additive hasAttachments proposal documented."
+    },
+    {
+      "id": "12.03",
+      "requirement": "Pull-to-refresh gesture",
+      "implementation": "Paged lists, unread states, refresh gesture, cache recovery",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Implemented for top-of-list downward swipe with refresh-button alternative; physical gesture acceptance remains."
+    },
+    {
+      "id": "13.01",
+      "requirement": "Separate sender/recipients/date/subject/body/files; reply, ordinary forward, archive/trash/read/spam actions",
+      "implementation": "Read/reply/ordinary forward, state actions, contact-based block sender",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Core read/reply and explicit forward send exercised. State actions also have retained API evidence."
+    },
+    {
+      "id": "13.02",
+      "requirement": "Block sender and easily understood secondary actions",
+      "implementation": "Read/reply/ordinary forward, state actions, contact-based block sender",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "Known contact sender resolves through authorized contact mapping and confirmation. Unsaved sender requires saving contact or proposed message-derived block endpoint."
+    },
+    {
+      "id": "14.01",
+      "requirement": "Phone/address/contact To and CC, subject/body/files, private confirmation, multiple-recipient group creation and locked membership",
+      "implementation": "Phone/address/contact recipient compose, To/CC group creation, no BCC disguise",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Real group recipients and unchanged thread roles tested; stale confirmation invalidated. Accessible comma-separated inputs are equivalent controls, not chips."
+    },
+    {
+      "id": "14.02",
+      "requirement": "BCC compose",
+      "implementation": "Phone/address/contact recipient compose, To/CC group creation, no BCC disguise",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "backend-dependent",
+      "remaining": "Backend rejects BCC. Minimal privacy-preserving contract proposal; no To/CC disguise."
+    },
+    {
+      "id": "14.03",
+      "requirement": "Attachments and encrypted new-message routing in existing conversations",
+      "implementation": "Phone/address/contact recipient compose, To/CC group creation, no BCC disguise",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "Original sender's ordinary atomic follow-up works. Other thread attachments/atomic reply consumption require proposals; separate message requires explicit choice and may reuse direct pair."
+    },
+    {
+      "id": "15.01",
+      "requirement": "Backend canonical address/name confirmation, own-contact selection, failed resolution blocks send and edits invalidate confirmation",
+      "implementation": "Explicit private confirmation; unavailable lookup never permits send; editing invalidates",
+      "source": "src/lib/recipients.ts; src/features/mail/Composer.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "blueprint-ui-results.json; tests/blueprint.test.ts",
+      "status": "implemented and tested",
+      "remaining": "Private endpoint tested; no directory/account-enumeration lookup or UUID entry. Encryption requires contact identity and independent key trust."
+    },
+    {
+      "id": "16.01",
+      "requirement": "Create/update/autosave/reopen/delete drafts, navigation close, offline preservation and truthful save states",
+      "implementation": "Revisioned server drafts, opted-in local drafts, uncertain-create reconciliation",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Browser ordinary/encrypted draft, ambiguous-create and denied-write suites pass. Revision conflicts handled without silent overwrite."
+    },
+    {
+      "id": "16.02",
+      "requirement": "All navigation-loss cases and atomic saved reply consumption",
+      "implementation": "Revisioned server drafts, opted-in local drafts, uncertain-create reconciliation",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json; web-recovery-ui-results.json",
+      "status": "partial",
+      "remaining": "Actual Back/reload guards preserve unsaved ordinary/encrypted text when canceled; saved drafts recover after navigation/reload. Locked composer retains in-memory text and supports explicit unlock. Atomic reply consumption remains backend-dependent; accepting a browser leave warning can still discard unsaved memory."
+    },
+    {
+      "id": "17.01",
+      "requirement": "Validate/resolve/send/busy/confirmed state, durable operation identity, exact ciphertext retry, preserve draft on failure",
+      "implementation": "Durable operations precede send; exact ciphertext retry and commitment lookup",
+      "source": "src/lib/outbox.ts; src/features/security/service.ts; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; multitab-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Browser interruption before/after commitment and same-profile two-tab retry yield one message."
+    },
+    {
+      "id": "18.01",
+      "requirement": "Opt-in bounded cache, minimal startup assets, actual offline reload and composition, safe pending operations and honest states",
+      "implementation": "Minimal service-worker shell; opt-in cache, offline drafts and reconciliation",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Cached mail/drafts and snapshot reconciliation verified; no automatic large attachment/crypto/scanner/Tamil download."
+    },
+    {
+      "id": "18.02",
+      "requirement": "Real intermittent cellular/low-end-device behavior",
+      "implementation": "Minimal service-worker shell; opt-in cache, offline drafts and reconciliation",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "partial",
+      "remaining": "CDP lab throttling is measured separately. Physical radio loss, device eviction and hardware quota exhaustion remain unverified."
+    },
+    {
+      "id": "19.01",
+      "requirement": "Shared lightweight loading indicators and operation text for core requests",
+      "implementation": "Loading/status components and operation-specific state",
+      "source": "src/components/ui.tsx; src/features/mail/Workspace.tsx; src/features/settings/Settings.tsx",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Named browser suites exercise auth, lists, sends, drafts and settings; no blank core-route startup."
+    },
+    {
+      "id": "19.02",
+      "requirement": "Every network-dependent screen under prolonged delay",
+      "implementation": "Loading/status components and operation-specific state",
+      "source": "src/components/ui.tsx; src/features/mail/Workspace.tsx; src/features/settings/Settings.tsx",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Exhaustive loading-state visual review not completed."
+    },
+    {
+      "id": "20.01",
+      "requirement": "Normalized public API errors, understandable retry/sign-in recovery and preserved input; no server stack/SQL prose",
+      "implementation": "Public error-code mapping; recoverable errors and preserved input",
+      "source": "src/lib/api.ts; src/components/ui.tsx",
+      "evidence": "tests/i18n.test.ts; offline-ui-results.json; otp-continuity-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Error mapping unit checks and browser network/storage/proof failures pass; UUID-bearing crypto errors replaced."
+    },
+    {
+      "id": "20.02",
+      "requirement": "Every possible third-party error path",
+      "implementation": "Public error-code mapping; recoverable errors and preserved input",
+      "source": "src/lib/api.ts; src/components/ui.tsx",
+      "evidence": "tests/i18n.test.ts; offline-ui-results.json; otp-continuity-ui-results.json",
+      "status": "partial",
+      "remaining": "Unexpected crypto/browser exceptions still require exhaustive localization/security review; no claim all library diagnostics are cataloged."
+    },
+    {
+      "id": "21.01",
+      "requirement": "Explicit actionable Home, contacts and search empty states",
+      "implementation": "Folder-specific, contact and search empty states",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered empty/search/no-contact paths exercised."
+    },
+    {
+      "id": "21.02",
+      "requirement": "Distinct Inbox/Sent/Drafts/Trash/Spam/Archive empty-state copy",
+      "implementation": "Folder-specific, contact and search empty states",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json; web-recovery-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "All seven folder-specific empty states plus Home, search and Contacts rendered with guidance/actions on disposable empty account."
+    },
+    {
+      "id": "22.01",
+      "requirement": "Server-side supported mailbox search, loading/results/no-results/paging and no whole-mailbox download",
+      "implementation": "Server search with bounded pages and encrypted-content caveat",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Live query plus delayed page/search ownership regression pass; encrypted content search limitation explained."
+    },
+    {
+      "id": "22.02",
+      "requirement": "All searchable field combinations",
+      "implementation": "Server search with bounded pages and encrypted-content caveat",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Sender/recipient/subject/body combinations depend on backend search contract; exhaustive field-specific UI matrix remains."
+    },
+    {
+      "id": "23.01",
+      "requirement": "Contacts create/edit/delete/search/use recipient with public fields and own-contact privacy",
+      "implementation": "Contacts CRUD/search/paging and bounded compose picker beyond 100",
+      "source": "src/features/contacts/Contacts.tsx; src/components/ContactPicker.tsx",
+      "evidence": "account-live-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "API CRUD plus rendered bounded picker finds contact beyond first 100. Compose picker has 30-row pages."
+    },
+    {
+      "id": "23.02",
+      "requirement": "Contact-list scale and all optional profile fields",
+      "implementation": "Contacts CRUD/search/paging and bounded compose picker beyond 100",
+      "source": "src/features/contacts/Contacts.tsx; src/components/ContactPicker.tsx",
+      "evidence": "account-live-results.json; blueprint-ui-results.json; web-recovery-ui-results.json",
+      "status": "partial",
+      "remaining": "Main contact list now replaces 50-row pages, with previous/next and server search. 151 added contacts plus saved encryption peer exercise more than 100 entries; short heap/paging sample. Invalid contact input preserves text with associated error. All optional profile/CRUD permutations and long soak remain unverified."
+    },
+    {
+      "id": "24.01",
+      "requirement": "Contact-based block/unblock, plain consequence confirmation, neutral fallback and real server enforcement",
+      "implementation": "Contact selection, consequence dialog, backend block and neutral fallback",
+      "source": "src/components/BlockContact.tsx; src/features/settings/Settings.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Browser block/unblock checks live backend state and no visible UUID; Escape returns focus."
+    },
+    {
+      "id": "24.02",
+      "requirement": "Blocking an unsaved message sender without a saved authorized identity",
+      "implementation": "Contact selection, consequence dialog, backend block and neutral fallback",
+      "source": "src/components/BlockContact.tsx; src/features/settings/Settings.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "blueprint-ui-results.json",
+      "status": "backend-dependent",
+      "remaining": "No identity enumeration. Minimal server-derived message-block endpoint proposed if product requires this shortcut."
+    },
+    {
+      "id": "25.01",
+      "requirement": "Supported discoverability, profile visibility, read receipts, communication and notification preferences with plain labels",
+      "implementation": "Six backend preferences plus explicit local browser announcement preference",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; web-recovery-ui-results.json",
+      "status": "partial",
+      "remaining": "Representative profile/alias/preference failures rendered near their section, edits retained and failed preference toggle unchanged. Existing live API preference checks pass. Not every control/permutation independently accepted."
+    },
+    {
+      "id": "26.01",
+      "requirement": "Public address/current phone/name/language/privacy/notices/security/logout without UUID",
+      "implementation": "Public address/name/profile/preferences; no ordinary UUID labels",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; locale-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered settings, local phone changes and no-ID assertions pass; avatar/profile paths retain API evidence."
+    },
+    {
+      "id": "26.02",
+      "requirement": "Approved legal settings links; future reviewed languages",
+      "implementation": "Public address/name/profile/preferences; no ordinary UUID labels",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; locale-ui-results.json",
+      "status": "external-input-dependent",
+      "remaining": "Approved Terms/Privacy URLs/content and matching version remain owner inputs. Tamil approval is outside the English-only launch."
+    },
+    {
+      "id": "27.01",
+      "requirement": "Password-backed and OTP-only phone change with correct proofs, same UUID/new public address/account refresh, retained mailbox/contacts and session replacement",
+      "implementation": "Password and OTP-only phone changes; immutable account/session replacement",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; otp-continuity-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Isolated rendered continuity suite passes; old cookies rejected; active key revoked/absent afterward."
+    },
+    {
+      "id": "27.02",
+      "requirement": "Encrypted history after phone change and every ambiguous account-change case",
+      "implementation": "Password and OTP-only phone changes; immutable account/session replacement",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; otp-continuity-ui-results.json; web-recovery-ui-results.json",
+      "status": "partial",
+      "remaining": "Committed phone-change response loss retries identical payload/idempotency key with pre-change cookies and stable account ID; subsequent settings requests pass after pending-flag repair. Password-backed historical E2EE acceptance retained. OTP-only encrypted history still requires unsupported key-management contract."
+    },
+    {
+      "id": "28.01",
+      "requirement": "No passwords/tokens/raw IDs in ordinary UI or URLs; authenticated cookies/CSRF, protected key backups, lock/expiry/logout handling",
+      "implementation": "Cookie/CSRF, protected keys, lock invalidation and public recipient labels",
+      "source": "src/features/security/SecurityPanel.tsx; src/features/security/service.ts; src/vendor/e2ee/client.ts; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "browser-ui-results.json; tests/e2ee.test.ts",
+      "status": "implemented and tested",
+      "remaining": "Rendered UUID checks, delayed-decrypt lock race, encrypted backup/retry and packaged isolation pass."
+    },
+    {
+      "id": "28.02",
+      "requirement": "Independent security certification/platform-protected native storage",
+      "implementation": "Cookie/CSRF, protected keys, lock invalidation and public recipient labels",
+      "source": "src/features/security/SecurityPanel.tsx; src/features/security/service.ts; src/vendor/e2ee/client.ts; src/lib/recipients.ts; src/components/BlockContact.tsx",
+      "evidence": "browser-ui-results.json; tests/e2ee.test.ts",
+      "status": "partial",
+      "remaining": "Independent website security audit remains external; native secure storage/device lifecycle is outside this delivery."
+    },
+    {
+      "id": "28.03",
+      "requirement": "OTP-only key enrollment, rotation and revocation",
+      "implementation": "Frontend explains unavailable password reauthentication; does not bypass proof validation.",
+      "source": "src/features/security/SecurityPanel.tsx; ../frontrepo/backend/src/routes/e2ee.ts",
+      "evidence": "REMAINING-BACKEND-CONTRACTS.md; otp-continuity-ui-results.json",
+      "status": "backend-dependent",
+      "remaining": "Current /api/e2ee/reauth accepts only password. Proposal 5 adds separately reviewed purpose/account/session-bound OTP reauthentication; disabled controls are not implementation."
+    },
+    {
+      "id": "29.01",
+      "requirement": "Owned file selection/progress/size limits/multiple files, resume/cancel, failure handling, explicit download and bounded inert preview",
+      "implementation": "Resumable owned uploads, safe bounded on-demand preview/download",
+      "source": "src/features/mail/Attachment.tsx; src/lib/uploads.ts; src/features/mail/Composer.tsx",
+      "evidence": "thread-contract-ui-results.json; frontend-live-results.json; tests/blueprint.test.ts",
+      "status": "implemented and tested",
+      "remaining": "Live upload module and rendered direct/group attachment+preview byte checks pass. No HTML/SVG/PDF execution or automatic large download."
+    },
+    {
+      "id": "29.02",
+      "requirement": "File attachment to arbitrary server-routed existing-thread send/reply",
+      "implementation": "Resumable owned uploads, safe bounded on-demand preview/download",
+      "source": "src/features/mail/Attachment.tsx; src/lib/uploads.ts; src/features/mail/Composer.tsx",
+      "evidence": "thread-contract-ui-results.json; frontend-live-results.json; tests/blueprint.test.ts",
+      "status": "backend-dependent",
+      "remaining": "Only original-sender atomic draft route presently preserves attachment ownership and roles. Minimal optional attachmentIds contract proposed."
+    },
+    {
+      "id": "29.03",
+      "requirement": "Real malware scanning and all many-file memory cases",
+      "implementation": "Resumable owned uploads, safe bounded on-demand preview/download",
+      "source": "src/features/mail/Attachment.tsx; src/lib/uploads.ts; src/features/mail/Composer.tsx",
+      "evidence": "thread-contract-ui-results.json; frontend-live-results.json; tests/blueprint.test.ts",
+      "status": "implemented but unverified",
+      "remaining": "Server scanner/provider outcomes and physical slow network behavior unverified."
+    },
+    {
+      "id": "30.01",
+      "requirement": "Opted-in browser new-mail announcement from actual mailbox changes; delivery/read/security/account information from backend",
+      "implementation": "New-mail announcements opt-in; actual delivery/read and security/account notices",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered announcement preference and actual new-message refresh tested; notice uses status region. Security/delivery APIs and readable UI tested."
+    },
+    {
+      "id": "30.02",
+      "requirement": "Push/provider SMS/IVR notification delivery",
+      "implementation": "New-mail announcements opt-in; actual delivery/read and security/account notices",
+      "source": "src/features/settings/Settings.tsx; src/features/settings/PhoneChange.tsx",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; blueprint-ui-results.json; blueprint-ui-results.json",
+      "status": "backend-dependent",
+      "remaining": "No supported browser push transport; provider configuration and controlled delivery acceptance required. No push claim."
+    },
+    {
+      "id": "31.01",
+      "requirement": "Draft/sending/committed/delivered/read/failed and pending states use actual backend values",
+      "implementation": "Typed real backend delivery and read statuses; pending commitment separated",
+      "source": "src/features/mail/DeliveryStatus.tsx; src/features/mail/Outbox.tsx",
+      "evidence": "responsive-ui-results.json; account-live-results.json",
+      "status": "implemented and tested",
+      "remaining": "Delivery component, pending UI and backend tests distinguish commitment from delivery and simulated channels."
+    },
+    {
+      "id": "32.01",
+      "requirement": "390px phone and 1280px desktop layouts, reading history/settings/compose fit, Tamil wrapping/system fonts",
+      "implementation": "Single-column mobile and desktop split panes; Tamil wrap corrections",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Named screenshots, overflow checks and axe pass; desktop split view is retained."
+    },
+    {
+      "id": "32.02",
+      "requirement": "Tablet/large-phone/desktop-monitor matrix and physical one-handed comfort",
+      "implementation": "Single-column mobile and desktop split panes; Tamil wrap corrections",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; layout-resume-ui-results.json",
+      "status": "partial",
+      "remaining": "768/1024 tablet layouts and emulated 200% content zoom/150% settings text tested, dialog clipping repaired. Physical one-handed comfort, keyboards and browser-chrome zoom remain external/unverified."
+    },
+    {
+      "id": "33.01",
+      "requirement": "Production entry budget, lazy crypto/scanner/Tamil, compact pagination, on-demand files and bounded rendering",
+      "implementation": "Lazy crypto/scanner/Tamil preview; bounded mailbox/history; startup budget",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented and tested",
+      "remaining": "Final production bundle and repeated browser measurements attached. No new UI framework/font download."
+    },
+    {
+      "id": "33.02",
+      "requirement": "Every render/storage bottleneck under long soak",
+      "implementation": "Lazy crypto/scanner/Tamil preview; bounded mailbox/history; startup budget",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented but unverified",
+      "remaining": "Only specified heap/navigation samples taken, not a device fleet or long-term memory certification."
+    },
+    {
+      "id": "34.01",
+      "requirement": "Equivalent bounded mailbox/history windows avoid excessive simultaneous rendering",
+      "implementation": "Equivalent bounded paging: 30 list rows and at most 60 history messages",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented and tested",
+      "remaining": "At most 30 mailbox rows/60 history messages; 126-message real fixture, stable paging/dedup and heap samples."
+    },
+    {
+      "id": "34.02",
+      "requirement": "Older Android, limited RAM/slow CPUs and actual low-end-device acceptance",
+      "implementation": "Equivalent bounded paging: 30 list rows and at most 60 history messages",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented but unverified",
+      "remaining": "Fast M5 CDP slowdown is not low-end-device proof."
+    },
+    {
+      "id": "35.01",
+      "requirement": "Separate local/server/cache/pending state, revision checks, transactional snapshots and safe mutation reconciliation",
+      "implementation": "Distinct local/server/cache/pending records and transactional snapshots",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Interrupted paging, expired cursor resnapshot, unsent work preservation and concurrent sends pass."
+    },
+    {
+      "id": "35.02",
+      "requirement": "Async result ownership across message/history/search/view/key-lock transitions",
+      "implementation": "Distinct local/server/cache/pending records and transactional snapshots",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Delayed first read/history/page cannot replace current view; stale decrypt after lock cannot disclose plaintext."
+    },
+    {
+      "id": "36.01",
+      "requirement": "Configurable API base, central serialization/headers/cookies/error mapping/timeouts/safe retry and exact existing contracts",
+      "implementation": "Shared typed API, cookies/CSRF, timeout and safe refresh",
+      "source": "src/lib/api.ts; vite.config.ts",
+      "evidence": "account-live-results.json; tests/i18n.test.ts; multitab-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Live API and module suites plus packaged proxy/CSRF checks. Local API target remains localhost:3000."
+    },
+    {
+      "id": "37.01",
+      "requirement": "Separate auth/server/UI/form/persistence responsibilities using existing architecture",
+      "implementation": "Feature state separate from API, storage, crypto and form state",
+      "source": "src/App.tsx; src/lib/api.ts; src/lib/storage.ts; src/features/mail/Workspace.tsx",
+      "evidence": "Source inspection; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Source inspection of App, API, storage and feature modules; this is structural evidence, not a behavioral certification."
+    },
+    {
+      "id": "38.01",
+      "requirement": "Reusable controls/phone input/dialogs/status/avatars/contacts/files and bounded mail responsibilities",
+      "implementation": "Reusable dialogs/fields/contacts/attachments and feature components",
+      "source": "src/components/ui.tsx; src/components/ContactPicker.tsx; src/features/mail/Attachment.tsx",
+      "evidence": "Source inspection",
+      "status": "partial",
+      "remaining": "Affected controls extracted; Workspace and Composer remain large components. Further unrelated refactor intentionally not undertaken."
+    },
+    {
+      "id": "39.01",
+      "requirement": "Labeled native forms, busy/disabled/error/success states, preserve failed input",
+      "implementation": "Labeled forms preserve input and expose busy/error states",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Auth/compose/settings/blocking and injected failures exercised; primary operations keyboard accessible."
+    },
+    {
+      "id": "39.02",
+      "requirement": "Every form keyboard/validation permutation",
+      "implementation": "Labeled forms preserve input and expose busy/error states",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; web-recovery-ui-results.json; layout-resume-ui-results.json; auth-final-ui-results.json; auth-edge-ui-results.json",
+      "status": "partial",
+      "remaining": "Representative backend contact validation and profile/alias/preference transport failures, keyboard login and dialog focus tested. Exhaustive field permutations, photo failures and physical autofill remain unverified."
+    },
+    {
+      "id": "40.01",
+      "requirement": "OTP/recipient field-associated errors and shared accessible alert/status regions",
+      "implementation": "OTP and recipient field-associated errors plus alert/status regions",
+      "source": "src/features/auth/AuthScreen.tsx; src/features/mail/Composer.tsx; src/components/ui.tsx",
+      "evidence": "blueprint-ui-results.json; otp-continuity-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Axe and rendered invalid recipient/OTP feedback checked."
+    },
+    {
+      "id": "40.02",
+      "requirement": "Every settings field error and native accessibility announcements",
+      "implementation": "OTP and recipient field-associated errors plus alert/status regions",
+      "source": "src/features/auth/AuthScreen.tsx; src/features/mail/Composer.tsx; src/components/ui.tsx",
+      "evidence": "blueprint-ui-results.json; otp-continuity-ui-results.json; web-recovery-ui-results.json",
+      "status": "partial",
+      "remaining": "Settings failures render within the initiating section; profile/alias/contact descriptions retained. Generic server errors are not falsely assigned to one field. Exhaustive permutations and human web screen-reader announcements remain unverified; native UI is outside scope."
+    },
+    {
+      "id": "41.01",
+      "requirement": "Consequential block/contact/alias delete, phone-change acknowledgment and security backup confirmation",
+      "implementation": "Native dialogs for contact/alias delete, blocking and separate send choices",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered block/phone/security flows and source inspection; no blanket confirmation on minor actions."
+    },
+    {
+      "id": "41.02",
+      "requirement": "Destructive-action consistency",
+      "implementation": "Native dialogs for contact/alias delete, blocking and separate send choices",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; web-recovery-ui-results.json; layout-resume-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Draft discard now explicitly confirms irreversible removal; cancel retains text. Message Trash asks confirmation, cancel avoids mutation, and Restore works. Existing contact/alias confirmations retained; permanent message deletion is not offered."
+    },
+    {
+      "id": "42.01",
+      "requirement": "Distinct primary, quiet and danger styles; Compose/Send/Reply/Verify/Save hierarchy",
+      "implementation": "Shared primary/quiet/danger styles and labeled actions",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Shared CSS/source and screenshots; no claim of human rural preference approval."
+    },
+    {
+      "id": "43.01",
+      "requirement": "Plain wording, obvious navigation, large controls, guidance and secondary advanced functions",
+      "implementation": "Short address/draft/CC guidance and ordinary public identities",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "CC/draft/address/encryption explanations provided. Rural first-time comprehension still requires human review; BCC unavailable honestly."
+    },
+    {
+      "id": "44.01",
+      "requirement": "Actual address first-use explanation, skippable guidance and contextual compose/contact/language help",
+      "implementation": "Skippable actual-address introduction and contextual explanations",
+      "source": "src/App.tsx; src/features/mail/Composer.tsx",
+      "evidence": "blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "First-use skip exercised; native-language selector and public identity shown. No long forced tutorial."
+    },
+    {
+      "id": "45.01",
+      "requirement": "Semantic HTML, native controls, accessible dialogs/menus/validation, keyboard focus",
+      "implementation": "Semantic web controls/dialogs, focus restoration and axe checks",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Seven axe scans and focus-return behavior pass in Chromium."
+    },
+    {
+      "id": "45.02",
+      "requirement": "Native screen-reader roles/focus/buttons/dynamic text",
+      "implementation": "Semantic web controls/dialogs, focus restoration and axe checks",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "outside current delivery",
+      "remaining": "Authoritative product decision: native Expo, iOS/Android apps, APKs and stores are outside this website/portal delivery; no owner scope decision is pending. Historical source assessment only."
+    },
+    {
+      "id": "45.03",
+      "requirement": "Human web screen-reader review",
+      "implementation": "Semantic web controls/dialogs, focus restoration and axe checks",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Automated checks cannot establish screen-reader comprehension or all assistive technology behavior."
+    },
+    {
+      "id": "46.01",
+      "requirement": "Central English catalog, whole-message parameters, lazy locale loaders and locale formatting; optional review overlay",
+      "implementation": "Central catalogs, whole-message interpolation, lazy locale load and token tests",
+      "source": "src/i18n/index.ts; src/i18n/en.json; src/i18n/ta.draft.json; src/i18n/LanguageSelector.tsx",
+      "evidence": "auth-final-ui-results.json; tests/i18n.test.ts; tests/blueprint.test.ts; TRANSLATION-REVIEW.md",
+      "status": "implemented and tested",
+      "remaining": "827 English entries; catalog audit and token validation pass. English-only ordinary dev/production. Tamil overlay is explicit review only, with English fallback for newer entries."
+    },
+    {
+      "id": "46.02",
+      "requirement": "All rare system prose and translation quality",
+      "implementation": "Central catalogs, whole-message interpolation, lazy locale load and token tests",
+      "source": "src/i18n/index.ts; src/i18n/en.json; src/i18n/ta.draft.json; src/i18n/LanguageSelector.tsx",
+      "evidence": "blueprint-ui-results.json; tests/blueprint.test.ts; TRANSLATION-REVIEW.md; locale-ui-results.json",
+      "status": "partial",
+      "remaining": "Unexpected third-party exceptions and rare system prose need exhaustive editorial/security review. Additional language quality is outside this English-only launch; no fluent approval is implied."
+    },
+    {
+      "id": "47.01",
+      "requirement": "Today time, Yesterday, older dates/year and shared locale-aware formatting without raw ISO UI",
+      "implementation": "Today time, Yesterday, older date/year; locale-aware number/date formatting",
+      "source": "src/components/ui.tsx; src/i18n/index.ts",
+      "evidence": "tests/i18n.test.ts; blueprint-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Formatter/unit and browser representative dates checked; phone/address/fingerprint values invariant."
+    },
+    {
+      "id": "47.02",
+      "requirement": "Timezone/day-boundary visual cases",
+      "implementation": "Today time, Yesterday, older date/year; locale-aware number/date formatting",
+      "source": "src/components/ui.tsx; src/i18n/index.ts",
+      "evidence": "tests/i18n.test.ts; blueprint-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Full locale/timezone/date-boundary matrix not exercised."
+    },
+    {
+      "id": "48.01",
+      "requirement": "Unread weight/count, error/success text/icons and labeled state beyond color",
+      "implementation": "Unread weight/count/text and error/status labels alongside color",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered styles/axe/source confirm alternatives; human color-vision/AT review remains separate."
+    },
+    {
+      "id": "49.01",
+      "requirement": "Explicit compose close, failed-write recovery, attachment progress and durable pending sends preserve work",
+      "implementation": "Compose close saves or retains local work; pending operations survive reload",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Offline/ambiguous/E2EE reload suites pass, with truthful unsaved/unknown state."
+    },
+    {
+      "id": "49.02",
+      "requirement": "Browser Back and unsaved encrypted text when manually locking keys mid-compose",
+      "implementation": "Compose close saves or retains local work; pending operations survive reload",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json; web-recovery-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Actual Back and reload cancellation retain ordinary/encrypted unsaved text; saved drafts recover. Actual key-lock service hides encrypted composer text; close cannot drop unsaved memory and inline unlock restores it. Accepting browser leave warning still intentionally loses unsaved memory; decrypted plaintext is not persisted."
+    },
+    {
+      "id": "50.01",
+      "requirement": "Backend remains authority for every protected operation; no proof/role/local-state bypass",
+      "implementation": "Backend authorization remains authoritative; no proof/role bypass",
+      "source": "src/lib/api.ts; src/lib/recipients.ts; ../frontrepo/backend/src/routes",
+      "evidence": "account-live-results.json; otp-continuity-ui-results.json; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Inspected contracts and real negative/session/key tests. No backend architecture changes."
+    },
+    {
+      "id": "51.01",
+      "requirement": "Inspect actual routes/schema/auth/errors/paging/states/files/recipient and verification contracts; no invented endpoint behavior",
+      "implementation": "Inspected actual routes, schemas, identity and recipient contracts",
+      "source": "docs/REMAINING-BACKEND-CONTRACTS.md; ../frontrepo/backend/src/services/conversationService.ts",
+      "evidence": "thread-contract-ui-results.json; account-live-results.json",
+      "status": "implemented and tested",
+      "remaining": "Supported original-sender route verified; limitations and compatibility proposals linked."
+    },
+    {
+      "id": "52.01",
+      "requirement": "No fake delivered/encrypted/organization/government/sent state",
+      "implementation": "Unsupported features gated; real commitment/verification statuses only",
+      "source": "src/features/auth/AuthScreen.tsx; src/features/mail/DeliveryStatus.tsx",
+      "evidence": "packaged-ui-results.json; browser-ui-results.json; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Production legal/Tamil gates, actual provider/status data and pending identity checks preserve honest boundaries."
+    },
+    {
+      "id": "53.01",
+      "requirement": "Direct retry/sign-in/draft/upload/send/OTP recovery without restart for normal errors",
+      "implementation": "Direct retries, uncertain draft review, pending sends and reauthentication",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Actual failure suites pass. Unknown sends/drafts remain explicit rather than blindly duplicated."
+    },
+    {
+      "id": "53.02",
+      "requirement": "Every combined recovery path",
+      "implementation": "Direct retries, uncertain draft review, pending sends and reauthentication",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json; web-recovery-ui-results.json; local-acceptance-ui-results.json",
+      "status": "partial",
+      "remaining": "Browser Back/reload, dropped committed phone-change response and focused cross-engine auth/draft/encryption/portal flows pass. Exhaustive combinations, browser eviction and cross-engine offline tests remain unverified."
+    },
+    {
+      "id": "54.01",
+      "requirement": "Critical website tests: auth/OTP/mail/compose/confirm/send/drafts/search/files/blocking/settings/session/network and continuity",
+      "implementation": "API, module and rendered UI suites distinguished; OTP continuity added",
+      "source": "scripts/test-otp-continuity-ui.mjs; scripts/test-blueprint-ui.mjs; scripts/test-ui-live.mjs",
+      "evidence": "INTEGRATION-RESULTS.md",
+      "status": "implemented and tested",
+      "remaining": "Named browser suites plus distinctly labeled API/module evidence; this row does not promote API-only subchecks to UI acceptance."
+    },
+    {
+      "id": "54.02",
+      "requirement": "Complete critical-flow UI matrix",
+      "implementation": "API, module and rendered UI suites distinguished; OTP continuity added",
+      "source": "scripts/test-otp-continuity-ui.mjs; scripts/test-blueprint-ui.mjs; scripts/test-ui-live.mjs",
+      "evidence": "INTEGRATION-RESULTS.md; web-recovery-ui-results.json; local-acceptance-ui-results.json; layout-resume-ui-results.json",
+      "status": "partial",
+      "remaining": "Focused critical browser checks include folders, portal, auth, compose/key-lock, phone change, settings failures and cross-engine draft/encryption. Full privacy/search/form combinations remain unverified; native suites are outside scope."
+    },
+    {
+      "id": "55.01",
+      "requirement": "Chromium mobile/desktop widths, keyboard focus, actual reload, expired-session/races, offline and CDP slow-network lab",
+      "implementation": "Chromium desktop/mobile widths; Firefox/WebKit executable checks",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Representative rendered workflows exercised with isolated accounts/contexts."
+    },
+    {
+      "id": "55.02",
+      "requirement": "Firefox, WebKit, physical keyboards/screen readers/camera, tablet and native platform acceptance",
+      "implementation": "Chromium desktop/mobile widths; Firefox/WebKit executable checks",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json; local-acceptance-ui-results.json; layout-resume-ui-results.json",
+      "status": "partial",
+      "remaining": "Official Firefox 155.0/WebKit 26.6 and Chrome 154 execute the focused auth/portal and critical mailbox/draft/encryption-unlock set. Tablet/text/zoom are emulation; physical keyboards, screen readers and camera remain unverified. Native is outside scope."
+    },
+    {
+      "id": "56.01",
+      "requirement": "126-message fixture, bounded pages/history, delayed API ownership, repeated navigation, cache/restart and production throttling",
+      "implementation": "Real 126-message mailbox, bounded history, heap/paging measurements",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented and tested",
+      "remaining": "Heap delta/paging and cold/warm/offline/encryption timings attached with host/network limits."
+    },
+    {
+      "id": "56.02",
+      "requirement": "Very large mailbox soak/many-large-file memory and real cellular performance",
+      "implementation": "Real 126-message mailbox, bounded history, heap/paging measurements",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented but unverified",
+      "remaining": "Current sample is 126 messages, not millions or a prolonged field deployment."
+    },
+    {
+      "id": "57.01",
+      "requirement": "Shared typography/spacing/buttons/fields/cards/dialogs/navigation/status/focus/contrast system",
+      "implementation": "Existing shared palette, spacing, controls and accessible contrast repaired",
+      "source": "src/styles.css; src/components/ui.tsx; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; docs/screenshots; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Existing visual direction preserved; concrete contrast/wrapping fixes accepted by representative scans/screenshots."
+    },
+    {
+      "id": "58.01",
+      "requirement": "Mobile labeled targets, optional swipe reply with visible reply alternative, navigation and input modes",
+      "implementation": "44px mobile controls, optional refresh/swipe alternatives, dialogs",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Emulated target measurements and responsive suite pass; gestures never mandatory."
+    },
+    {
+      "id": "58.02",
+      "requirement": "Physical keyboard dismissal/occlusion, pull refresh and destructive-action thumb comfort",
+      "implementation": "44px mobile controls, optional refresh/swipe alternatives, dialogs",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Requires real-device hands-on acceptance."
+    },
+    {
+      "id": "59.01",
+      "requirement": "Native web controls for mouse/touch/keyboard, visible focus and keyboard-accessible dialog/actions",
+      "implementation": "Native controls, visible focus, keyboard dialog return",
+      "source": "src/components/ui.tsx; src/styles.css; src/features/auth/auth.css",
+      "evidence": "blueprint-ui-results.json; responsive-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Browser keyboard/focus regression and emulated touch; no custom inaccessible replacement controls introduced."
+    },
+    {
+      "id": "60.01",
+      "requirement": "HttpOnly session cookies, explicit per-account mail/draft cache, language/UI preferences and protected private-key storage",
+      "implementation": "Opt-in plaintext cache/drafts, language preference, encrypted protected keys",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Storage denial/quota-boundary injection, cache opt-in/offline reload and account isolation pass."
+    },
+    {
+      "id": "60.02",
+      "requirement": "Actual OS/browser eviction or full disk; native secure storage",
+      "implementation": "Opt-in plaintext cache/drafts, language preference, encrypted protected keys",
+      "source": "src/lib/storage.ts; src/lib/sync.ts; src/lib/outbox.ts",
+      "evidence": "offline-ui-results.json; multitab-ui-results.json; ambiguous-draft-ui-results.json",
+      "status": "implemented but unverified",
+      "remaining": "Faults are injected at storage boundaries, not hardware quota exhaustion or OS eviction. Native persistence is outside scope."
+    },
+    {
+      "id": "61.01",
+      "requirement": "Respect visible/background platform limits; conservative one-minute refresh, no continuous background/push assumption",
+      "implementation": "Visible-page refresh at one minute; no unsupported background push claims",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs",
+      "evidence": "Source inspection; packaged-ui-results.json; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Source inspection and live manual update. No aggressive health polling; status reflects last actual API request."
+    },
+    {
+      "id": "61.02",
+      "requirement": "Long background suspension/resume scenarios",
+      "implementation": "Visible-page refresh at one minute; no unsupported background push claims",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs",
+      "evidence": "Source inspection; packaged-ui-results.json; Source inspection; layout-resume-ui-results.json",
+      "status": "partial",
+      "remaining": "Actual mail during real 120-second CDP lifecycle freeze appears on visible resume with opted-in announcement. Visibility boundary is simulated and is not OS eviction, mobile background execution or multi-day soak."
+    },
+    {
+      "id": "62.01",
+      "requirement": "Essential text/system fonts/small icons, no animation dependency or remote accessibility resource",
+      "implementation": "System fonts/text, small icons, optional lazy features and offline shell",
+      "source": "src/features/mail/Workspace.tsx; scripts/service-worker.mjs; scripts/measure-browser.mjs",
+      "evidence": "blueprint-ui-results.json; performance-browser-results.json; bundle-measurement.json",
+      "status": "implemented and tested",
+      "remaining": "Bundle/precache verifies optional assets are lazy; representative text accessible offline."
+    },
+    {
+      "id": "63.01",
+      "requirement": "Do not fabricate government/verified organization or structured service functionality",
+      "implementation": "No fabricated government or verified-organization functionality",
+      "source": "src/features/mail/types.ts; docs/REMAINING-BACKEND-CONTRACTS.md",
+      "evidence": "Source inspection; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "No fabricated UI or badges introduced."
+    },
+    {
+      "id": "63.02",
+      "requirement": "Future verified organizations/official senders/structured requests/service messages",
+      "implementation": "No fabricated government or verified-organization functionality",
+      "source": "src/features/mail/types.ts; docs/REMAINING-BACKEND-CONTRACTS.md",
+      "evidence": "Source inspection; Source inspection",
+      "status": "backend-dependent",
+      "remaining": "Requires product scope, authorized backend contracts and owner-approved verification policy."
+    },
+    {
+      "id": "64.01",
+      "requirement": "Real aliases and identity QR sharing preserve existing account model",
+      "implementation": "Real aliases/QR present; no fake future recovery/device/government flows",
+      "source": "src/features/security/SecurityPanel.tsx; src/features/security/service.ts; src/vendor/e2ee/client.ts",
+      "evidence": "browser-ui-results.json; tests/e2ee.test.ts",
+      "status": "implemented and tested",
+      "remaining": "Aliases have API evidence; QR/backup/fingerprint workflow rendered acceptance. Unreviewed QR address claims labeled."
+    },
+    {
+      "id": "64.02",
+      "requirement": "Phone recovery/recovery codes/trusted devices/organizations/government/structured requests/richer push",
+      "implementation": "Real aliases/QR present; no fake future recovery/device/government flows",
+      "source": "src/features/security/SecurityPanel.tsx; src/features/security/service.ts; src/vendor/e2ee/client.ts",
+      "evidence": "browser-ui-results.json; tests/e2ee.test.ts",
+      "status": "backend-dependent",
+      "remaining": "Future product/backend scope; no fake placeholders or unsupported flows."
+    },
+    {
+      "id": "65.01",
+      "requirement": "VERIFY \u2192 ADDRESS \u2192 INBOX primary journey",
+      "implementation": "Phone-first authentication, address guidance and compose/confirm/send",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "resolved product decision",
+      "remaining": "Unified Home is the approved primary mobile mailbox. Inbox, Sent and other supported folders remain accessible. This supersedes historical Inbox/Sent-first wording; no decision is pending."
+    },
+    {
+      "id": "65.02",
+      "requirement": "First-time simplicity and secondary advanced functionality",
+      "implementation": "Phone-first authentication, address guidance and compose/confirm/send",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "First-time rural comprehension and human usability review remain external. English is the sole launch language; additional language approval is not required."
+    },
+    {
+      "id": "66.01",
+      "requirement": "Phases 1\u20138: foundation, auth, mail, management, accessibility/reliability, user features, continuity and hardening",
+      "implementation": "Foundation through website hardening implemented incrementally",
+      "source": "docs/INTEGRATION-RESULTS.md; docs/NATIVE-SCOPE.md",
+      "evidence": "All named evidence artifacts",
+      "status": "partial",
+      "remaining": "Incremental website/portal implementation retained; external acceptance, owner legal/deployment inputs and missing backend contracts remain separate from local completion. Native is outside scope."
+    },
+    {
+      "id": "67.01",
+      "requirement": "Inspect/reuse existing code, preserve package architecture/strict types, real API compatibility, incremental work and fix findings",
+      "implementation": "Full blueprint/source inspection, preserved versions and backend, targeted checks",
+      "source": "package.json; docs/INTEGRATION-RESULTS.md; docs/NATIVE-SCOPE.md",
+      "evidence": "npm run check; packaged-ui-results.json; Source inspection",
+      "status": "implemented and tested",
+      "remaining": "Check/build/unit/live/browser runs recorded; only relevant frontend responsibilities changed and axe dev dependency added."
+    },
+    {
+      "id": "67.02",
+      "requirement": "After-work checks: tests/types/lint/build/mobile/backend/responsive/accessibility/performance",
+      "implementation": "Full blueprint/source inspection, preserved versions and backend, targeted checks",
+      "source": "package.json; docs/INTEGRATION-RESULTS.md; docs/NATIVE-SCOPE.md",
+      "evidence": "npm run check; packaged-ui-results.json; Source inspection",
+      "status": "partial",
+      "remaining": "No lint script configured; strict TypeScript, catalog AST audit, unit/build/budgets and relevant browser/API/module suites run. Physical/external coverage remains unverified. Native builds outside delivery."
+    },
+    {
+      "id": "68.01",
+      "requirement": "Website objective steps 1,3\u20136,8\u201321,23,25: local proof/auth/address/mail/read/reply/compose/phone recipient/confirm/send/state/draft/recovery/search/manage/contact/settings/logout/desktop/continuity",
+      "implementation": "Website core journey and isolated proof continuity; blueprint not wholly complete",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "implemented and tested",
+      "remaining": "Rendered critical paths pass with exact gaps in section 54; API-only subchecks identified in evidence."
+    },
+    {
+      "id": "68.02",
+      "requirement": "Steps 2,7,22,24 and complete product definition: comprehension, comfortable phone use, accessibility and overall minimal effort",
+      "implementation": "Website core journey and isolated proof continuity; blueprint not wholly complete",
+      "source": "src/features/mail/Workspace.tsx; src/features/mail/Composer.tsx",
+      "evidence": "browser-ui-results.json; blueprint-ui-results.json; thread-contract-ui-results.json",
+      "status": "partial",
+      "remaining": "Human rural/mobile/assistive-technology review, approved legal/deployment inputs and unsupported backend contracts remain. Native and additional languages are outside this delivery; navigation decision resolved."
+    }
+  ]
+}

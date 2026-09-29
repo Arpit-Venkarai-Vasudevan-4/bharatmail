@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-29T04:26:25.873Z",
+  "origin": "http://localhost:8080",
+  "passed": [
+    "Already displayed auth validation updates English/Tamil/English without clearing entered phone or exposing server errors",
+    "Runtime Tamil updates mounted mailbox, syncs account preference and survives actual reload; account identity unchanged",
+    "Already displayed encryption error switches language with the mounted security panel"
+  ],
+  "conditions": "Installed headless Chrome, development Tamil draft preview, live backend. Language quality remains unreviewed."
+}

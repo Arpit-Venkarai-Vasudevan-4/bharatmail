@@ -1,0 +1,4 @@
+import {t} from '../../i18n';
+export async function renderIdentityQr(payload:string){const QRCode=await import('qrcode');return QRCode.toDataURL(payload,{width:300,margin:2,errorCorrectionLevel:'M'});}
+/** Local image decoding only. Payload validation remains the existing strict PhoneMail decoder. */
+export async function decodeIdentityQrImage(file:File){if(file.size>10*1024*1024)throw new Error(t("m_bd8c9b8760a5"));const {Html5Qrcode}=await import('html5-qrcode');const host=document.createElement('div');host.id=`qr-image-${crypto.randomUUID()}`;host.hidden=true;document.body.append(host);const reader=new Html5Qrcode(host.id);try{const payload=await reader.scanFile(file,false);const {readQrPayload}=await import('../../vendor/e2ee');await readQrPayload(payload);return payload;}finally{reader.clear();host.remove();}}

@@ -1,0 +1,75 @@
+{
+  "started": "2026-09-29T08:57:33.164Z",
+  "live": [
+    "Chromium: password signup/login/logout/restoration and exact spaces work despite failed capability discovery; wrong credentials rejected",
+    "Chromium: portal OTP shows actual address/code-login guidance, revokes token, resets and preserves mailbox session",
+    "Chromium: OTP-only account signs in with a legitimate sink proof after wrong-code feedback",
+    "Password-created account OTP login is rejected even with a valid proof; no password setup/reset route exists",
+    "Unsupported stored Tamil falls back to English and saving profile does not overwrite backend Tamil preference",
+    "Firefox: password signup/login/logout/restoration and exact spaces work despite failed capability discovery; wrong credentials rejected",
+    "Firefox: portal OTP shows actual address/code-login guidance, revokes token, resets and preserves mailbox session",
+    "Firefox: OTP-only account signs in with a legitimate sink proof after wrong-code feedback",
+    "WebKit: password signup/login/logout/restoration and exact spaces work despite failed capability discovery; wrong credentials rejected",
+    "WebKit: portal OTP shows actual address/code-login guidance, revokes token, resets and preserves mailbox session",
+    "WebKit: OTP-only account signs in with a legitimate sink proof after wrong-code feedback"
+  ],
+  "controlled": [
+    "Password rate limit honors Retry-After and recovers",
+    "Voice OTP appears only with its channel capability; request uses ivr/login and handles provider failure without placing a call",
+    "Late code response cannot replace a newer password flow",
+    "Server resend/expiry timestamps recompute on visibility; changing channel invalidates the challenge",
+    "Configured IVR validates/normalizes tel link, copy success/fallback and continuation; call link never activated"
+  ],
+  "a11y": [
+    {
+      "name": "Chromium portal",
+      "violations": []
+    },
+    {
+      "name": "registration unavailable IVR",
+      "violations": []
+    },
+    {
+      "name": "configured IVR",
+      "violations": []
+    },
+    {
+      "name": "auth width 360",
+      "violations": []
+    },
+    {
+      "name": "auth width 768",
+      "violations": []
+    },
+    {
+      "name": "auth width 1280",
+      "violations": []
+    },
+    {
+      "name": "Firefox portal",
+      "violations": []
+    },
+    {
+      "name": "WebKit portal",
+      "violations": []
+    }
+  ],
+  "engines": [
+    {
+      "name": "Chromium",
+      "version": "154.0.8037.58"
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0"
+    },
+    {
+      "name": "WebKit",
+      "version": "26.6"
+    }
+  ],
+  "limitations": [
+    "Provider/voice capability and error responses explicitly mocked only when unavailable locally. No real call, SMS, external mail, or provider webhook was invoked. Physical autofill and human screen-reader review unverified."
+  ],
+  "finished": "2026-09-29T08:57:48.308Z"
+}

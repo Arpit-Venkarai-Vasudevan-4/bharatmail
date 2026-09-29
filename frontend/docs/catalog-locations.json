@@ -1,0 +1,2141 @@
+{
+  "m_e8e8d5fa8130": [
+    "src/App.tsx:28"
+  ],
+  "m_039eb7962876": [
+    "src/App.tsx:38"
+  ],
+  "m_c0ac1aed91b7": [
+    "src/App.tsx:44"
+  ],
+  "m_cb8d5e44d8c2": [
+    "src/App.tsx:48"
+  ],
+  "m_7cd769e7bf5e": [
+    "src/App.tsx:50"
+  ],
+  "m_eccee4ef9458": [
+    "src/App.tsx:51"
+  ],
+  "m_e5a3ef7c25bc": [
+    "src/App.tsx:53"
+  ],
+  "m_eb355944b92d": [
+    "src/App.tsx:54"
+  ],
+  "m_8196cc7f970a": [
+    "src/App.tsx:54"
+  ],
+  "m_6b23c0d5f35d": [
+    "src/App.tsx:54"
+  ],
+  "m_95049f1227f6": [
+    "src/App.tsx:54"
+  ],
+  "m_514e5dc98b7b": [
+    "src/App.tsx:54"
+  ],
+  "m_b450645debe2": [
+    "src/App.tsx:54",
+    "src/App.tsx:63",
+    "src/features/contacts/Contacts.tsx:37"
+  ],
+  "m_5d8d03a2e6bb": [
+    "src/App.tsx:54"
+  ],
+  "m_45ba14159fcd": [
+    "src/App.tsx:54"
+  ],
+  "m_de41cbfd5405": [
+    "src/App.tsx:54"
+  ],
+  "m_2a1e1f360c49": [
+    "src/App.tsx:54"
+  ],
+  "m_dbb5f6371b6a": [
+    "src/App.tsx:54"
+  ],
+  "m_4aaf6a9dc80d": [
+    "src/App.tsx:54",
+    "src/features/settings/Settings.tsx:80"
+  ],
+  "m_99904db30de4": [
+    "src/App.tsx:55"
+  ],
+  "m_0ed77fd2619b": [
+    "src/App.tsx:56"
+  ],
+  "m_a2a2fc5ae8df": [
+    "src/App.tsx:56"
+  ],
+  "m_ed572eb0dd7f": [
+    "src/App.tsx:56",
+    "src/features/auth/AuthScreen.tsx:64",
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_a1794783aab7": [
+    "src/App.tsx:56"
+  ],
+  "connection.reachable": [
+    "src/App.tsx:56"
+  ],
+  "connection.unreachable": [
+    "src/App.tsx:56"
+  ],
+  "connection.unknown": [
+    "src/App.tsx:56"
+  ],
+  "m_e9c07e134741": [
+    "src/App.tsx:56"
+  ],
+  "notice.open": [
+    "src/App.tsx:56"
+  ],
+  "m_a587aa1f4ffc": [
+    "src/App.tsx:56"
+  ],
+  "m_48f0d3d397d4": [
+    "src/App.tsx:56",
+    "src/features/settings/Settings.tsx:125"
+  ],
+  "m_be1d0b8efb2c": [
+    "src/App.tsx:57"
+  ],
+  "m_2bf46e72ff32": [
+    "src/App.tsx:58"
+  ],
+  "m_bfd402b2f6f3": [
+    "src/App.tsx:58",
+    "src/features/auth/AuthScreen.tsx:75"
+  ],
+  "guidance.title": [
+    "src/App.tsx:58"
+  ],
+  "guidance.address": [
+    "src/App.tsx:58"
+  ],
+  "guidance.help": [
+    "src/App.tsx:58"
+  ],
+  "guidance.dismiss": [
+    "src/App.tsx:58"
+  ],
+  "m_64db0a046592": [
+    "src/App.tsx:58"
+  ],
+  "m_d9c842765a2d": [
+    "src/App.tsx:58"
+  ],
+  "m_98652afe6ee7": [
+    "src/App.tsx:59",
+    "src/features/contacts/Contacts.tsx:42"
+  ],
+  "m_7a66599789db": [
+    "src/App.tsx:65"
+  ],
+  "m_2db7f0c01676": [
+    "src/App.tsx:65"
+  ],
+  "m_ba000c11b7d3": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_d271fd8701c2": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_34971b0bb7d9": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_4d95e41f2953": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_17b775b4cb8f": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_01cd0ad906f6": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_8d22d6641cc5": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_f9a5315af662": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_d79425d3c0d8": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_8dd5c45a06a9": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_b7a5e5baf789": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_d3d0f2525fed": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_1973e0ea55c6": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_47debe64c577": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_8c1e6268539b": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_5dce24cdbe4d": [
+    "src/Introduction.tsx:4"
+  ],
+  "m_e1b14d97213f": [
+    "src/Introduction.tsx:4"
+  ],
+  "block.sender": [
+    "src/components/BlockContact.tsx:11"
+  ],
+  "block.knownOnly": [
+    "src/components/BlockContact.tsx:11",
+    "src/features/settings/Settings.tsx:110"
+  ],
+  "block.title": [
+    "src/components/BlockContact.tsx:11"
+  ],
+  "block.consequence": [
+    "src/components/BlockContact.tsx:11"
+  ],
+  "block.confirm": [
+    "src/components/BlockContact.tsx:11"
+  ],
+  "block.cancel": [
+    "src/components/BlockContact.tsx:11"
+  ],
+  "recipient.chooseContact": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "recipient.searchContacts": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "recipient.noContacts": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "recipient.previous": [
+    "src/components/ContactPicker.tsx:9",
+    "src/features/contacts/Contacts.tsx:43"
+  ],
+  "recipient.loading": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "recipient.page": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "recipient.next": [
+    "src/components/ContactPicker.tsx:9"
+  ],
+  "m_5237d3c9a824": [
+    "src/components/ui.tsx:5",
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_63dceb8800b2": [
+    "src/components/ui.tsx:5"
+  ],
+  "m_07ed6ccf6bf6": [
+    "src/components/ui.tsx:5"
+  ],
+  "m_c8df66c5fe3f": [
+    "src/components/ui.tsx:9"
+  ],
+  "m_220142ae1133": [
+    "src/components/ui.tsx:12"
+  ],
+  "m_d8b8392e2c54": [
+    "src/components/ui.tsx:13"
+  ],
+  "m_e555d4a69834": [
+    "src/components/ui.tsx:16"
+  ],
+  "date.yesterday": [
+    "src/components/ui.tsx:17"
+  ],
+  "auth.capabilityFailed": [
+    "src/features/auth/AuthScreen.tsx:28"
+  ],
+  "auth.rateLimited": [
+    "src/features/auth/AuthScreen.tsx:37"
+  ],
+  "m_2308880f1d48": [
+    "src/features/auth/AuthScreen.tsx:38"
+  ],
+  "auth.otpUnavailable": [
+    "src/features/auth/AuthScreen.tsx:40"
+  ],
+  "m_6dfab019c738": [
+    "src/features/auth/AuthScreen.tsx:41",
+    "src/features/auth/AuthScreen.tsx:51"
+  ],
+  "auth.challengeMismatch": [
+    "src/features/auth/AuthScreen.tsx:46"
+  ],
+  "m_eabcf287240f": [
+    "src/features/auth/AuthScreen.tsx:51"
+  ],
+  "otp.expired": [
+    "src/features/auth/AuthScreen.tsx:51",
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_f5d4aca4fea0": [
+    "src/features/auth/AuthScreen.tsx:60"
+  ],
+  "m_6a4edb96b7af": [
+    "src/features/auth/AuthScreen.tsx:61"
+  ],
+  "m_3089a190f833": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_2fa5ad0c7895": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_4004fb1ea294": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_d61deef148c8": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_5a61f6308c4e": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_b9d118683fa4": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_53fa83a8b7dd": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_05c17b1a5943": [
+    "src/features/auth/AuthScreen.tsx:64"
+  ],
+  "m_66e3b4fb48ce": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_7a074559ce6a": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_d599547e30aa": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_f3289e1349e7": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_f4365fdf0355": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_0fee4c6e23f4": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_acf532b25321": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_20f6b8de152d": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_b27c1dff468d": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_4cccbcfc9b91": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "m_f55b8f353290": [
+    "src/features/auth/AuthScreen.tsx:65"
+  ],
+  "auth.createdAddress": [
+    "src/features/auth/AuthScreen.tsx:66"
+  ],
+  "m_945bc168cf8b": [
+    "src/features/auth/AuthScreen.tsx:66"
+  ],
+  "m_b2d25b05be4c": [
+    "src/features/auth/AuthScreen.tsx:66"
+  ],
+  "auth.method": [
+    "src/features/auth/AuthScreen.tsx:67"
+  ],
+  "auth.passwordChoice": [
+    "src/features/auth/AuthScreen.tsx:67"
+  ],
+  "auth.codeChoice": [
+    "src/features/auth/AuthScreen.tsx:67"
+  ],
+  "m_219e4a1165b3": [
+    "src/features/auth/AuthScreen.tsx:68"
+  ],
+  "m_e7cf3ef4f17c": [
+    "src/features/auth/AuthScreen.tsx:70",
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "auth.channel": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "auth.sms": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "auth.voice": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_44ef8cbb15c4": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_3ee75029c70e": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "auth.expires": [
+    "src/features/auth/AuthScreen.tsx:70",
+    "src/features/settings/PhoneChange.tsx:79"
+  ],
+  "m_082dca1907be": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_b97457409ab5": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_cf5741b5c8c5": [
+    "src/features/auth/AuthScreen.tsx:70"
+  ],
+  "m_d8ee9c07d6ab": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "m_f6c1824c25aa": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "auth.consent": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "m_ede548996483": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "m_c385c3440806": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "auth.devConsent": [
+    "src/features/auth/AuthScreen.tsx:71"
+  ],
+  "auth.wait": [
+    "src/features/auth/AuthScreen.tsx:74"
+  ],
+  "m_4660a983366f": [
+    "src/features/auth/AuthScreen.tsx:74"
+  ],
+  "m_cdb89bc29abe": [
+    "src/features/auth/AuthScreen.tsx:74"
+  ],
+  "m_e77fea936d3e": [
+    "src/features/auth/AuthScreen.tsx:75"
+  ],
+  "m_135f20d28972": [
+    "src/features/auth/AuthScreen.tsx:75"
+  ],
+  "m_61e8d44ad423": [
+    "src/features/auth/AuthScreen.tsx:75"
+  ],
+  "m_75d0ccafb540": [
+    "src/features/auth/AuthScreen.tsx:79"
+  ],
+  "m_ba901e4e33e7": [
+    "src/features/auth/AuthScreen.tsx:79"
+  ],
+  "ivr.title": [
+    "src/features/auth/IvrRegistration.tsx:7"
+  ],
+  "ivr.steps": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.number": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.call": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.copy": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.handoff": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.after": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.unavailable": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.webAlternative": [
+    "src/features/auth/IvrRegistration.tsx:8"
+  ],
+  "ivr.noPassword": [
+    "src/features/auth/IvrRegistration.tsx:9"
+  ],
+  "ivr.continue": [
+    "src/features/auth/IvrRegistration.tsx:9",
+    "src/features/auth/IvrRegistration.tsx:9"
+  ],
+  "m_306f1bb20677": [
+    "src/features/auth/PhoneField.tsx:3"
+  ],
+  "m_8fd77b983305": [
+    "src/features/auth/PhoneField.tsx:4"
+  ],
+  "m_f8afb32cf079": [
+    "src/features/auth/PhoneField.tsx:4"
+  ],
+  "m_97dc0cec073b": [
+    "src/features/auth/PhoneField.tsx:4"
+  ],
+  "m_30b296cb1f81": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_08ca9a22267a": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_60d12948ae4a": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_1d0affb9cb1b": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_342326920d1d": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_6d5a1102fbe3": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_7c784d121b4c": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_ce5c3821dff9": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_0f6c5402c0ec": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_e37a25b1c286": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_922912017c64": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_18e957f33982": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_b962fc442538": [
+    "src/features/auth/contracts.ts:8"
+  ],
+  "m_3ccd9d6586ef": [
+    "src/features/auth/contracts.ts:9",
+    "src/lib/api.ts:171"
+  ],
+  "m_29856afb0fd3": [
+    "src/features/contacts/Contacts.tsx:37"
+  ],
+  "m_a02ce0df219d": [
+    "src/features/contacts/Contacts.tsx:37",
+    "src/features/contacts/Contacts.tsx:44"
+  ],
+  "m_f863aac2492e": [
+    "src/features/contacts/Contacts.tsx:38",
+    "src/features/contacts/Contacts.tsx:38"
+  ],
+  "m_9485587c4eb7": [
+    "src/features/contacts/Contacts.tsx:40"
+  ],
+  "m_83c30e3e4a7a": [
+    "src/features/contacts/Contacts.tsx:41"
+  ],
+  "m_20e708a4bf22": [
+    "src/features/contacts/Contacts.tsx:41"
+  ],
+  "m_6149e1f843d1": [
+    "src/features/contacts/Contacts.tsx:41"
+  ],
+  "m_d12d0581e38b": [
+    "src/features/contacts/Contacts.tsx:41"
+  ],
+  "contact.edit": [
+    "src/features/contacts/Contacts.tsx:42"
+  ],
+  "contact.delete": [
+    "src/features/contacts/Contacts.tsx:42"
+  ],
+  "m_ba3bbbe10d8b": [
+    "src/features/contacts/Contacts.tsx:43",
+    "src/features/mail/Workspace.tsx:78"
+  ],
+  "contacts.nextPage": [
+    "src/features/contacts/Contacts.tsx:43"
+  ],
+  "m_81cd065a45d6": [
+    "src/features/contacts/Contacts.tsx:44"
+  ],
+  "m_af70017e5181": [
+    "src/features/contacts/Contacts.tsx:46"
+  ],
+  "m_adcf53e9f7ec": [
+    "src/features/contacts/Contacts.tsx:47"
+  ],
+  "m_0e66373f45dc": [
+    "src/features/contacts/Contacts.tsx:48"
+  ],
+  "m_8a7525b1492f": [
+    "src/features/contacts/Contacts.tsx:49"
+  ],
+  "m_23e39291d613": [
+    "src/features/contacts/Contacts.tsx:50"
+  ],
+  "m_d24f121f4a4e": [
+    "src/features/contacts/Contacts.tsx:50"
+  ],
+  "m_b7d2d4ce2f03": [
+    "src/features/contacts/Contacts.tsx:52"
+  ],
+  "contact.remove": [
+    "src/features/contacts/Contacts.tsx:52"
+  ],
+  "m_f5fed436f9d6": [
+    "src/features/contacts/Contacts.tsx:52"
+  ],
+  "m_ae709ac4721f": [
+    "src/features/contacts/Contacts.tsx:52"
+  ],
+  "attachment.previewUnavailable": [
+    "src/features/mail/Attachment.tsx:15",
+    "src/features/mail/Attachment.tsx:15",
+    "src/features/mail/Attachment.tsx:15"
+  ],
+  "attachment.sizeStatus": [
+    "src/features/mail/Attachment.tsx:16"
+  ],
+  "attachment.preview": [
+    "src/features/mail/Attachment.tsx:16"
+  ],
+  "attachment.download": [
+    "src/features/mail/Attachment.tsx:16"
+  ],
+  "draft.filesFailed": [
+    "src/features/mail/Composer.tsx:30"
+  ],
+  "recipient.invalid": [
+    "src/features/mail/Composer.tsx:33",
+    "src/lib/recipients.ts:12"
+  ],
+  "recipient.saveContact": [
+    "src/features/mail/Composer.tsx:33",
+    "src/lib/recipients.ts:22"
+  ],
+  "m_3170f831dfce": [
+    "src/features/mail/Composer.tsx:36"
+  ],
+  "m_fb90df04bc35": [
+    "src/features/mail/Composer.tsx:39"
+  ],
+  "m_1b49d65529d3": [
+    "src/features/mail/Composer.tsx:39"
+  ],
+  "m_2338bfd2eb28": [
+    "src/features/mail/Composer.tsx:42"
+  ],
+  "recipient.duplicates": [
+    "src/features/mail/Composer.tsx:42"
+  ],
+  "m_6c65793474de": [
+    "src/features/mail/Composer.tsx:43"
+  ],
+  "m_0cb4683055af": [
+    "src/features/mail/Composer.tsx:44"
+  ],
+  "m_05700b2d3955": [
+    "src/features/mail/Composer.tsx:44"
+  ],
+  "m_95532b185a36": [
+    "src/features/mail/Composer.tsx:45"
+  ],
+  "m_8e750ae9568f": [
+    "src/features/mail/Composer.tsx:45"
+  ],
+  "m_a66452a4ae2b": [
+    "src/features/mail/Composer.tsx:45"
+  ],
+  "m_9fe9cad531b6": [
+    "src/features/mail/Composer.tsx:45"
+  ],
+  "m_ee66f3c3bb53": [
+    "src/features/mail/Composer.tsx:45"
+  ],
+  "m_fd17e8701a10": [
+    "src/features/mail/Composer.tsx:46"
+  ],
+  "m_82bfa59bb313": [
+    "src/features/mail/Composer.tsx:46"
+  ],
+  "m_d1a4a789e035": [
+    "src/features/mail/Composer.tsx:46"
+  ],
+  "m_dcfe227f3fd2": [
+    "src/features/mail/Composer.tsx:47",
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_11e2ac89346f": [
+    "src/features/mail/Composer.tsx:48"
+  ],
+  "draft.confirmDiscard": [
+    "src/features/mail/Composer.tsx:49"
+  ],
+  "m_44daf1c53942": [
+    "src/features/mail/Composer.tsx:49"
+  ],
+  "m_a424e33d9093": [
+    "src/features/mail/Composer.tsx:50",
+    "src/features/security/SecurityPanel.tsx:39"
+  ],
+  "draft.unlockToKeep": [
+    "src/features/mail/Composer.tsx:50",
+    "src/features/mail/Composer.tsx:50"
+  ],
+  "draft.passphrase": [
+    "src/features/mail/Composer.tsx:50",
+    "src/features/mail/Composer.tsx:50"
+  ],
+  "m_e9b748348752": [
+    "src/features/mail/Composer.tsx:50",
+    "src/features/security/SecurityPanel.tsx:43"
+  ],
+  "m_cb30147eec19": [
+    "src/features/mail/Composer.tsx:50",
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_74a41190a3b4": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_943d27ca2346": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_05c15dbbf8e4": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "forward.guidance": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_b8fe03a0dd00": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_13e9350417e7": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_7db20897053b": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_f4b06ef6d3c8": [
+    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/DeliveryStatus.tsx:28"
+  ],
+  "recipient.placeholder": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_b28037e918b6": [
+    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/DeliveryStatus.tsx:28"
+  ],
+  "m_19a1a17d8876": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_b1ca609e30bf": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_1ed1c884bc8b": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "recipient.country": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "recipient.restored": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_7b21b5665f36": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "recipient.confirmed": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_68971283841a": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_6907eb1593e0": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_2f77668a9dfb": [
+    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/Workspace.tsx:81",
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_88a36fe39f7f": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_4fc26d8184e5": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_05dc3a8cabe5": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_19adc7545da7": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_7a6a27ff4934": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_3028bf7d2dec": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_e2e55a8787c4": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_402276cb6545": [
+    "src/features/mail/Composer.tsx:51"
+  ],
+  "m_e17e7ee1fc26": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_402037a89448": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_c2fe550e0db2": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_aef2f06b9eeb": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_a38a8da13a53": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_39a674f10d23": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_53f5067dc8a5": [
+    "src/features/mail/Composer.tsx:52",
+    "src/features/mail/Workspace.tsx:76",
+    "src/features/mail/Workspace.tsx:81",
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "recipient.unknown": [
+    "src/features/mail/Composer.tsx:52",
+    "src/features/security/SecurityPanel.tsx:40",
+    "src/lib/recipients.ts:8"
+  ],
+  "m_216135294814": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_822710caea40": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_7ae037917869": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_83ab7dd67d79": [
+    "src/features/mail/Composer.tsx:52"
+  ],
+  "m_b90660de2fd8": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_d11c3bdd9ea4": [
+    "src/features/mail/Composer.tsx:53",
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_e65a12e5f783": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_b8ed5279e897": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_93a26b1eaff9": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_87fbe4fb79b1": [
+    "src/features/mail/Composer.tsx:53",
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_9c52a1c50a93": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_d82a0ba45ad0": [
+    "src/features/mail/Composer.tsx:53",
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_3de100106dd4": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_ab19478e0a43": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_d3c4cb271cd9": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_092c3e6c819b": [
+    "src/features/mail/Composer.tsx:53"
+  ],
+  "m_ebf12ef47cf5": [
+    "src/features/mail/DeliveryStatus.tsx:10",
+    "src/features/mail/Workspace.tsx:76"
+  ],
+  "m_81cca29e4ad7": [
+    "src/features/mail/DeliveryStatus.tsx:11",
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_ce6738564ea0": [
+    "src/features/mail/DeliveryStatus.tsx:12"
+  ],
+  "m_0bdd45fabeba": [
+    "src/features/mail/DeliveryStatus.tsx:13"
+  ],
+  "m_0edfaa01d91b": [
+    "src/features/mail/DeliveryStatus.tsx:14"
+  ],
+  "m_031a8f0f659d": [
+    "src/features/mail/DeliveryStatus.tsx:15"
+  ],
+  "m_aea4a04a8042": [
+    "src/features/mail/DeliveryStatus.tsx:16"
+  ],
+  "m_661ff40a07e0": [
+    "src/features/mail/DeliveryStatus.tsx:17"
+  ],
+  "m_f8fe6f863109": [
+    "src/features/mail/DeliveryStatus.tsx:18"
+  ],
+  "m_9be795ab4223": [
+    "src/features/mail/DeliveryStatus.tsx:19"
+  ],
+  "m_7589de4e3b9d": [
+    "src/features/mail/DeliveryStatus.tsx:20"
+  ],
+  "m_34c7d0ced574": [
+    "src/features/mail/DeliveryStatus.tsx:21"
+  ],
+  "m_617ddd6bfe90": [
+    "src/features/mail/DeliveryStatus.tsx:23",
+    "src/features/mail/Workspace.tsx:17"
+  ],
+  "m_28a740b3053f": [
+    "src/features/mail/DeliveryStatus.tsx:25"
+  ],
+  "m_02142dfac8bb": [
+    "src/features/mail/DeliveryStatus.tsx:26"
+  ],
+  "m_0576c78a2e61": [
+    "src/features/mail/DeliveryStatus.tsx:30"
+  ],
+  "m_9b9a8d05a7ec": [
+    "src/features/mail/DeliveryStatus.tsx:30"
+  ],
+  "m_6e55584aeca0": [
+    "src/features/mail/DeliveryStatus.tsx:30"
+  ],
+  "m_2c2846b7cc24": [
+    "src/features/mail/Outbox.tsx:16"
+  ],
+  "m_0606c5bac1ca": [
+    "src/features/mail/Outbox.tsx:17"
+  ],
+  "m_d931461a555b": [
+    "src/features/mail/Outbox.tsx:18"
+  ],
+  "m_dc576c0dd559": [
+    "src/features/mail/Outbox.tsx:20"
+  ],
+  "m_164557364fc9": [
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_22b35abf1959": [
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_c24006023488": [
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_49559a342853": [
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "m_ec963ffc911b": [
+    "src/features/mail/Outbox.tsx:21",
+    "src/features/settings/PhoneChange.tsx:84"
+  ],
+  "m_4234755d5171": [
+    "src/features/mail/Outbox.tsx:21"
+  ],
+  "cache.outdated": [
+    "src/features/mail/Workspace.tsx:29"
+  ],
+  "m_807359dbd5f3": [
+    "src/features/mail/Workspace.tsx:42"
+  ],
+  "m_94649be5d872": [
+    "src/features/mail/Workspace.tsx:45"
+  ],
+  "cache.saved": [
+    "src/features/mail/Workspace.tsx:48",
+    "src/features/mail/Workspace.tsx:57",
+    "src/features/mail/Workspace.tsx:58"
+  ],
+  "mail.confirmTrash": [
+    "src/features/mail/Workspace.tsx:60"
+  ],
+  "m_e978b00de465": [
+    "src/features/mail/Workspace.tsx:68"
+  ],
+  "m_903532e03397": [
+    "src/features/mail/Workspace.tsx:68"
+  ],
+  "m_ccca18175753": [
+    "src/features/mail/Workspace.tsx:68",
+    "src/features/mail/Workspace.tsx:75"
+  ],
+  "forward.subject": [
+    "src/features/mail/Workspace.tsx:71"
+  ],
+  "forward.body": [
+    "src/features/mail/Workspace.tsx:71"
+  ],
+  "m_4757ec62d71d": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_031e345cc157": [
+    "src/features/mail/Workspace.tsx:73",
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_4d596336dbae": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_0f525e6dfeb2": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_b7d2eeadf529": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_5539fa781ac0": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "m_baa7bfd402ff": [
+    "src/features/mail/Workspace.tsx:73"
+  ],
+  "mail.updatesWaiting": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "mail.newest": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "mail.previousPage": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_fdcd01fae2f3": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_1e4ea9db1ac6": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_4a227c66a0e8": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_bf3cda441288": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_e7f9b6491c29": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "m_258150cb3ee4": [
+    "src/features/mail/Workspace.tsx:74"
+  ],
+  "mail.hasAttachments": [
+    "src/features/mail/Workspace.tsx:75",
+    "src/features/mail/Workspace.tsx:76"
+  ],
+  "m_396c946f0c79": [
+    "src/features/mail/Workspace.tsx:75"
+  ],
+  "m_10ef19f37b01": [
+    "src/features/mail/Workspace.tsx:75"
+  ],
+  "m_268b37608588": [
+    "src/features/mail/Workspace.tsx:76"
+  ],
+  "m_e4b84cb7046f": [
+    "src/features/mail/Workspace.tsx:77"
+  ],
+  "draft.revision": [
+    "src/features/mail/Workspace.tsx:77"
+  ],
+  "m_ac8991ef0101": [
+    "src/features/mail/Workspace.tsx:78"
+  ],
+  "m_3ab08fe8568a": [
+    "src/features/mail/Workspace.tsx:78"
+  ],
+  "m_dde5ae89d4de": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_1453ccdf9be7": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "welcome.headline": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_a8c933f5357d": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_38d4752ec95f": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_0b93776166a9": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_b501899e0a68": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_d456fc756644": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_b6aebd2846a4": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_abe772881cdd": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_fbd780ed3fe3": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "m_12a7ad1d379e": [
+    "src/features/mail/Workspace.tsx:79"
+  ],
+  "mail.latestHistory": [
+    "src/features/mail/Workspace.tsx:80",
+    "src/features/mail/Workspace.tsx:81"
+  ],
+  "m_08b041935798": [
+    "src/features/mail/Workspace.tsx:80",
+    "src/features/mail/Workspace.tsx:81"
+  ],
+  "m_de55a2029e9c": [
+    "src/features/mail/Workspace.tsx:80"
+  ],
+  "m_f17671d83db0": [
+    "src/features/mail/Workspace.tsx:81"
+  ],
+  "m_e827ba9b6cd6": [
+    "src/features/mail/Workspace.tsx:81",
+    "src/features/mail/Workspace.tsx:83",
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_9bcfe35c7185": [
+    "src/features/mail/Workspace.tsx:81"
+  ],
+  "m_b4b4cc5c5002": [
+    "src/features/mail/Workspace.tsx:81"
+  ],
+  "m_5bc0aa08d678": [
+    "src/features/mail/Workspace.tsx:82",
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_65b52e8c6521": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_da8f3adfa78a": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_52c355aed8b8": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_b250a454877d": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_54b4e3f28dc5": [
+    "src/features/mail/Workspace.tsx:82",
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_b49c9b6cdf43": [
+    "src/features/mail/Workspace.tsx:82",
+    "src/features/mail/Workspace.tsx:91",
+    "src/features/settings/Settings.tsx:122"
+  ],
+  "m_dbebda550bfb": [
+    "src/features/mail/Workspace.tsx:82",
+    "src/features/mail/Workspace.tsx:91",
+    "src/features/mail/Workspace.tsx:92"
+  ],
+  "mail.folderBanner": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_f26b91a3798e": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_19fa8a500c51": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_78ad111269a5": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_e38ec11fedb3": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_911f182a7f15": [
+    "src/features/mail/Workspace.tsx:82"
+  ],
+  "m_16217c15a3cd": [
+    "src/features/mail/Workspace.tsx:83"
+  ],
+  "m_125e91cdcce6": [
+    "src/features/mail/Workspace.tsx:83"
+  ],
+  "m_aae578c4ac88": [
+    "src/features/mail/Workspace.tsx:83"
+  ],
+  "m_4656fe2c00e1": [
+    "src/features/mail/Workspace.tsx:85"
+  ],
+  "m_30f0dd08d39c": [
+    "src/features/mail/Workspace.tsx:85"
+  ],
+  "forward.action": [
+    "src/features/mail/Workspace.tsx:86"
+  ],
+  "m_c253f451bdd5": [
+    "src/features/mail/Workspace.tsx:87",
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_398c73eb02af": [
+    "src/features/mail/Workspace.tsx:87"
+  ],
+  "m_78f5975a5d70": [
+    "src/features/mail/Workspace.tsx:87"
+  ],
+  "m_9fdc0079202f": [
+    "src/features/mail/Workspace.tsx:89"
+  ],
+  "m_c77121287940": [
+    "src/features/mail/Workspace.tsx:89"
+  ],
+  "m_5f54f388aa90": [
+    "src/features/mail/Workspace.tsx:89"
+  ],
+  "m_73c533857ea9": [
+    "src/features/mail/Workspace.tsx:89"
+  ],
+  "m_cf25b47a2bd9": [
+    "src/features/mail/Workspace.tsx:90"
+  ],
+  "m_ea713ecd8537": [
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_a76e13b98392": [
+    "src/features/mail/Workspace.tsx:91"
+  ],
+  "m_44d05df8d610": [
+    "src/features/mail/Workspace.tsx:92"
+  ],
+  "m_dfae71cb7c5b": [
+    "src/features/security/SecurityPanel.tsx:24"
+  ],
+  "m_b18dbf1a3e77": [
+    "src/features/security/SecurityPanel.tsx:25"
+  ],
+  "m_4c5051e6dd06": [
+    "src/features/security/SecurityPanel.tsx:26"
+  ],
+  "m_157bef267021": [
+    "src/features/security/SecurityPanel.tsx:26"
+  ],
+  "m_1f6201a8b8a6": [
+    "src/features/security/SecurityPanel.tsx:27"
+  ],
+  "m_99d010aca44a": [
+    "src/features/security/SecurityPanel.tsx:27"
+  ],
+  "m_293c338cbf07": [
+    "src/features/security/SecurityPanel.tsx:28"
+  ],
+  "m_43874e419886": [
+    "src/features/security/SecurityPanel.tsx:28"
+  ],
+  "m_8436d7622770": [
+    "src/features/security/SecurityPanel.tsx:29"
+  ],
+  "m_7444f1421ea1": [
+    "src/features/security/SecurityPanel.tsx:29"
+  ],
+  "m_da73858b5836": [
+    "src/features/security/SecurityPanel.tsx:30"
+  ],
+  "m_b1108bf12654": [
+    "src/features/security/SecurityPanel.tsx:30"
+  ],
+  "m_f79462a3f18e": [
+    "src/features/security/SecurityPanel.tsx:30"
+  ],
+  "m_e1b3f3e81423": [
+    "src/features/security/SecurityPanel.tsx:30"
+  ],
+  "m_8adc53bcc85a": [
+    "src/features/security/SecurityPanel.tsx:31"
+  ],
+  "m_544334a22113": [
+    "src/features/security/SecurityPanel.tsx:32"
+  ],
+  "m_1852a665904d": [
+    "src/features/security/SecurityPanel.tsx:34"
+  ],
+  "m_ad5f9680d298": [
+    "src/features/security/SecurityPanel.tsx:35",
+    "src/features/security/SecurityPanel.tsx:36"
+  ],
+  "m_adc5a15b1687": [
+    "src/features/security/SecurityPanel.tsx:36"
+  ],
+  "m_7d9eb7acb13e": [
+    "src/features/security/SecurityPanel.tsx:36"
+  ],
+  "m_287613d8dc56": [
+    "src/features/security/SecurityPanel.tsx:37"
+  ],
+  "m_0de9881822b9": [
+    "src/features/security/SecurityPanel.tsx:39"
+  ],
+  "m_531c7b28abf2": [
+    "src/features/security/SecurityPanel.tsx:39"
+  ],
+  "m_c54ede3c793a": [
+    "src/features/security/SecurityPanel.tsx:39"
+  ],
+  "m_7e1b0d5641f2": [
+    "src/features/security/SecurityPanel.tsx:40"
+  ],
+  "m_c917591c8632": [
+    "src/features/security/SecurityPanel.tsx:40"
+  ],
+  "m_bb1c56615eb0": [
+    "src/features/security/SecurityPanel.tsx:40"
+  ],
+  "m_5a626267473b": [
+    "src/features/security/SecurityPanel.tsx:40"
+  ],
+  "m_7b0e55802cac": [
+    "src/features/security/SecurityPanel.tsx:40"
+  ],
+  "m_2ca8bacd2512": [
+    "src/features/security/SecurityPanel.tsx:41"
+  ],
+  "m_c68014504390": [
+    "src/features/security/SecurityPanel.tsx:41"
+  ],
+  "m_6e2495ba1a86": [
+    "src/features/security/SecurityPanel.tsx:42"
+  ],
+  "m_dcbce242a08f": [
+    "src/features/security/SecurityPanel.tsx:42"
+  ],
+  "m_e00bf38cd45e": [
+    "src/features/security/SecurityPanel.tsx:43"
+  ],
+  "m_5aecd754f8df": [
+    "src/features/security/SecurityPanel.tsx:43"
+  ],
+  "m_93ba3f249e56": [
+    "src/features/security/SecurityPanel.tsx:43"
+  ],
+  "m_0a729b90dd32": [
+    "src/features/security/SecurityPanel.tsx:43"
+  ],
+  "m_b20c54d0f810": [
+    "src/features/security/SecurityPanel.tsx:44"
+  ],
+  "m_1fb2f24dd23b": [
+    "src/features/security/SecurityPanel.tsx:45"
+  ],
+  "m_c59145aec40a": [
+    "src/features/security/SecurityPanel.tsx:46"
+  ],
+  "m_76ecf956bd04": [
+    "src/features/security/SecurityPanel.tsx:46"
+  ],
+  "m_5c9a61e05daa": [
+    "src/features/security/SecurityPanel.tsx:46"
+  ],
+  "m_7da69e0ebd60": [
+    "src/features/security/SecurityPanel.tsx:47"
+  ],
+  "m_4a5b1d2f888a": [
+    "src/features/security/SecurityPanel.tsx:48"
+  ],
+  "m_1ea482b41996": [
+    "src/features/security/SecurityPanel.tsx:48"
+  ],
+  "m_6dc281af1d59": [
+    "src/features/security/SecurityPanel.tsx:49"
+  ],
+  "m_220c74869166": [
+    "src/features/security/SecurityPanel.tsx:50"
+  ],
+  "m_d4ccc02f76c9": [
+    "src/features/security/SecurityPanel.tsx:50"
+  ],
+  "m_f197e0e64211": [
+    "src/features/security/SecurityPanel.tsx:51"
+  ],
+  "m_f819d2829e00": [
+    "src/features/security/SecurityPanel.tsx:51"
+  ],
+  "m_6ab2df4b7b97": [
+    "src/features/security/SecurityPanel.tsx:51"
+  ],
+  "m_06ebf9d47c38": [
+    "src/features/security/SecurityPanel.tsx:51"
+  ],
+  "identity.export": [
+    "src/features/security/SecurityPanel.tsx:51"
+  ],
+  "m_e4c060543034": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_ff2f7c43f858": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_313a4e352785": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_d6420500d445": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_b56b64b100c0": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_c2e8e6cf5611": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_eb0d1e3cda68": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_2081eafe3f04": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_0f14b1c54b30": [
+    "src/features/security/SecurityPanel.tsx:52"
+  ],
+  "m_6069f2199e17": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "m_23a8e19a22f5": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "identity.claim": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "m_0f6d225ef021": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "m_d0235c9dbf4c": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "m_bff8fee47e0b": [
+    "src/features/security/SecurityPanel.tsx:53"
+  ],
+  "m_3a1c1bf09c06": [
+    "src/features/security/SecurityPanel.tsx:54"
+  ],
+  "m_663e1a5bd52f": [
+    "src/features/security/SecurityPanel.tsx:54"
+  ],
+  "m_bf265061cffe": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_c252e230572f": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_4ae3e092e304": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_929dcffc93cc": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_4ff5b1edbe7d": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_5a0ef1a439f3": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_f95b96b6c762": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_c02ac84b48ce": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_ce80d7ddbeae": [
+    "src/features/security/SecurityPanel.tsx:55"
+  ],
+  "m_09384582edb6": [
+    "src/features/security/mime.ts:4"
+  ],
+  "m_23cd824f0036": [
+    "src/features/security/mime.ts:5"
+  ],
+  "m_29439ff5e830": [
+    "src/features/security/mime.ts:5"
+  ],
+  "m_432b6050881c": [
+    "src/features/security/mime.ts:8"
+  ],
+  "m_a7fc24f9d6f9": [
+    "src/features/security/mime.ts:13"
+  ],
+  "m_0b2a61961fab": [
+    "src/features/security/mime.ts:16"
+  ],
+  "m_ed91b4c54826": [
+    "src/features/security/mime.ts:17"
+  ],
+  "m_e66edb664f79": [
+    "src/features/security/mime.ts:18"
+  ],
+  "m_bd8c9b8760a5": [
+    "src/features/security/qr.ts:4"
+  ],
+  "m_60b2527aeb51": [
+    "src/features/security/service.ts:16"
+  ],
+  "m_30469b0c1301": [
+    "src/features/security/service.ts:16"
+  ],
+  "m_c9b41e9e5246": [
+    "src/features/security/service.ts:17"
+  ],
+  "m_dd252ca7d4d5": [
+    "src/features/security/service.ts:19"
+  ],
+  "m_7e7a4393b5f4": [
+    "src/features/security/service.ts:20"
+  ],
+  "m_1e529b3ed2df": [
+    "src/features/security/service.ts:23"
+  ],
+  "m_17bb484922e7": [
+    "src/features/security/service.ts:24"
+  ],
+  "m_ef74fba7f284": [
+    "src/features/security/service.ts:24"
+  ],
+  "m_c6e6e1c3e029": [
+    "src/features/security/service.ts:26"
+  ],
+  "m_58be4f12e30d": [
+    "src/features/security/service.ts:30"
+  ],
+  "m_4095b142328a": [
+    "src/features/security/service.ts:32"
+  ],
+  "m_e2b0eaabeab9": [
+    "src/features/security/service.ts:35"
+  ],
+  "m_392939cfeed7": [
+    "src/features/security/service.ts:37"
+  ],
+  "m_769f53433f49": [
+    "src/features/security/storage.ts:6"
+  ],
+  "m_1b254d1233dc": [
+    "src/features/security/storage.ts:7"
+  ],
+  "m_c3267410f5c3": [
+    "src/features/security/storage.ts:8"
+  ],
+  "m_d188abe42150": [
+    "src/features/security/storage.ts:9"
+  ],
+  "m_710cc69457d8": [
+    "src/features/security/storage.ts:14"
+  ],
+  "m_28f5a56b31d0": [
+    "src/features/security/storage.ts:15"
+  ],
+  "m_20f8a9332355": [
+    "src/features/security/storage.ts:17"
+  ],
+  "m_1f24074a45d1": [
+    "src/features/security/storage.ts:17"
+  ],
+  "m_2f186ad03992": [
+    "src/features/security/storage.ts:18"
+  ],
+  "m_7915e6489a0b": [
+    "src/features/settings/PhoneChange.tsx:40"
+  ],
+  "m_0aaa4753cbce": [
+    "src/features/settings/PhoneChange.tsx:49"
+  ],
+  "m_678a30001809": [
+    "src/features/settings/PhoneChange.tsx:50"
+  ],
+  "m_df7754bc9d11": [
+    "src/features/settings/PhoneChange.tsx:60"
+  ],
+  "phone.unknown": [
+    "src/features/settings/PhoneChange.tsx:67"
+  ],
+  "m_87d06b050f36": [
+    "src/features/settings/PhoneChange.tsx:72"
+  ],
+  "m_d36ac29635ba": [
+    "src/features/settings/PhoneChange.tsx:73"
+  ],
+  "m_7a191f5374c3": [
+    "src/features/settings/PhoneChange.tsx:74"
+  ],
+  "m_7b54e7f37801": [
+    "src/features/settings/PhoneChange.tsx:77"
+  ],
+  "m_4d8cefaf9e46": [
+    "src/features/settings/PhoneChange.tsx:78"
+  ],
+  "m_9828e8a0d8cb": [
+    "src/features/settings/PhoneChange.tsx:78"
+  ],
+  "m_24d8be871928": [
+    "src/features/settings/PhoneChange.tsx:78"
+  ],
+  "m_75c5c7fb0814": [
+    "src/features/settings/PhoneChange.tsx:79",
+    "src/features/settings/PhoneChange.tsx:79"
+  ],
+  "m_c2f3498e3c22": [
+    "src/features/settings/PhoneChange.tsx:80"
+  ],
+  "phone.oldProof": [
+    "src/features/settings/PhoneChange.tsx:81"
+  ],
+  "m_2f53e012357b": [
+    "src/features/settings/PhoneChange.tsx:81"
+  ],
+  "m_dccd15987d23": [
+    "src/features/settings/PhoneChange.tsx:81"
+  ],
+  "m_65b113c7a7b7": [
+    "src/features/settings/PhoneChange.tsx:81"
+  ],
+  "m_1cd4c9f1fc39": [
+    "src/features/settings/PhoneChange.tsx:82"
+  ],
+  "m_2faaa080c894": [
+    "src/features/settings/PhoneChange.tsx:84"
+  ],
+  "m_9ed5a0c62910": [
+    "src/features/settings/PhoneChange.tsx:84"
+  ],
+  "m_c02b14e43425": [
+    "src/features/settings/PhoneChange.tsx:85"
+  ],
+  "m_3490b97459d0": [
+    "src/features/settings/Settings.tsx:66"
+  ],
+  "m_52f68694a3c4": [
+    "src/features/settings/Settings.tsx:72"
+  ],
+  "m_5fe9f551fe99": [
+    "src/features/settings/Settings.tsx:78"
+  ],
+  "m_07c83598863b": [
+    "src/features/settings/Settings.tsx:78"
+  ],
+  "m_4605176093f2": [
+    "src/features/settings/Settings.tsx:82"
+  ],
+  "m_48353587e69e": [
+    "src/features/settings/Settings.tsx:82"
+  ],
+  "m_7c8147178c9e": [
+    "src/features/settings/Settings.tsx:82"
+  ],
+  "m_c0135b571d04": [
+    "src/features/settings/Settings.tsx:83"
+  ],
+  "m_d696a35bdd18": [
+    "src/features/settings/Settings.tsx:86"
+  ],
+  "m_a11551dd46eb": [
+    "src/features/settings/Settings.tsx:86"
+  ],
+  "m_2b7f6a84de91": [
+    "src/features/settings/Settings.tsx:88"
+  ],
+  "m_ea278dbc0644": [
+    "src/features/settings/Settings.tsx:89"
+  ],
+  "m_0c8209e72ec8": [
+    "src/features/settings/Settings.tsx:89"
+  ],
+  "m_50cbb5542838": [
+    "src/features/settings/Settings.tsx:90"
+  ],
+  "m_1bc6f23b5304": [
+    "src/features/settings/Settings.tsx:90"
+  ],
+  "m_882fb8edf90a": [
+    "src/features/settings/Settings.tsx:93"
+  ],
+  "m_bfefa6122687": [
+    "src/features/settings/Settings.tsx:93"
+  ],
+  "m_efe10c80ec8a": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_fde6cedbbfc5": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_0610fd9b8f71": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_b48483748297": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_fb1e6fa55327": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_24433c70eba5": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "m_e2d0a54968ea": [
+    "src/features/settings/Settings.tsx:94"
+  ],
+  "alias.delete": [
+    "src/features/settings/Settings.tsx:95"
+  ],
+  "m_515ec26af503": [
+    "src/features/settings/Settings.tsx:95"
+  ],
+  "m_fa57243dc0dd": [
+    "src/features/settings/Settings.tsx:95"
+  ],
+  "m_e7007a602b44": [
+    "src/features/settings/Settings.tsx:95"
+  ],
+  "m_e6551176a613": [
+    "src/features/settings/Settings.tsx:97"
+  ],
+  "m_22cdec079649": [
+    "src/features/settings/Settings.tsx:97"
+  ],
+  "m_eb318564e822": [
+    "src/features/settings/Settings.tsx:97"
+  ],
+  "m_7fbbfdb34dec": [
+    "src/features/settings/Settings.tsx:97"
+  ],
+  "m_8dfe03180f35": [
+    "src/features/settings/Settings.tsx:98"
+  ],
+  "m_d9edb412aefb": [
+    "src/features/settings/Settings.tsx:99"
+  ],
+  "m_b40413513157": [
+    "src/features/settings/Settings.tsx:99"
+  ],
+  "m_00409da9558b": [
+    "src/features/settings/Settings.tsx:100"
+  ],
+  "m_18984c14da5f": [
+    "src/features/settings/Settings.tsx:103"
+  ],
+  "m_815bf9b39e77": [
+    "src/features/settings/Settings.tsx:103"
+  ],
+  "notice.web": [
+    "src/features/settings/Settings.tsx:104"
+  ],
+  "notice.failed": [
+    "src/features/settings/Settings.tsx:104"
+  ],
+  "notice.help": [
+    "src/features/settings/Settings.tsx:104"
+  ],
+  "m_40c64c631ca5": [
+    "src/features/settings/Settings.tsx:104"
+  ],
+  "m_6cb9ba442c1c": [
+    "src/features/settings/Settings.tsx:105"
+  ],
+  "m_7f8f3d1c344a": [
+    "src/features/settings/Settings.tsx:106"
+  ],
+  "m_bb8c08ae4108": [
+    "src/features/settings/Settings.tsx:106"
+  ],
+  "m_e98336f0e109": [
+    "src/features/settings/Settings.tsx:107"
+  ],
+  "m_0b02e211e1d0": [
+    "src/features/settings/Settings.tsx:110"
+  ],
+  "block.unknown": [
+    "src/features/settings/Settings.tsx:112"
+  ],
+  "m_929094a5e437": [
+    "src/features/settings/Settings.tsx:112"
+  ],
+  "m_712da63171e0": [
+    "src/features/settings/Settings.tsx:112"
+  ],
+  "m_2df91f4bbc9f": [
+    "src/features/settings/Settings.tsx:113"
+  ],
+  "m_38b9d88c1fdb": [
+    "src/features/settings/Settings.tsx:116"
+  ],
+  "m_d1616c1e5d54": [
+    "src/features/settings/Settings.tsx:116"
+  ],
+  "m_20b8cae494de": [
+    "src/features/settings/Settings.tsx:117"
+  ],
+  "m_c527572b026b": [
+    "src/features/settings/Settings.tsx:117"
+  ],
+  "m_baaadaf28413": [
+    "src/features/settings/Settings.tsx:117"
+  ],
+  "m_d6cb9743ee2c": [
+    "src/features/settings/Settings.tsx:118"
+  ],
+  "m_20cf43479ae6": [
+    "src/features/settings/Settings.tsx:121"
+  ],
+  "m_6be6f081c79c": [
+    "src/features/settings/Settings.tsx:121"
+  ],
+  "m_e3df282ac02a": [
+    "src/features/settings/Settings.tsx:122"
+  ],
+  "m_fcce4df26b97": [
+    "src/features/settings/Settings.tsx:123"
+  ],
+  "m_38ec3eb0503e": [
+    "src/lib/api.ts:54"
+  ],
+  "m_3a68dd70492d": [
+    "src/lib/api.ts:95"
+  ],
+  "m_e7a50435a351": [
+    "src/lib/api.ts:109"
+  ],
+  "m_bda9b6414f47": [
+    "src/lib/api.ts:115"
+  ],
+  "m_ae324f85c7f7": [
+    "src/lib/api.ts:115"
+  ],
+  "m_0f0d3f99e098": [
+    "src/lib/api.ts:122"
+  ],
+  "m_a4686a0fadab": [
+    "src/lib/api.ts:136"
+  ],
+  "m_eec1a3564cf0": [
+    "src/lib/api.ts:145"
+  ],
+  "m_993f9dce71ab": [
+    "src/lib/api.ts:146"
+  ],
+  "m_d09f9843f42d": [
+    "src/lib/api.ts:147"
+  ],
+  "m_621dbe614022": [
+    "src/lib/outbox.ts:19"
+  ],
+  "m_583719c35b27": [
+    "src/lib/outbox.ts:28"
+  ],
+  "m_ca0e0988cbd1": [
+    "src/lib/outbox.ts:40"
+  ],
+  "m_ba177b340868": [
+    "src/lib/outbox.ts:41"
+  ],
+  "m_72a8745b5557": [
+    "src/lib/outbox.ts:43"
+  ],
+  "m_6ab364fc189f": [
+    "src/lib/outbox.ts:51"
+  ],
+  "m_91cfa6edb36f": [
+    "src/lib/outbox.ts:57"
+  ],
+  "m_9b9760b596c9": [
+    "src/lib/outbox.ts:60"
+  ],
+  "m_501eacab289b": [
+    "src/lib/outbox.ts:66"
+  ],
+  "m_405a8d5892fb": [
+    "src/lib/outbox.ts:69"
+  ],
+  "m_7bb0c42591c2": [
+    "src/lib/outbox.ts:69"
+  ],
+  "m_c0c4e972e4c0": [
+    "src/lib/outbox.ts:74"
+  ],
+  "m_43795a9fb43d": [
+    "src/lib/outbox.ts:86"
+  ],
+  "recipient.unavailable": [
+    "src/lib/recipients.ts:14"
+  ],
+  "m_45290156794f": [
+    "src/lib/storage.ts:7"
+  ],
+  "m_83074a50d5fd": [
+    "src/lib/storage.ts:20"
+  ],
+  "m_b6f06f4b8be0": [
+    "src/lib/storage.ts:40"
+  ],
+  "m_a0d61ed804c7": [
+    "src/lib/storage.ts:50"
+  ],
+  "m_da951135e2ea": [
+    "src/lib/storage.ts:68"
+  ],
+  "m_905dc3cb6ffc": [
+    "src/lib/sync.ts:7"
+  ],
+  "m_891b852484f8": [
+    "src/lib/sync.ts:15"
+  ],
+  "m_6bb1b411ba6a": [
+    "src/lib/sync.ts:23"
+  ],
+  "m_89e69db23a10": [
+    "src/lib/sync.ts:24"
+  ],
+  "m_1b399533a706": [
+    "src/lib/sync.ts:47"
+  ],
+  "m_2c965806e0a9": [
+    "src/lib/uploads.ts:12"
+  ],
+  "m_9837940e1dac": [
+    "src/lib/uploads.ts:21"
+  ],
+  "m_bfbd93e85246": [
+    "src/lib/uploads.ts:29"
+  ],
+  "m_5a9dc956f8d9": [
+    "src/lib/uploads.ts:32"
+  ],
+  "m_2947e0bf7629": [
+    "src/lib/uploads.ts:39"
+  ],
+  "m_5bb0db020aca": [
+    "src/main.tsx:9"
+  ],
+  "m_72cd95faa00e": [
+    "src/vendor/e2ee/client.ts:135"
+  ],
+  "m_7fa4e10e2332": [
+    "src/vendor/e2ee/client.ts:140"
+  ],
+  "m_97ffb835b16c": [
+    "src/vendor/e2ee/client.ts:219"
+  ],
+  "m_276701fed016": [
+    "src/vendor/e2ee/client.ts:224"
+  ],
+  "m_df821a1cedfb": [
+    "src/vendor/e2ee/client.ts:234"
+  ],
+  "m_2b9444bbf986": [
+    "src/vendor/e2ee/client.ts:239"
+  ],
+  "m_f80ba71c85f8": [
+    "src/vendor/e2ee/client.ts:290"
+  ],
+  "m_1e87e020a1c1": [
+    "src/vendor/e2ee/client.ts:352"
+  ],
+  "m_f96a39a107f5": [
+    "src/vendor/e2ee/client.ts:357"
+  ],
+  "m_86b0fcbe66d7": [
+    "src/vendor/e2ee/client.ts:370"
+  ],
+  "m_8ae5c383f4c7": [
+    "src/vendor/e2ee/client.ts:400"
+  ],
+  "m_b1c961522347": [
+    "src/vendor/e2ee/client.ts:407"
+  ],
+  "m_3a788cc27f9d": [
+    "src/vendor/e2ee/client.ts:428"
+  ],
+  "security.verifyRecipient": [
+    "src/vendor/e2ee/client.ts:474"
+  ],
+  "security.changedRecipient": [
+    "src/vendor/e2ee/client.ts:476"
+  ],
+  "security.missingRecipientKey": [
+    "src/vendor/e2ee/client.ts:488"
+  ],
+  "m_72321713ee6b": [
+    "src/vendor/e2ee/client.ts:514"
+  ],
+  "m_65a871b6cabd": [
+    "src/vendor/e2ee/client.ts:528"
+  ],
+  "m_8f5400e5a6df": [
+    "src/vendor/e2ee/client.ts:531"
+  ],
+  "m_a149e865e849": [
+    "src/vendor/e2ee/client.ts:538"
+  ],
+  "m_35e380d17aa9": [
+    "src/vendor/e2ee/client.ts:574"
+  ],
+  "m_f7a7823707de": [
+    "src/vendor/e2ee/client.ts:577"
+  ],
+  "m_bd5d8591493b": [
+    "src/vendor/e2ee/client.ts:587"
+  ],
+  "m_5d4790a47fdc": [
+    "src/vendor/e2ee/client.ts:594"
+  ],
+  "m_e611d79b31d6": [
+    "src/vendor/e2ee/client.ts:600"
+  ],
+  "m_6cb53a63fe56": [
+    "src/vendor/e2ee/durable.ts:19"
+  ],
+  "m_8def54410bd2": [
+    "src/vendor/e2ee/durable.ts:22"
+  ],
+  "m_8dd66460f405": [
+    "src/vendor/e2ee/durable.ts:24"
+  ],
+  "m_1bde58d03e0e": [
+    "src/vendor/e2ee/durable.ts:27"
+  ],
+  "m_8e4c1735a067": [
+    "src/vendor/e2ee/durable.ts:29"
+  ],
+  "m_ae637a557f6c": [
+    "src/vendor/e2ee/durable.ts:30"
+  ],
+  "m_e01c668a3d07": [
+    "src/vendor/e2ee/durable.ts:31"
+  ],
+  "m_94d807063104": [
+    "src/vendor/e2ee/durable.ts:32"
+  ],
+  "m_71a4e03ea99f": [
+    "src/vendor/e2ee/durable.ts:33"
+  ],
+  "m_15117e2a8d6c": [
+    "src/vendor/e2ee/durable.ts:48"
+  ],
+  "m_6ef8fe29676c": [
+    "src/vendor/e2ee/durable.ts:49"
+  ],
+  "m_f84bb271ad7b": [
+    "src/vendor/e2ee/durable.ts:51"
+  ],
+  "m_f5133460a6a7": [
+    "src/vendor/e2ee/durable.ts:53"
+  ],
+  "m_f775b10a2875": [
+    "src/vendor/e2ee/index.ts:18"
+  ],
+  "m_1b763da66a4a": [
+    "src/vendor/e2ee/index.ts:23"
+  ],
+  "m_7add7eb9f4bd": [
+    "src/vendor/e2ee/index.ts:42"
+  ],
+  "m_41ce88208b93": [
+    "src/vendor/e2ee/index.ts:45"
+  ],
+  "m_1a8eac24d624": [
+    "src/vendor/e2ee/index.ts:48"
+  ],
+  "m_20a63927d85d": [
+    "src/vendor/e2ee/index.ts:75"
+  ],
+  "m_3ac40139d9ef": [
+    "src/vendor/e2ee/index.ts:78"
+  ],
+  "m_162f27e57d9f": [
+    "src/vendor/e2ee/index.ts:89"
+  ],
+  "m_9e9e157afc42": [
+    "src/vendor/e2ee/index.ts:91"
+  ],
+  "m_9634cb130789": [
+    "src/vendor/e2ee/index.ts:102"
+  ],
+  "m_64fd08c1d3cd": [
+    "src/vendor/e2ee/index.ts:122"
+  ],
+  "m_b2e8160aa59e": [
+    "src/vendor/e2ee/index.ts:129"
+  ],
+  "m_c8867028d212": [
+    "src/vendor/e2ee/index.ts:199"
+  ],
+  "m_e73cca8a5a36": [
+    "src/vendor/e2ee/index.ts:222",
+    "src/vendor/e2ee/index.ts:229"
+  ],
+  "m_39f5629f1006": [
+    "src/vendor/e2ee/index.ts:225"
+  ],
+  "m_778c1493cdb1": [
+    "src/vendor/e2ee/index.ts:233"
+  ],
+  "m_44c0239e68b5": [
+    "src/vendor/e2ee/index.ts:255",
+    "src/vendor/e2ee/index.ts:256"
+  ],
+  "m_c6230d2ae3e0": [
+    "src/vendor/e2ee/index.ts:271"
+  ],
+  "m_2d43bb46eec3": [
+    "src/vendor/e2ee/index.ts:274"
+  ],
+  "m_05d50d230401": [
+    "src/vendor/e2ee/index.ts:283",
+    "src/vendor/e2ee/index.ts:288"
+  ],
+  "m_5927941049d9": [
+    "src/vendor/e2ee/index.ts:290"
+  ],
+  "m_9a72cc93e635": [
+    "src/vendor/e2ee/index.ts:295",
+    "src/vendor/e2ee/index.ts:297"
+  ],
+  "m_3edee56e867b": [
+    "src/vendor/e2ee/index.ts:303"
+  ],
+  "m_8563fec6b2ed": [
+    "src/vendor/e2ee/index.ts:310"
+  ],
+  "m_e43d9b8e0c41": [
+    "src/vendor/e2ee/index.ts:313"
+  ],
+  "m_e87ff049be44": [
+    "src/vendor/e2ee/index.ts:326"
+  ],
+  "m_b5db2706b851": [
+    "src/vendor/e2ee/index.ts:365"
+  ],
+  "m_f53de4d4c462": [
+    "src/vendor/e2ee/index.ts:386"
+  ],
+  "m_795c2863abf6": [
+    "src/vendor/e2ee/index.ts:389"
+  ],
+  "m_2e8d85271a12": [
+    "src/vendor/e2ee/index.ts:414"
+  ]
+}

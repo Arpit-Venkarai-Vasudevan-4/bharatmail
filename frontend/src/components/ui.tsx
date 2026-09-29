@@ -1,0 +1,17 @@
+import {localizeSystemMessage,t,formatDateTime,formatNumber,getLocale} from '../i18n';
+import { useEffect, useRef, useId, type ReactNode } from 'react';
+import LanguageSelector from '../i18n/LanguageSelector';
+import { X, Flower2 } from 'lucide-react';
+export function Brand({small=false}:{small?:boolean}) {return <a className={`brand ${small?'small':''}`} href="/" aria-label={t("m_5237d3c9a824")}><img src="/favicon.svg" alt=""/><span>{t("m_63dceb8800b2")}<span className="brand-light">{t("m_07ed6ccf6bf6")}</span><i/></span></a>}
+export function Modal({title,children,onClose,wide=false,busy=false}:{title:string;children:ReactNode;onClose:()=>void;wide?:boolean;busy?:boolean}) {
+ const ref=useRef<HTMLDialogElement>(null); const titleId=useId();
+ useEffect(()=>{const old=document.activeElement as HTMLElement;const d=ref.current;d?.showModal();return()=>{d?.close();old?.focus()}},[]);
+ return <dialog ref={ref} aria-labelledby={titleId} className={`modal ${wide?'wide':''}`} onKeyDown={e=>{if(e.key!=='Tab')return;const controls=[...e.currentTarget.querySelectorAll<HTMLElement>('button,input,select,textarea,a[href],[tabindex]')].filter(el=>el.tabIndex>=0&&!el.matches(':disabled')&&el.getClientRects().length>0&&getComputedStyle(el).visibility!=='hidden');const first=controls[0],last=controls.at(-1);if(!first){e.preventDefault();return}if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}} aria-busy={busy} onCancel={e=>{e.preventDefault();if(!busy)onClose()}}><div className="modal-heading"><h2 id={titleId}>{title}</h2><button className="icon-button" aria-label={t("m_c8df66c5fe3f")} disabled={busy} onClick={onClose}><X size={21}/></button></div><div className="dialog-language"><LanguageSelector/></div>{children}</dialog>
+}
+export function Empty({title,children}:{title:string;children?:ReactNode}) {return <div className="empty-state"><span className="empty-flower"><Flower2 size={42} strokeWidth={1}/></span><h2>{title}</h2><div>{children}</div></div>}
+export function Loading({label=t("m_220142ae1133")}:{label?:string}) {return <div className="loading" role="status"><span className="spinner"/>{label}</div>}
+export function ErrorNotice({message,retry}:{message:string;retry?:()=>void}) {return <div className="error-notice" role="alert"><span>{localizeSystemMessage(message)}</span>{retry&&<button onClick={retry}>{t("m_d8b8392e2c54")}</button>}</div>}
+export function initials(value:string){return value.replace(/@.*/, '').split(/[ .+_-]/).filter(Boolean).map(x=>x[0]).join('').slice(0,2).toUpperCase()||'P'}
+export function newId(){return globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`}
+export function readableAddress(value:string){return value || t("m_e555d4a69834")}
+export function formatDate(value:string,short=false){const d=new Date(value);if(!Number.isFinite(+d))return '';const now=new Date(),day=new Date(now.getFullYear(),now.getMonth(),now.getDate()),yesterday=new Date(day);yesterday.setDate(day.getDate()-1);if(d>=day)return new Intl.DateTimeFormat(getLocale(),{hour:'numeric',minute:'2-digit'}).format(d);if(d>=yesterday)return t('date.yesterday');return new Intl.DateTimeFormat(getLocale(),short?{month:'short',day:'numeric',...(d.getFullYear()!==now.getFullYear()?{year:'numeric'}:{})}:{dateStyle:'medium',timeStyle:'short'}).format(d)}

@@ -1,0 +1,59 @@
+{
+  "name": "phonemail-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8080",
+    "dev:portal": "vite --host 127.0.0.1 --port 8081 --mode portal",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build && node scripts/service-worker.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 8080",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:live": "node scripts/test-account-live.mjs",
+    "test:live:modules": "node --import tsx scripts/test-frontend-live.ts",
+    "test:ui:packaged": "node scripts/test-packaged-ui.mjs",
+    "test:ui:e2ee": "node scripts/test-ui-live.mjs",
+    "test:ui:offline": "node scripts/test-offline-ui.mjs",
+    "test:ui:multitab": "node scripts/test-multitab-ui.mjs",
+    "test:ui:responsive": "node scripts/test-responsive-ui.mjs",
+    "test:ui:ambiguous-draft": "node scripts/test-ambiguous-draft-ui.mjs",
+    "profile": "node scripts/profile-server.mjs",
+    "check": "npm run typecheck && npm run i18n:check && npm test && npm run build",
+    "measure": "node scripts/bundle-budget.mjs",
+    "measure:browser": "node scripts/measure-browser.mjs",
+    "i18n:check": "node scripts/extract-catalog.mjs",
+    "test:ui:threads": "node scripts/test-thread-contract-ui.mjs",
+    "test:ui:blueprint": "node scripts/test-blueprint-ui.mjs",
+    "test:ui:otp": "API_ORIGIN=http://localhost:13000 node scripts/test-otp-continuity-ui.mjs",
+    "test:ui:locale": "node scripts/test-locale-errors-ui.mjs",
+    "test:ui:local-acceptance": "API_ORIGIN=http://localhost:13000 node scripts/test-local-acceptance-ui.mjs",
+    "test:ui:web-recovery": "API_ORIGIN=http://localhost:13000 node scripts/test-web-recovery-ui.mjs",
+    "test:ui:layout-resume": "API_ORIGIN=http://localhost:13000 node scripts/test-layout-resume-ui.mjs",
+    "test:ui:auth-final": "API_ORIGIN=http://localhost:13000 node scripts/test-auth-final-ui.mjs",
+    "test:ui:auth-edges": "API_ORIGIN=http://localhost:13000 node scripts/test-auth-edge-ui.mjs"
+  },
+  "dependencies": {
+    "html5-qrcode": "2.3.8",
+    "lucide-react": "0.468.0",
+    "openpgp": "6.3.2",
+    "qrcode": "1.5.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "^1.51.0",
+    "@types/node": "24.19.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+import {t,formatDateTime,formatNumber,getLocale} from '../../i18n';
+import { countries } from './contracts';
+export default function PhoneField({phone,country,onPhone,onCountry,disabled=false,label=t("m_306f1bb20677"),id='phone',describedBy,invalid=false}:{phone:string;country:string;onPhone:(value:string)=>void;onCountry:(value:string)=>void;disabled?:boolean;label?:string;id?:string;describedBy?:string;invalid?:boolean}) {
+  return <div className="phone-field"><label htmlFor={`${id}-country`}>{t("m_8fd77b983305")}</label><select id={`${id}-country`} value={country} onChange={e=>onCountry(e.target.value)} disabled={disabled}>{countries().map(([value,label])=><option key={value} value={value}>{label}</option>)}</select><label htmlFor={id}>{label}</label><input aria-describedby={describedBy} aria-invalid={invalid} id={id} type="tel" inputMode="tel" autoComplete="tel" value={phone} onChange={e=>onPhone(e.target.value)} required disabled={disabled} placeholder={country ? t("m_f8afb32cf079") : t("m_97dc0cec073b")} maxLength={40}/></div>;
+}

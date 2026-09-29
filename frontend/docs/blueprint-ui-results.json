@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-29T04:15:37.337Z",
+  "origin": "http://localhost:8080",
+  "passed": [
+    "Saved contact beyond the first 100 is found by bounded server search; only its public address is editable",
+    "Phone confirmation uses backend canonical address; To/CC edits clear confirmation and invalid input cannot send; mounted compose switches Tamil without changing user content",
+    "Blocking uses a contact plus consequence confirmation; backend block/unblock succeeds; dialog Escape restores keyboard focus and ordinary UI has no UUIDs",
+    "Contacts and encryption panels switch at runtime; Tamil mobile views fit; no UUID labels, fields or ordinary text",
+    "126 real messages page in bounded 30-row mailbox and 60-message history; refresh preserves older mailbox page; measured paging/heap",
+    "A slow first message read cannot replace the second selected message",
+    "A delayed older-history response cannot append messages into a different conversation",
+    "A delayed mailbox cursor page cannot replace the current search results",
+    "Forward sends an attributed ordinary message to an explicitly selected recipient, with no implicit recipient or attachment transfer",
+    "Opted-in browser new-mail announcement follows actual backend mailbox changes and uses a status live region",
+    "Unified Home stays primary and mobile drawer exposes Inbox and Sent as usable secondary folders"
+  ],
+  "a11y": [
+    {
+      "view": "authentication",
+      "violations": []
+    },
+    {
+      "view": "mail navigation",
+      "violations": []
+    },
+    {
+      "view": "compose validation",
+      "violations": []
+    },
+    {
+      "view": "block confirmation dialog",
+      "violations": []
+    },
+    {
+      "view": "settings",
+      "violations": []
+    },
+    {
+      "view": "Contacts",
+      "violations": []
+    },
+    {
+      "view": "Privacy & keys",
+      "violations": []
+    }
+  ],
+  "engines": [
+    {
+      "name": "Firefox",
+      "status": "unavailable",
+      "reason": "browserType.launch: Executable doesn't exist at /Users/shubhamchahar/Library/Caches/ms-playwright/firefox-1543/firefox/Nightly.app/Contents/MacOS/firefox ╔════════════════════════════════════════════════════════════╗ ║ Looks like Playwright was just installed or updated.       ║"
+    },
+    {
+      "name": "WebKit",
+      "status": "unavailable",
+      "reason": "browserType.launch: Executable doesn't exist at /Users/shubhamchahar/Library/Caches/ms-playwright/webkit-2359/pw_run.sh ╔════════════════════════════════════════════════════════════╗ ║ Looks like Playwright was just installed or updated.       ║"
+    }
+  ],
+  "metrics": {
+    "heapBefore": 17321252,
+    "pageMs": [
+      62,
+      63,
+      50,
+      51
+    ],
+    "heapAfter": 17456104
+  },
+  "conditions": "Installed headless Chrome on local development build; 1280x1000 and 390x844; real backend fixtures. No physical-device or human screen-reader claim."
+}

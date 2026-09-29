@@ -1,0 +1,28 @@
+{
+  "started": "2026-09-29T05:51:44.781Z",
+  "finished": "2026-09-29T05:51:46.616Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome, headless, emulated 390×844 touch viewport, production Docker frontend, live backend",
+  "passed": [
+    "Mailbox counts render once with the correct plural; live delivery and pending-send statuses use readable labels",
+    "390×844 touch browser: Home, compose, sent conversation history, and settings fit without horizontal overflow or browser errors",
+    "Mobile primary compose, navigation/settings, and filter touch targets are at least 44 CSS pixels"
+  ],
+  "measuredTouchTargets": {
+    "menu": 44,
+    "settings": 44,
+    "filters": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "reply": [
+      44,
+      44
+    ]
+  },
+  "limitations": [
+    "This Chromium run has touch input and a mobile viewport but no physical iOS/Android on-screen keyboard; keyboard resize, predictive bar, and device-specific viewport behavior remain unverified."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "started": "2026-09-29T09:00:56.668Z",
+  "origin": "http://localhost:18082",
+  "checks": [
+    "All seven folder empty states plus Home, search and Contacts render their distinct guidance/actions",
+    "Ordinary Back/reload warns for unsaved text; cancel retains it, and saved draft survives actual Back and reload",
+    "Encrypted key lock hides text without discarding it; close and reload cannot silently lose unsaved work; unlock/save/reload restores ciphertext draft",
+    "Lost committed phone-change response recovers the identical request/idempotency key using pre-change cookies; immutable identity retained",
+    "Profile, alias and preference transport failures stay next to the affected section; edits remain, failed toggle rolls back and retry succeeds",
+    "Contact backend validation error preserves input and is associated with address field",
+    "151-contact fixture uses bounded 50-row pages and server search beyond the first 100; short paging/heap sample recorded"
+  ],
+  "a11y": [
+    {
+      "view": "locked unsaved composer",
+      "violations": []
+    },
+    {
+      "view": "profile save failure",
+      "violations": []
+    },
+    {
+      "view": "preference failure",
+      "violations": []
+    },
+    {
+      "view": "contact validation failure",
+      "violations": []
+    },
+    {
+      "view": "bounded contacts",
+      "violations": []
+    }
+  ],
+  "metrics": {
+    "contactsHeapBefore": 17539960,
+    "contactsHeapAfter": 17095616,
+    "contactsPageMs": [
+      74,
+      40,
+      64
+    ]
+  },
+  "limitations": [
+    "Disposable isolated local backend and development frontend. Fault routes abort actual requests/responses; successful operations are not mocked. Unsaved-memory navigation checks cancel the browser warning; leaving despite the warning can discard unsaved work. Key lock invokes the actual service while compose owns focus. Contact paging is a short unthrottled sample with other acceptance running, not a soak."
+  ],
+  "finished": "2026-09-29T09:01:24.242Z"
+}

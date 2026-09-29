@@ -1,0 +1,23 @@
+{
+  "started": "2026-09-29T08:58:24.438Z",
+  "finished": "2026-09-29T08:58:34.886Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome; production frontend; two isolated E2EE contexts plus one group recipient context; real UI actions",
+  "passed": [
+    "Two isolated browser contexts sign in and enroll keys through rendered controls",
+    "Unverified recipient send is refused with a localized neutral error containing no internal account ID",
+    "Both UIs require explicit independent fingerprint comparison before pinning",
+    "Encrypted backup downloads and imports through the UI after locking",
+    "Encrypted draft saves, closes, restores recipients/text/files and sends from UI",
+    "A received sender/signature mismatch is rejected without displaying plaintext or attachments; the genuine response still decrypts",
+    "Receiver and sender Sent decrypt through UI; downloaded encrypted attachment bytes match",
+    "A held decrypt response released after the UI locks keys cannot reveal plaintext; unlock and a new decrypt recover normally",
+    "Encrypted reply sends through the rendered locked-recipient composer",
+    "Rendered initial compose creates one two-recipient group; both recipients receive it and thread recipients stay locked",
+    "Interrupted encrypted send survives reload; invalid durable signature is rejected; retry reuses identical ciphertext and idempotency key once",
+    "A committed encrypted send with its response dropped survives reload and reconciles by the same identity/ciphertext without another send or duplicate",
+    "Key rotation rejects the stale fingerprint in the recipient UI and requires explicit trust of the new key",
+    "Sender Sent and recipient historical mail remain readable after rotation and new-key trust",
+    "Revoked identity is rejected by the recipient UI"
+  ]
+}

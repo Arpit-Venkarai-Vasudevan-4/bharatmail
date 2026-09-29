@@ -1,0 +1,14 @@
+{
+  "started": "2026-09-29T09:00:56.722Z",
+  "finished": "2026-09-29T09:00:59.270Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome, one local account and one recipient, live backend",
+  "passed": [
+    "A real initial draft POST committed with HTTP 201 but its browser response was dropped, producing the ambiguous state.",
+    "The composer kept the original recipient, subject, and body while listing the server draft.",
+    "The user explicitly linked the matching server draft, saved against its revision, and the backend still contained exactly one matching draft."
+  ],
+  "limitations": [
+    "The test deliberately drops the response after the local server commit; it does not assert content similarity can identify authorship. The UI labels it as a possible draft and asks the user to review it."
+  ]
+}

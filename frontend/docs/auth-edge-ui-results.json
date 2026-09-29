@@ -1,0 +1,28 @@
+{
+  "started": "2026-09-29T08:56:51.431Z",
+  "live": [
+    "Portal password signup validates 6 characters/72 UTF-8 bytes, shows actual address/password guidance, revokes and resets",
+    "Legitimate challenge reaches real attempt limit in rendered UI; change number clears proof; unconfigured voice delivery is absent"
+  ],
+  "controlled": [
+    "Unavailable password request retains input and retry signs in to the live backend"
+  ],
+  "layout": [
+    "Registration/IVR at 200% content zoom and 360px/150% text fits; no secrets in screenshots",
+    "Keyboard selects authentication method and traverses country, phone, channel, request in order"
+  ],
+  "a11y": [
+    {
+      "view": "registration content zoom 200%",
+      "violations": []
+    },
+    {
+      "view": "registration phone text 150%",
+      "violations": []
+    }
+  ],
+  "limitations": [
+    "Content zoom/text/viewport emulation, not physical devices or human screen readers. Browser unavailable/rate failures are controlled faults."
+  ],
+  "finished": "2026-09-29T08:56:53.489Z"
+}

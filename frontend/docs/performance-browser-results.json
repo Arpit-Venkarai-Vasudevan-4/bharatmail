@@ -1,0 +1,146 @@
+{
+  "started": "2026-09-29T08:59:49.361Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome, headless, production Docker frontend",
+  "browserVersion": "154.0.8037.58",
+  "host": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v24.21.0",
+    "cpu": "Apple M5",
+    "memoryBytes": 17179869184
+  },
+  "conditions": {
+    "routeReadiness": "heading visible, main mailbox API complete, updating indicator cleared",
+    "navigationRoute": "unauthenticated sign-in",
+    "latencyMs": 150,
+    "downloadBytesPerSecond": 204800,
+    "uploadBytesPerSecond": 51200,
+    "cpuThrottlingRate": 4,
+    "viewport": "390x844",
+    "coldRuns": 3,
+    "warmRuns": 3
+  },
+  "samples": [
+    {
+      "kind": "cold",
+      "run": 1,
+      "domContentLoadedMs": 871,
+      "loadEventMs": 871,
+      "responseStartMs": 1,
+      "fcpMs": 920,
+      "lcpMs": 1332,
+      "transferBytes": 107788,
+      "longTasks": []
+    },
+    {
+      "kind": "warm",
+      "run": 1,
+      "domContentLoadedMs": 19,
+      "loadEventMs": 20,
+      "responseStartMs": 2,
+      "fcpMs": 44,
+      "lcpMs": 388,
+      "transferBytes": 1178,
+      "longTasks": []
+    },
+    {
+      "kind": "cold",
+      "run": 2,
+      "domContentLoadedMs": 871,
+      "loadEventMs": 872,
+      "responseStartMs": 1,
+      "fcpMs": 924,
+      "lcpMs": 1288,
+      "transferBytes": 107788,
+      "longTasks": []
+    },
+    {
+      "kind": "warm",
+      "run": 2,
+      "domContentLoadedMs": 20,
+      "loadEventMs": 20,
+      "responseStartMs": 2,
+      "fcpMs": 52,
+      "lcpMs": 400,
+      "transferBytes": 1178,
+      "longTasks": []
+    },
+    {
+      "kind": "cold",
+      "run": 3,
+      "domContentLoadedMs": 871,
+      "loadEventMs": 872,
+      "responseStartMs": 1,
+      "fcpMs": 924,
+      "lcpMs": 1308,
+      "transferBytes": 107788,
+      "longTasks": []
+    },
+    {
+      "kind": "warm",
+      "run": 3,
+      "domContentLoadedMs": 18,
+      "loadEventMs": 20,
+      "responseStartMs": 2,
+      "fcpMs": 40,
+      "lcpMs": 404,
+      "transferBytes": 1178,
+      "longTasks": []
+    }
+  ],
+  "routes": [
+    {
+      "destination": "Drafts",
+      "elapsedMs": 405
+    },
+    {
+      "destination": "Favorites",
+      "elapsedMs": 409
+    },
+    {
+      "destination": "Home",
+      "elapsedMs": 414
+    }
+  ],
+  "encryption": {
+    "elapsedMs": 974,
+    "longTasks": [
+      {
+        "start": 3098.2999999970198,
+        "duration": 108
+      },
+      {
+        "start": 3217.2000000029802,
+        "duration": 74
+      },
+      {
+        "start": 3657.2999999970198,
+        "duration": 66
+      }
+    ],
+    "longTaskCount": 3,
+    "longTaskTotalMs": 248,
+    "longTaskMaxMs": 108
+  },
+  "offlineStartup": {
+    "elapsedMs": 74,
+    "domContentLoadedMs": 19,
+    "loadEventMs": 20,
+    "responseStartMs": 2,
+    "fcpMs": 60,
+    "lcpMs": 60,
+    "transferBytes": 0,
+    "longTasks": [],
+    "restoredWorkspace": true,
+    "serviceWorkerControlled": true,
+    "offlineStorageOptedIn": true
+  },
+  "limitations": [
+    "CDP shapes the measured Chrome page target, including its API requests; separate service-worker target traffic and aggregate traffic from other devices are not guaranteed to share this limit. It does not emulate a real mobile radio or packet loss.",
+    "CPU rate 4 is Chrome software throttling on this host, not a physical low-end phone. Cold runs use fresh browser contexts with HTTP cache disabled; warm runs reload in the same context after one visit.",
+    "Offline startup is a single service-worker-controlled reload after explicit offline-storage opt-in; the separate offline acceptance suite verifies cached mail and local-draft restoration.",
+    "Resource transferBytes counts page-observed resource entries and excludes the navigation document and service-worker precache requests. LCP and resource timing are lab observations, not field percentiles. The API and UI acceptance backend remain local."
+  ],
+  "finished": "2026-09-29T09:00:01.542Z"
+}

@@ -1,0 +1,21 @@
+{
+  "started": "2026-09-29T08:58:24.438Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome, production Docker frontend, live backend, one isolated context with second tab",
+  "passed": [
+    "Offline storage opt-in persists; a real multi-page live snapshot is interrupted after page one and remains staged",
+    "After online visit, actual offline browser reload restores opted-in mail and the unsent local draft",
+    "IndexedDB quota rejection gives an explicit failed-save state, never a Saved confirmation",
+    "IndexedDB denial blocks offline persistence and never produces a Saved confirmation",
+    "Reconnection resumes the actual paged snapshot and keeps the unsent local draft outside server reconciliation",
+    "Live backend CURSOR_EXPIRED (410) triggers a fresh snapshot without deleting the unsent local draft",
+    "Switching accounts in the same browser does not expose another account’s cached messages or drafts"
+  ],
+  "contactsForPagedSnapshot": 105,
+  "expiredCursorResponse": 410,
+  "limitations": [
+    "QuotaExceededError and SecurityError were injected at the real IndexedDB write/open boundary; hardware quota exhaustion and browser-specific storage policy dialogs were not induced.",
+    "Retention watermark was set by a test-only SQL update for this generated account row, then reset to zero; no production account or backend source was changed."
+  ],
+  "finished": "2026-09-29T08:59:11.711Z"
+}

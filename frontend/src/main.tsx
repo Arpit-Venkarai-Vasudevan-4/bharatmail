@@ -1,0 +1,10 @@
+import {restoreLocale} from './i18n';
+import {t,formatDateTime,formatNumber,getLocale} from './i18n';
+import React,{Suspense} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from './App';
+import './styles.css';
+const Portal=React.lazy(()=>import('./features/auth/AuthScreen'));
+void restoreLocale();
+createRoot(document.getElementById('root')!).render(<React.StrictMode>{import.meta.env.VITE_PORTAL==='true'?<Suspense fallback={<p>{t("m_5bb0db020aca")}</p>}><Portal portal onAuthenticated={()=>{}}/></Suspense>:<App/>}</React.StrictMode>);
+if(import.meta.env.PROD && 'serviceWorker' in navigator && import.meta.env.VITE_PORTAL!=='true')window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{/* Static offline support is optional. */})});

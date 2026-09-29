@@ -1,0 +1,102 @@
+{
+  "started": "2026-09-29T08:57:33.083Z",
+  "finished": "2026-09-29T08:57:33.970Z",
+  "api": "http://localhost:3000",
+  "passed": [
+    "Backend live and ready",
+    "Cookie authentication preserves account identity",
+    "Cookie session refresh with CSRF",
+    "Registration portal bearer lifecycle leaves existing cookie session intact",
+    "Portal temporary session revoked",
+    "All six preferences and partial updates retain unrelated settings",
+    "Profile name and language",
+    "Explicit native app presence",
+    "Alias creation",
+    "Alias deactivation",
+    "Alias activation",
+    "Deleted alias remains reserved",
+    "Contact create, edit, search",
+    "Block account",
+    "Confirmation does not disclose block relationships",
+    "Unblock and confirm recipient",
+    "Resumable first chunk",
+    "Offset reconciliation, conflict, and resumed completion",
+    "Authorized range download",
+    "Unauthorized download rejected",
+    "Profile picture upload and assignment",
+    "Owner profile picture bytes can be displayed",
+    "Profile picture removal",
+    "Draft update and stale revision conflict",
+    "Atomic draft send with ready attachment",
+    "Committed send operation lookup",
+    "Exact retry after commitment does not duplicate",
+    "Recipient conversation and content",
+    "Recipient attachment access after commitment",
+    "Read/favorite, archive/spam/trash, restore",
+    "Server search",
+    "Local reply and one-reply conflict",
+    "Group follow-up reaches CC with server-controlled recipients",
+    "Existing group rejects caller-changed To and CC",
+    "Owner security notices",
+    "Mark security notice read",
+    "Paged snapshot watermark and incremental change feed",
+    "Contact deletion"
+  ],
+  "capabilities": {
+    "auth": {
+      "password": true,
+      "otp": true,
+      "cookieSessions": true,
+      "bearerSessions": true
+    },
+    "messaging": {
+      "attachments": true,
+      "idempotency": true,
+      "pagination": true,
+      "sync": true,
+      "e2ee": true,
+      "folders": [
+        "inbox",
+        "sent",
+        "drafts",
+        "trash",
+        "archive",
+        "spam"
+      ]
+    },
+    "integrations": {
+      "sms": {
+        "supported": true,
+        "configured": false,
+        "simulated": true,
+        "liveTested": false
+      },
+      "ivr": {
+        "supported": true,
+        "configured": false,
+        "simulated": true,
+        "liveTested": false
+      },
+      "provider": "local_mock",
+      "smtp": false,
+      "mailTransport": {
+        "mode": "disabled",
+        "configured": false,
+        "listenerEnabled": false,
+        "listenerAvailable": false,
+        "relayReachable": null
+      },
+      "localMailHarness": false,
+      "outboxWorker": true
+    },
+    "limits": {
+      "pageSizeMax": 100,
+      "recipientMax": 50,
+      "messageBodyMax": 100000
+    }
+  },
+  "limitations": [
+    "Disposable local accounts only; no real SMS, IVR, or SMTP provider traffic.",
+    "Phone-change proofs require an available local OTP sink or delivered provider code; this run does not bypass OTP."
+  ]
+}

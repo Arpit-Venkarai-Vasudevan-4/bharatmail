@@ -1,0 +1,25 @@
+# Overlay the existing stack WITHOUT restarting or rebuilding backend/database.
+# docker compose -f ../frontrepo/docker-compose.yml -f compose.frontend.yml build web-client web-portal
+# docker compose -f ../frontrepo/docker-compose.yml -f compose.frontend.yml up -d --no-deps web-client web-portal
+services:
+  web-client:
+    build:
+      context: ../frontend
+      args:
+        VITE_IVR_PUBLIC_NUMBER: ${VITE_IVR_PUBLIC_NUMBER:-}
+        VITE_IVR_REGISTRATION_ENABLED: ${VITE_IVR_REGISTRATION_ENABLED:-false}
+        VITE_IVR_SIGNIN_READY: ${VITE_IVR_SIGNIN_READY:-false}
+        VITE_TERMS_URL: ${VITE_TERMS_URL:-}
+        VITE_PRIVACY_URL: ${VITE_PRIVACY_URL:-}
+        VITE_TERMS_VERSION: ${VITE_TERMS_VERSION:-}
+  web-portal:
+    build:
+      context: ../frontend
+      args:
+        VITE_PORTAL: "true"
+        VITE_IVR_PUBLIC_NUMBER: ${VITE_IVR_PUBLIC_NUMBER:-}
+        VITE_IVR_REGISTRATION_ENABLED: ${VITE_IVR_REGISTRATION_ENABLED:-false}
+        VITE_IVR_SIGNIN_READY: ${VITE_IVR_SIGNIN_READY:-false}
+        VITE_TERMS_URL: ${VITE_TERMS_URL:-}
+        VITE_PRIVACY_URL: ${VITE_PRIVACY_URL:-}
+        VITE_TERMS_VERSION: ${VITE_TERMS_VERSION:-}

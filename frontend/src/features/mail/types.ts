@@ -1,0 +1,5 @@
+export interface User {id:string; phone?:string;email?:string;primaryEmail?:string;displayName?:string;language?:string;[key:string]:unknown}
+export interface Message {id:string;conversationId:string;senderEmail:string;subject:string;body:string;snippet?:string;attachmentCount?:number;createdAt:string;isRead:boolean;isFavorite:boolean;contentFormat?:'plain'|'openpgp-v1';folder?:string;inReplyToId?:string|null;recipients?:{email:string;role:'to'|'cc'}[];attachments?:{id:string;filename:string;mimeType:string;sizeBytes:number;scanStatus?:string}[];entityType?:'draft'|'message';lifecycleStatus?:string}
+export interface Conversation {id:string;kind:'direct'|'group';members:string[];unreadCount:number;hasAttachments?:boolean;lastMessage:Message|null;updatedAt:string}
+export interface Draft {id:string;subject:string;body:string;to:string[];cc:string[];revision:number;contentFormat?:string}
+export interface ComposeSeed {key:string;to?:string[];cc?:string[];subject?:string;body?:string;conversationId?:string;replyToId?:string;draft?:Draft;encrypted?:boolean;locked?:boolean;localRecovery?:boolean;atomicThread?:boolean;needsReconcile?:boolean;forwarded?:boolean}

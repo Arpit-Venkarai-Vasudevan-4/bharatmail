@@ -1,0 +1,12 @@
+{
+  "started": "2026-09-29T08:58:24.439Z",
+  "finished": "2026-09-29T08:58:27.389Z",
+  "origin": "http://localhost:18080",
+  "passed": [
+    "Direct original-sender follow-up attaches a file through atomic draft send, retains conversation/roles, reaches recipients, and consumes the draft",
+    "Group with To/Cc original-sender follow-up attaches a file through atomic draft send, retains conversation/roles, reaches recipients, and consumes the draft"
+  ],
+  "limitations": [
+    "The supported path is a new message by the original sender after the initial message and its roles have been loaded. Replies, other senders, and incomplete history use the server-routed message endpoint, which has no attachment field."
+  ]
+}

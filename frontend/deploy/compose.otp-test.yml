@@ -1,0 +1,36 @@
+# Disposable acceptance environment. Never targets the owner's backend or database.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: phonemail
+      POSTGRES_PASSWORD: isolated-local-acceptance
+      POSTGRES_DB: phonemail_acceptance
+    tmpfs: /var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U phonemail -d phonemail_acceptance]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+  backend:
+    image: frontrepo-backend
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      DATABASE_URL: postgres://phonemail:isolated-local-acceptance@db:5432/phonemail_acceptance
+      JWT_SECRET: isolated-local-acceptance-secret-only-2026
+      OTP_PROVIDER: local
+      OTP_TEST_SINK_DIR: /otp-sink
+      OTP_TTL_MS: 180000
+      OTP_RESEND_COOLDOWN_MS: 1000
+      OTP_MAX_ATTEMPTS: 3
+      MAIL_TRANSPORT_MODE: disabled
+      SMTP_INBOUND_ENABLED: 'false'
+      OUTBOX_WORKER_ENABLED: 'false'
+      CORS_ORIGIN: http://localhost:18082
+    ports: ['127.0.0.1:13000:3000']
+    volumes: ['/tmp/phonemail-blueprint-otp:/otp-sink']
+    tmpfs: ['/app/storage', '/app/local-mail']
+    depends_on:
+      db:
+        condition: service_healthy

@@ -1,0 +1,15 @@
+{
+  "started": "2026-09-29T09:00:56.718Z",
+  "finished": "2026-09-29T09:00:58.743Z",
+  "origin": "http://localhost:18080",
+  "browser": "Installed Chrome, production Docker frontend, one same-origin profile with two tabs",
+  "refreshRequestsObserved": 1,
+  "sendRequestsObserved": 1,
+  "passed": [
+    "Two browser tabs receive simultaneous 401 responses, share one live session renewal, and both recover their settings requests",
+    "Two tabs race one durable send identity under Web Locks; operation lookup confirms one live backend message"
+  ],
+  "limitations": [
+    "Concurrent operations were issued in two tabs of one Chromium profile, so they shared cookies, IndexedDB, BroadcastChannel, and Web Locks. Other browsers do not share those browser primitives."
+  ]
+}
