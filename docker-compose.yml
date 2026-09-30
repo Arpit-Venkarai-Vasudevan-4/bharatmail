@@ -29,6 +29,7 @@ services:
       DATABASE_URL: postgres://${POSTGRES_USER:-phonemail}:${POSTGRES_PASSWORD:-phonemail}@db:5432/${POSTGRES_DB:-phonemail}
       MAIL_DOMAIN: ${MAIL_DOMAIN:-phonemail.com}
       AUTH_METHOD: ${AUTH_METHOD:-password}
+      OTP_PROVIDER: ${OTP_PROVIDER:-local}
       JWT_SECRET: ${JWT_SECRET:-local-development-secret-change-this-32chars}
       NODE_ENV: ${NODE_ENV:-development}
       PHONE_DEFAULT_COUNTRY: ${PHONE_DEFAULT_COUNTRY:-}
