@@ -1,53 +1,53 @@
 {
-  "measuredAt": "2026-09-29T08:57:45.743Z",
-  "criticalRouteGzipBytes": 95018,
+  "measuredAt": "2026-09-30T12:55:51.447Z",
+  "criticalRouteGzipBytes": 96089,
   "budgetBytes": 204800,
   "pass": true,
   "chunks": [
     {
-      "file": "AuthScreen-BBhlnASZ.js",
+      "file": "AuthScreen-Mps3Xe-6.js",
       "bytes": 12856,
-      "gzip": 4744
+      "gzip": 4745
     },
     {
-      "file": "Composer-DSh3Rs6v.js",
-      "bytes": 20688,
-      "gzip": 7152
+      "file": "Composer-DcpqHv-e.js",
+      "bytes": 22946,
+      "gzip": 7814
     },
     {
-      "file": "Contacts-C6D2jpNN.js",
+      "file": "Contacts-DN3Du7al.js",
       "bytes": 5783,
-      "gzip": 2244
+      "gzip": 2242
     },
     {
-      "file": "Introduction-DliAz2qD.js",
+      "file": "Introduction-Ba1ArYph.js",
       "bytes": 3338,
-      "gzip": 1341
+      "gzip": 1337
     },
     {
-      "file": "Outbox-CoZKDxog.js",
+      "file": "Outbox-CY1POijk.js",
       "bytes": 1758,
-      "gzip": 883
+      "gzip": 881
     },
     {
-      "file": "PhoneChange-BGHPcqJX.js",
+      "file": "PhoneChange-8AOCQ0tz.js",
       "bytes": 5287,
       "gzip": 2261
     },
     {
-      "file": "PhoneField-DnhzXD2I.js",
+      "file": "PhoneField-Dvbv1Ke_.js",
       "bytes": 757,
-      "gzip": 466
+      "gzip": 465
     },
     {
-      "file": "SecurityPanel-xesWHx8E.js",
+      "file": "SecurityPanel-3bnGtaMl.js",
       "bytes": 12864,
       "gzip": 4331
     },
     {
-      "file": "Settings-BPILiAVP.js",
+      "file": "Settings-Dec-CXQU.js",
       "bytes": 11748,
-      "gzip": 4142
+      "gzip": 4138
     },
     {
       "file": "browser-gVwQTYG-.js",
@@ -55,14 +55,14 @@
       "gzip": 10133
     },
     {
-      "file": "check-Ckk9IjN0.js",
+      "file": "check-ycfSVGEl.js",
       "bytes": 287,
-      "gzip": 242
+      "gzip": 241
     },
     {
-      "file": "client-72juCoSv.js",
+      "file": "client-CzsahWPf.js",
       "bytes": 15514,
-      "gzip": 4762
+      "gzip": 4761
     },
     {
       "file": "encryption-zbCyw9JV.js",
@@ -70,29 +70,29 @@
       "gzip": 131914
     },
     {
-      "file": "index-D-k2_Enj.js",
+      "file": "index-YAjwWq0G.js",
       "bytes": 9527,
-      "gzip": 3666
+      "gzip": 3665
     },
     {
-      "file": "main-CwgSWx6q.js",
-      "bytes": 66148,
-      "gzip": 19958
+      "file": "main-Bcz1yrGY.js",
+      "bytes": 68570,
+      "gzip": 20661
     },
     {
-      "file": "outbox-Lj7uUE4l.js",
+      "file": "outbox-Dj1Y7psC.js",
       "bytes": 3671,
-      "gzip": 1759
+      "gzip": 1760
     },
     {
-      "file": "portal-B-xChSY3.js",
+      "file": "portal-DAT2kTxR.js",
       "bytes": 299,
-      "gzip": 243
+      "gzip": 245
     },
     {
-      "file": "qr-C5-Ce0yO.js",
+      "file": "qr-fO7KOSzf.js",
       "bytes": 1172,
-      "gzip": 631
+      "gzip": 632
     },
     {
       "file": "runtime-Cpj98o6Y.js",
@@ -105,34 +105,34 @@
       "gzip": 99934
     },
     {
-      "file": "service-DuS9QFI2.js",
+      "file": "service-IE-t7Bcu.js",
       "bytes": 10675,
-      "gzip": 4285
+      "gzip": 4287
     },
     {
-      "file": "smartphone-DQ-R8Oai.js",
+      "file": "smartphone-CvOg5ZRh.js",
       "bytes": 365,
       "gzip": 287
     },
     {
-      "file": "styles-CDnwgsQR.js",
-      "bytes": 208385,
-      "gzip": 74880
+      "file": "styles-NN7tIx_4.js",
+      "bytes": 209681,
+      "gzip": 75248
     },
     {
-      "file": "sync-BucwD8kZ.js",
+      "file": "sync-D3jO9UlC.js",
       "bytes": 2675,
       "gzip": 1230
     },
     {
-      "file": "ta.draft-Bkx1zrHG.js",
-      "bytes": 128272,
-      "gzip": 29669
+      "file": "ta.draft-C1cQ8lcX.js",
+      "bytes": 131596,
+      "gzip": 30690
     },
     {
-      "file": "uploads-B2T15LzT.js",
+      "file": "uploads-lQjm9gj_.js",
       "bytes": 1955,
-      "gzip": 1036
+      "gzip": 1035
     }
   ]
 }

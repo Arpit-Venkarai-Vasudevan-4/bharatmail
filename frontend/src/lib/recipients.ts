@@ -22,3 +22,17 @@ export async function contactIdentity(address:string):Promise<Recipient>{
  if(!match)throw new Error(t('recipient.saveContact'));
  return {userId:match.userId,address:match.address,name:match.label};
 }
+
+export type RecipientCountries = Record<string,string>;
+export const splitRecipients=(text:string)=>text.split(/[,;\n]/).map(value=>value.trim()).filter(Boolean);
+export const recipientCountryKey=(role:'to'|'cc',address:string,occurrence=0)=>`${role}:${address}${occurrence?'#'+occurrence:''}`;
+export const needsRecipientCountry=(address:string)=>!address.includes('@')&&!/^(\+|00)/.test(address);
+export function recipientEntries(to:string,cc:string,countries:RecipientCountries){
+ return (['to','cc'] as const).flatMap(role=>{const seen=new Map<string,number>();return splitRecipients(role==='to'?to:cc).map(address=>{const occurrence=seen.get(address)||0;seen.set(address,occurrence+1);const key=recipientCountryKey(role,address,occurrence);return {role,address,occurrence,key,country:needsRecipientCountry(address)?countries[key]||'':''}})});
+}
+export async function confirmRecipientEntries(entries:ReturnType<typeof recipientEntries>,resolve=resolveRecipient){
+ if(entries.length>50||new Set(entries.map(e=>`${e.address.toLowerCase()}|${e.country}`)).size!==entries.length)throw new Error(t('recipient.duplicates'));
+ const results=await Promise.all(entries.map(e=>resolve(e.address,e.country)));
+ if(new Set(results.map(r=>r.address?.toLowerCase())).size!==results.length)throw new Error(t('recipient.duplicates'));
+ return {to:results.filter((_,i)=>entries[i].role==='to'),cc:results.filter((_,i)=>entries[i].role==='cc')};
+}

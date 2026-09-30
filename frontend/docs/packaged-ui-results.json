@@ -1,7 +1,7 @@
 {
-  "started": "2026-09-29T08:58:23.470Z",
-  "clientOrigin": "http://localhost:18080",
-  "portalOrigin": "http://localhost:18081",
+  "started": "2026-09-30T12:57:41.593Z",
+  "clientOrigin": "http://localhost:8080",
+  "portalOrigin": "http://localhost:8081",
   "checks": [
     "Container API proxy login returned cookie session and CSRF cookies",
     "Settings profile update succeeded through cookie/CSRF proxy",
@@ -14,22 +14,22 @@
     "/index.html",
     "/favicon.svg",
     "/fonts.css",
-    "/assets/main-DInBGqkI.js",
-    "/assets/styles-CDnwgsQR.js",
-    "/assets/styles-a8q9RO1X.css",
+    "/assets/main-BJ7E0EPY.js",
+    "/assets/styles-NN7tIx_4.js",
+    "/assets/styles-DF0RLTVq.css",
     "/assets/runtime-Cpj98o6Y.js",
-    "/assets/AuthScreen-BXPSJR-1.js",
+    "/assets/AuthScreen-CLOizZGb.js",
     "/assets/AuthScreen-BtcyaTtT.css",
-    "/assets/PhoneField-DnhzXD2I.js",
-    "/assets/Composer-D91moezW.js",
-    "/assets/check-CYrZyAgQ.js"
+    "/assets/PhoneField-Dvbv1Ke_.js",
+    "/assets/Composer-BAi2O6pb.js",
+    "/assets/check-NUdmpbRB.js"
   ],
   "portalRegistrationEnabled": false,
   "ivrDefault": "unavailable; no dial link",
   "interfaceLanguage": "English only",
   "pageErrors": [],
   "limitations": [
-    "Local Docker proxy test used an isolated temporary Nginx template that forwarded Origin as the configured local service alias because the running backend allow-list contains ports 8080 and 8081, while test containers used 18080 and 18081. Production Nginx configuration was separately checked for headers and routing."
+    "Existing Docker Compose frontend configuration on ports 8080/8081 with the owner backend; no Origin forwarding override."
   ],
-  "finished": "2026-09-29T08:58:24.289Z"
+  "finished": "2026-09-30T12:57:42.416Z"
 }

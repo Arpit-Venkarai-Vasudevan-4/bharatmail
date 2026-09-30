@@ -1,7 +1,7 @@
 {
-  "started": "2026-09-29T09:00:56.722Z",
-  "finished": "2026-09-29T09:00:59.270Z",
-  "origin": "http://localhost:18080",
+  "started": "2026-09-30T03:11:20.678Z",
+  "finished": "2026-09-30T03:11:22.855Z",
+  "origin": "http://localhost:8080",
   "browser": "Installed Chrome, one local account and one recipient, live backend",
   "passed": [
     "A real initial draft POST committed with HTTP 201 but its browser response was dropped, producing the ambiguous state.",

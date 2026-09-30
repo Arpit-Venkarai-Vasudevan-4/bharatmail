@@ -560,7 +560,7 @@
   ],
   "m_ba3bbbe10d8b": [
     "src/features/contacts/Contacts.tsx:43",
-    "src/features/mail/Workspace.tsx:78"
+    "src/features/mail/Workspace.tsx:104"
   ],
   "contacts.nextPage": [
     "src/features/contacts/Contacts.tsx:43"
@@ -613,269 +613,284 @@
     "src/features/mail/Attachment.tsx:16"
   ],
   "draft.filesFailed": [
-    "src/features/mail/Composer.tsx:30"
+    "src/features/mail/Composer.tsx:34"
   ],
   "recipient.invalid": [
-    "src/features/mail/Composer.tsx:33",
+    "src/features/mail/Composer.tsx:37",
     "src/lib/recipients.ts:12"
   ],
   "recipient.saveContact": [
-    "src/features/mail/Composer.tsx:33",
+    "src/features/mail/Composer.tsx:37",
     "src/lib/recipients.ts:22"
   ],
   "m_3170f831dfce": [
-    "src/features/mail/Composer.tsx:36"
+    "src/features/mail/Composer.tsx:40"
+  ],
+  "composer.recipientsChanged": [
+    "src/features/mail/Composer.tsx:49"
   ],
   "m_fb90df04bc35": [
-    "src/features/mail/Composer.tsx:39"
+    "src/features/mail/Composer.tsx:56"
   ],
   "m_1b49d65529d3": [
-    "src/features/mail/Composer.tsx:39"
+    "src/features/mail/Composer.tsx:57"
   ],
   "m_2338bfd2eb28": [
-    "src/features/mail/Composer.tsx:42"
-  ],
-  "recipient.duplicates": [
-    "src/features/mail/Composer.tsx:42"
+    "src/features/mail/Composer.tsx:79"
   ],
   "m_6c65793474de": [
-    "src/features/mail/Composer.tsx:43"
+    "src/features/mail/Composer.tsx:80"
   ],
   "m_0cb4683055af": [
-    "src/features/mail/Composer.tsx:44"
+    "src/features/mail/Composer.tsx:81"
   ],
   "m_05700b2d3955": [
-    "src/features/mail/Composer.tsx:44"
+    "src/features/mail/Composer.tsx:81"
   ],
   "m_95532b185a36": [
-    "src/features/mail/Composer.tsx:45"
+    "src/features/mail/Composer.tsx:82"
   ],
   "m_8e750ae9568f": [
-    "src/features/mail/Composer.tsx:45"
+    "src/features/mail/Composer.tsx:82"
   ],
   "m_a66452a4ae2b": [
-    "src/features/mail/Composer.tsx:45"
+    "src/features/mail/Composer.tsx:82"
   ],
   "m_9fe9cad531b6": [
-    "src/features/mail/Composer.tsx:45"
+    "src/features/mail/Composer.tsx:82"
   ],
   "m_ee66f3c3bb53": [
-    "src/features/mail/Composer.tsx:45"
+    "src/features/mail/Composer.tsx:82"
   ],
   "m_fd17e8701a10": [
-    "src/features/mail/Composer.tsx:46"
+    "src/features/mail/Composer.tsx:83"
   ],
   "m_82bfa59bb313": [
-    "src/features/mail/Composer.tsx:46"
+    "src/features/mail/Composer.tsx:83"
   ],
   "m_d1a4a789e035": [
-    "src/features/mail/Composer.tsx:46"
+    "src/features/mail/Composer.tsx:83"
   ],
   "m_dcfe227f3fd2": [
-    "src/features/mail/Composer.tsx:47",
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:84",
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_11e2ac89346f": [
-    "src/features/mail/Composer.tsx:48"
+    "src/features/mail/Composer.tsx:85"
   ],
   "draft.confirmDiscard": [
-    "src/features/mail/Composer.tsx:49"
+    "src/features/mail/Composer.tsx:86"
   ],
   "m_44daf1c53942": [
-    "src/features/mail/Composer.tsx:49"
+    "src/features/mail/Composer.tsx:86"
   ],
   "m_a424e33d9093": [
-    "src/features/mail/Composer.tsx:50",
+    "src/features/mail/Composer.tsx:87",
     "src/features/security/SecurityPanel.tsx:39"
   ],
   "draft.unlockToKeep": [
-    "src/features/mail/Composer.tsx:50",
-    "src/features/mail/Composer.tsx:50"
+    "src/features/mail/Composer.tsx:87",
+    "src/features/mail/Composer.tsx:87"
   ],
   "draft.passphrase": [
-    "src/features/mail/Composer.tsx:50",
-    "src/features/mail/Composer.tsx:50"
+    "src/features/mail/Composer.tsx:87",
+    "src/features/mail/Composer.tsx:87"
   ],
   "m_e9b748348752": [
-    "src/features/mail/Composer.tsx:50",
+    "src/features/mail/Composer.tsx:87",
     "src/features/security/SecurityPanel.tsx:43"
   ],
   "m_cb30147eec19": [
-    "src/features/mail/Composer.tsx:50",
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:87",
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_74a41190a3b4": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_943d27ca2346": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_05c15dbbf8e4": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "forward.guidance": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_b8fe03a0dd00": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_13e9350417e7": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_7db20897053b": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_f4b06ef6d3c8": [
-    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88",
     "src/features/mail/DeliveryStatus.tsx:28"
   ],
   "recipient.placeholder": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_b28037e918b6": [
-    "src/features/mail/Composer.tsx:51",
-    "src/features/mail/Composer.tsx:51",
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88",
     "src/features/mail/DeliveryStatus.tsx:28"
   ],
   "m_19a1a17d8876": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_b1ca609e30bf": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_1ed1c884bc8b": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
-  "recipient.country": [
-    "src/features/mail/Composer.tsx:51"
+  "composer.countryFor": [
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Composer.tsx:88"
+  ],
+  "composer.chooseCountry": [
+    "src/features/mail/Composer.tsx:88"
   ],
   "recipient.restored": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_7b21b5665f36": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "recipient.confirmed": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_68971283841a": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_6907eb1593e0": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_2f77668a9dfb": [
-    "src/features/mail/Composer.tsx:51",
-    "src/features/mail/Workspace.tsx:81",
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Composer.tsx:88",
+    "src/features/mail/Workspace.tsx:107",
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_88a36fe39f7f": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_4fc26d8184e5": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_05dc3a8cabe5": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_19adc7545da7": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_7a6a27ff4934": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_3028bf7d2dec": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_e2e55a8787c4": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_402276cb6545": [
-    "src/features/mail/Composer.tsx:51"
+    "src/features/mail/Composer.tsx:88"
   ],
   "m_e17e7ee1fc26": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_402037a89448": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_c2fe550e0db2": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_aef2f06b9eeb": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_a38a8da13a53": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_39a674f10d23": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_53f5067dc8a5": [
-    "src/features/mail/Composer.tsx:52",
-    "src/features/mail/Workspace.tsx:76",
-    "src/features/mail/Workspace.tsx:81",
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Composer.tsx:89",
+    "src/features/mail/Workspace.tsx:102",
+    "src/features/mail/Workspace.tsx:107",
+    "src/features/mail/Workspace.tsx:108"
   ],
   "recipient.unknown": [
-    "src/features/mail/Composer.tsx:52",
+    "src/features/mail/Composer.tsx:89",
     "src/features/security/SecurityPanel.tsx:40",
     "src/lib/recipients.ts:8"
   ],
   "m_216135294814": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_822710caea40": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_7ae037917869": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_83ab7dd67d79": [
-    "src/features/mail/Composer.tsx:52"
+    "src/features/mail/Composer.tsx:89"
   ],
   "m_b90660de2fd8": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_d11c3bdd9ea4": [
-    "src/features/mail/Composer.tsx:53",
+    "src/features/mail/Composer.tsx:90",
     "src/features/mail/Outbox.tsx:21"
   ],
   "m_e65a12e5f783": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_b8ed5279e897": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_93a26b1eaff9": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_87fbe4fb79b1": [
-    "src/features/mail/Composer.tsx:53",
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90",
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_9c52a1c50a93": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_d82a0ba45ad0": [
-    "src/features/mail/Composer.tsx:53",
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90",
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_3de100106dd4": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90",
+    "src/features/mail/Composer.tsx:90"
+  ],
+  "composer.saving": [
+    "src/features/mail/Composer.tsx:90"
+  ],
+  "composer.modeSaving": [
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_ab19478e0a43": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_d3c4cb271cd9": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_092c3e6c819b": [
-    "src/features/mail/Composer.tsx:53"
+    "src/features/mail/Composer.tsx:90"
   ],
   "m_ebf12ef47cf5": [
     "src/features/mail/DeliveryStatus.tsx:10",
-    "src/features/mail/Workspace.tsx:76"
+    "src/features/mail/Workspace.tsx:102"
   ],
   "m_81cca29e4ad7": [
     "src/features/mail/DeliveryStatus.tsx:11",
@@ -962,272 +977,272 @@
     "src/features/mail/Outbox.tsx:21"
   ],
   "cache.outdated": [
-    "src/features/mail/Workspace.tsx:29"
+    "src/features/mail/Workspace.tsx:30"
   ],
   "m_807359dbd5f3": [
-    "src/features/mail/Workspace.tsx:42"
+    "src/features/mail/Workspace.tsx:44"
   ],
   "m_94649be5d872": [
-    "src/features/mail/Workspace.tsx:45"
+    "src/features/mail/Workspace.tsx:47"
   ],
   "cache.saved": [
-    "src/features/mail/Workspace.tsx:48",
-    "src/features/mail/Workspace.tsx:57",
-    "src/features/mail/Workspace.tsx:58"
+    "src/features/mail/Workspace.tsx:50",
+    "src/features/mail/Workspace.tsx:83",
+    "src/features/mail/Workspace.tsx:84"
   ],
   "mail.confirmTrash": [
-    "src/features/mail/Workspace.tsx:60"
+    "src/features/mail/Workspace.tsx:86"
   ],
   "m_e978b00de465": [
-    "src/features/mail/Workspace.tsx:68"
+    "src/features/mail/Workspace.tsx:94"
   ],
   "m_903532e03397": [
-    "src/features/mail/Workspace.tsx:68"
+    "src/features/mail/Workspace.tsx:94"
   ],
   "m_ccca18175753": [
-    "src/features/mail/Workspace.tsx:68",
-    "src/features/mail/Workspace.tsx:75"
+    "src/features/mail/Workspace.tsx:94",
+    "src/features/mail/Workspace.tsx:101"
   ],
   "forward.subject": [
-    "src/features/mail/Workspace.tsx:71"
+    "src/features/mail/Workspace.tsx:97"
   ],
   "forward.body": [
-    "src/features/mail/Workspace.tsx:71"
+    "src/features/mail/Workspace.tsx:97"
   ],
   "m_4757ec62d71d": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_031e345cc157": [
-    "src/features/mail/Workspace.tsx:73",
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99",
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_4d596336dbae": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_0f525e6dfeb2": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_b7d2eeadf529": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_5539fa781ac0": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "m_baa7bfd402ff": [
-    "src/features/mail/Workspace.tsx:73"
+    "src/features/mail/Workspace.tsx:99"
   ],
   "mail.updatesWaiting": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "mail.newest": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "mail.previousPage": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_fdcd01fae2f3": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_1e4ea9db1ac6": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_4a227c66a0e8": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_bf3cda441288": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_e7f9b6491c29": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "m_258150cb3ee4": [
-    "src/features/mail/Workspace.tsx:74"
+    "src/features/mail/Workspace.tsx:100"
   ],
   "mail.hasAttachments": [
-    "src/features/mail/Workspace.tsx:75",
-    "src/features/mail/Workspace.tsx:76"
+    "src/features/mail/Workspace.tsx:101",
+    "src/features/mail/Workspace.tsx:102"
   ],
   "m_396c946f0c79": [
-    "src/features/mail/Workspace.tsx:75"
+    "src/features/mail/Workspace.tsx:101"
   ],
   "m_10ef19f37b01": [
-    "src/features/mail/Workspace.tsx:75"
+    "src/features/mail/Workspace.tsx:101"
   ],
   "m_268b37608588": [
-    "src/features/mail/Workspace.tsx:76"
+    "src/features/mail/Workspace.tsx:102"
   ],
   "m_e4b84cb7046f": [
-    "src/features/mail/Workspace.tsx:77"
+    "src/features/mail/Workspace.tsx:103"
   ],
   "draft.revision": [
-    "src/features/mail/Workspace.tsx:77"
+    "src/features/mail/Workspace.tsx:103"
   ],
   "m_ac8991ef0101": [
-    "src/features/mail/Workspace.tsx:78"
+    "src/features/mail/Workspace.tsx:104"
   ],
   "m_3ab08fe8568a": [
-    "src/features/mail/Workspace.tsx:78"
+    "src/features/mail/Workspace.tsx:104"
   ],
   "m_dde5ae89d4de": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_1453ccdf9be7": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "welcome.headline": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_a8c933f5357d": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_38d4752ec95f": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_0b93776166a9": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_b501899e0a68": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_d456fc756644": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_b6aebd2846a4": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_abe772881cdd": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_fbd780ed3fe3": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "m_12a7ad1d379e": [
-    "src/features/mail/Workspace.tsx:79"
+    "src/features/mail/Workspace.tsx:105"
   ],
   "mail.latestHistory": [
-    "src/features/mail/Workspace.tsx:80",
-    "src/features/mail/Workspace.tsx:81"
+    "src/features/mail/Workspace.tsx:106",
+    "src/features/mail/Workspace.tsx:107"
   ],
   "m_08b041935798": [
-    "src/features/mail/Workspace.tsx:80",
-    "src/features/mail/Workspace.tsx:81"
+    "src/features/mail/Workspace.tsx:106",
+    "src/features/mail/Workspace.tsx:107"
   ],
   "m_de55a2029e9c": [
-    "src/features/mail/Workspace.tsx:80"
+    "src/features/mail/Workspace.tsx:106"
   ],
   "m_f17671d83db0": [
-    "src/features/mail/Workspace.tsx:81"
+    "src/features/mail/Workspace.tsx:107"
   ],
   "m_e827ba9b6cd6": [
-    "src/features/mail/Workspace.tsx:81",
-    "src/features/mail/Workspace.tsx:83",
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:107",
+    "src/features/mail/Workspace.tsx:109",
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_9bcfe35c7185": [
-    "src/features/mail/Workspace.tsx:81"
+    "src/features/mail/Workspace.tsx:107"
   ],
   "m_b4b4cc5c5002": [
-    "src/features/mail/Workspace.tsx:81"
+    "src/features/mail/Workspace.tsx:107"
   ],
   "m_5bc0aa08d678": [
-    "src/features/mail/Workspace.tsx:82",
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:108",
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_65b52e8c6521": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_da8f3adfa78a": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_52c355aed8b8": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_b250a454877d": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_54b4e3f28dc5": [
-    "src/features/mail/Workspace.tsx:82",
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:108",
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_b49c9b6cdf43": [
-    "src/features/mail/Workspace.tsx:82",
-    "src/features/mail/Workspace.tsx:91",
+    "src/features/mail/Workspace.tsx:108",
+    "src/features/mail/Workspace.tsx:117",
     "src/features/settings/Settings.tsx:122"
   ],
   "m_dbebda550bfb": [
-    "src/features/mail/Workspace.tsx:82",
-    "src/features/mail/Workspace.tsx:91",
-    "src/features/mail/Workspace.tsx:92"
+    "src/features/mail/Workspace.tsx:108",
+    "src/features/mail/Workspace.tsx:117",
+    "src/features/mail/Workspace.tsx:118"
   ],
   "mail.folderBanner": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_f26b91a3798e": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_19fa8a500c51": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_78ad111269a5": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_e38ec11fedb3": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_911f182a7f15": [
-    "src/features/mail/Workspace.tsx:82"
+    "src/features/mail/Workspace.tsx:108"
   ],
   "m_16217c15a3cd": [
-    "src/features/mail/Workspace.tsx:83"
+    "src/features/mail/Workspace.tsx:109"
   ],
   "m_125e91cdcce6": [
-    "src/features/mail/Workspace.tsx:83"
+    "src/features/mail/Workspace.tsx:109"
   ],
   "m_aae578c4ac88": [
-    "src/features/mail/Workspace.tsx:83"
+    "src/features/mail/Workspace.tsx:109"
   ],
   "m_4656fe2c00e1": [
-    "src/features/mail/Workspace.tsx:85"
+    "src/features/mail/Workspace.tsx:111"
   ],
   "m_30f0dd08d39c": [
-    "src/features/mail/Workspace.tsx:85"
+    "src/features/mail/Workspace.tsx:111"
   ],
   "forward.action": [
-    "src/features/mail/Workspace.tsx:86"
+    "src/features/mail/Workspace.tsx:112"
   ],
   "m_c253f451bdd5": [
-    "src/features/mail/Workspace.tsx:87",
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:113",
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_398c73eb02af": [
-    "src/features/mail/Workspace.tsx:87"
+    "src/features/mail/Workspace.tsx:113"
   ],
   "m_78f5975a5d70": [
-    "src/features/mail/Workspace.tsx:87"
+    "src/features/mail/Workspace.tsx:113"
   ],
   "m_9fdc0079202f": [
-    "src/features/mail/Workspace.tsx:89"
+    "src/features/mail/Workspace.tsx:115"
   ],
   "m_c77121287940": [
-    "src/features/mail/Workspace.tsx:89"
+    "src/features/mail/Workspace.tsx:115"
   ],
   "m_5f54f388aa90": [
-    "src/features/mail/Workspace.tsx:89"
+    "src/features/mail/Workspace.tsx:115"
   ],
   "m_73c533857ea9": [
-    "src/features/mail/Workspace.tsx:89"
+    "src/features/mail/Workspace.tsx:115"
   ],
   "m_cf25b47a2bd9": [
-    "src/features/mail/Workspace.tsx:90"
+    "src/features/mail/Workspace.tsx:116"
   ],
   "m_ea713ecd8537": [
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_a76e13b98392": [
-    "src/features/mail/Workspace.tsx:91"
+    "src/features/mail/Workspace.tsx:117"
   ],
   "m_44d05df8d610": [
-    "src/features/mail/Workspace.tsx:92"
+    "src/features/mail/Workspace.tsx:118"
   ],
   "m_dfae71cb7c5b": [
     "src/features/security/SecurityPanel.tsx:24"
@@ -1881,6 +1896,10 @@
   ],
   "recipient.unavailable": [
     "src/lib/recipients.ts:14"
+  ],
+  "recipient.duplicates": [
+    "src/lib/recipients.ts:34",
+    "src/lib/recipients.ts:36"
   ],
   "m_45290156794f": [
     "src/lib/storage.ts:7"

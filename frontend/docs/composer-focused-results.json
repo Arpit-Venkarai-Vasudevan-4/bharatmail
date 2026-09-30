@@ -1,0 +1,31 @@
+{
+  "started": "2026-09-30T12:56:20.116Z",
+  "origin": "http://localhost:8080",
+  "checks": [
+    "Mixed India To / US Cc use per-address country; changing one country rejects stale confirmation; canonical role/order retained",
+    "Autosave stores canonical To/Cc; manual identical save says Already saved without another create; draft list updates while composer stays open and fixed-mode reason is visible",
+    "Manual save shows Saving then Saved only after live promise success; repeated clicks create one PATCH",
+    "Conflict keeps text and unsaved state with explicit manual failure and existing conflict recovery",
+    "Encryption selected state is visible/pressed; missing keys fail saving and preserve encrypted intent/text",
+    "Attachment mode restriction has visible reason and clears on removal; phone/desktop layout and axe checks pass",
+    "Reduced-motion and lite mode suppress feedback animations",
+    "Four-second Drafts-only polling discovers a real draft, makes no general-mail refresh, pauses hidden/outside Drafts and resumes visible",
+    "Actual offline local save appears immediately, restores per-recipient country, pauses network polling and reconciles to canonical online draft",
+    "Real encrypted draft saves, appears promptly without plaintext preview, reports Already saved and reopens through existing decryption",
+    "Draft polling retains the older cursor page, row identity and list scroll"
+  ],
+  "a11y": [
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 1280,
+      "violations": []
+    }
+  ],
+  "limitations": [
+    "Disposable local password accounts and drafts only; no message send or OTP request. Conflict/failure/latency are intercepted browser responses; success uses the live backend."
+  ],
+  "finished": "2026-09-30T12:56:51.735Z"
+}
