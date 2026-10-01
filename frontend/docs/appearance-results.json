@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-01T03:05:56.417Z",
+  "origin": "http://localhost:18080",
+  "checks": [
+    "Three themes render, persist after reload; renamed motion toggle retains storage and disables backdrop blur; timezone visible",
+    "Browser-clock emulation: automatic start while open, midnight crossing, reload, foreground wake and exclusive end/default fallback",
+    "Rendered add/edit/remove and multiple-window persistence; overlapping windows blocked, adjacent windows accepted",
+    "Mobile layout, keyboard focus, dark compose, and durable preference-write failure feedback"
+  ],
+  "scans": [
+    {
+      "name": "white appearance dialog",
+      "violations": []
+    },
+    {
+      "name": "white mailbox and navigation",
+      "violations": []
+    },
+    {
+      "name": "warm appearance dialog",
+      "violations": []
+    },
+    {
+      "name": "warm mailbox and navigation",
+      "violations": []
+    },
+    {
+      "name": "dark appearance dialog",
+      "violations": []
+    },
+    {
+      "name": "dark mailbox and navigation",
+      "violations": []
+    },
+    {
+      "name": "dark compose",
+      "violations": []
+    },
+    {
+      "name": "mobile appearance",
+      "violations": []
+    }
+  ],
+  "conditions": "Headless installed Chrome, local Mac, disposable account. Schedule time advanced through Playwright clock; timezone Asia/Kolkata; desktop and 390px viewport emulation. No scheduled-message delivery implemented or tested."
+}

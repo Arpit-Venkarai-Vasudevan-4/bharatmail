@@ -1,0 +1,32 @@
+{
+  "started": "2026-10-01T03:05:50.560Z",
+  "finished": "2026-10-01T03:05:57.792Z",
+  "origin": "http://localhost:18080",
+  "passed": [
+    "Desktop continuous chronological outgoing/right and incoming/left messages; full body beyond 500 characters; safe attachment preview",
+    "Subject headings appear once outside bubbles, reply shares its subject section; rendered reply composer sends once into the same conversation and appears last with correct reply parent",
+    "Keyboard opens per-message actions; delivery and full-details dialogs work and restore focus; reader axe scan passes",
+    "Per-message favorite, read/unread, archive/spam/trash with restore, and supported forward retain their existing live handlers",
+    "Live API arrivals append on existing mailbox refresh; older reading position remains fixed, bottom readers follow latest",
+    "Older paging preserves visible message offset over three pages, caps DOM at 60 messages, and latest-history returns to newest 20",
+    "Tablet, 390px and 320px viewports and CSS 200% zoom fit without horizontal reader overflow; mobile reader axe scan passes",
+    "Three-person group header and full long unbroken subject/body fit narrow phones without horizontal reader overflow",
+    "Real encrypted fixture with injected invalid-signer response rejected: receiver placeholder, verified decrypt and encrypted attachment bytes; locking removes plaintext and decrypted attachment"
+  ],
+  "scans": [
+    {
+      "label": "Desktop expanded message actions",
+      "violations": []
+    },
+    {
+      "label": "320px mobile conversation",
+      "violations": []
+    }
+  ],
+  "conditions": "Packaged frontend; headless installed Chrome on local Mac; real disposable local API accounts. Viewport/CSS zoom emulation, not physical-device or screen-reader acceptance.",
+  "limitations": [
+    "Firefox/WebKit and human screen-reader review not run in this focused suite.",
+    "Existing single-message decrypted state retained; decrypting another message hides the previous plaintext.",
+    "Older bounded windows require explicit latest-history navigation to see new arrivals."
+  ]
+}

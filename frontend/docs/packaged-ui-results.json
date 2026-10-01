@@ -1,7 +1,7 @@
 {
-  "started": "2026-09-30T12:57:41.593Z",
-  "clientOrigin": "http://localhost:8080",
-  "portalOrigin": "http://localhost:8081",
+  "started": "2026-10-01T03:05:13.166Z",
+  "clientOrigin": "http://localhost:18080",
+  "portalOrigin": "http://localhost:18081",
   "checks": [
     "Container API proxy login returned cookie session and CSRF cookies",
     "Settings profile update succeeded through cookie/CSRF proxy",
@@ -14,22 +14,23 @@
     "/index.html",
     "/favicon.svg",
     "/fonts.css",
-    "/assets/main-BJ7E0EPY.js",
-    "/assets/styles-NN7tIx_4.js",
-    "/assets/styles-DF0RLTVq.css",
+    "/assets/main-BQG4B-ZH.js",
+    "/assets/main-B5QA85cI.css",
+    "/assets/styles-C5zoQ6ZK.js",
+    "/assets/styles-CKkDFSBu.css",
     "/assets/runtime-Cpj98o6Y.js",
-    "/assets/AuthScreen-CLOizZGb.js",
-    "/assets/AuthScreen-BtcyaTtT.css",
-    "/assets/PhoneField-Dvbv1Ke_.js",
-    "/assets/Composer-BAi2O6pb.js",
-    "/assets/check-NUdmpbRB.js"
+    "/assets/AuthScreen-CXuJLmQs.js",
+    "/assets/AuthScreen-BfrQ74k_.css",
+    "/assets/PhoneField-BOFJDgcG.js",
+    "/assets/Composer-DkNTI8VD.js",
+    "/assets/check-BSKTVd84.js"
   ],
   "portalRegistrationEnabled": false,
   "ivrDefault": "unavailable; no dial link",
   "interfaceLanguage": "English only",
   "pageErrors": [],
   "limitations": [
-    "Existing Docker Compose frontend configuration on ports 8080/8081 with the owner backend; no Origin forwarding override."
+    "Packaged-browser acceptance against the configured local origins. The API must allow these origins; a nonstandard port alone does not prove that any proxy rewrites Origin. Physical devices, provider delivery and public TLS are outside this suite."
   ],
-  "finished": "2026-09-30T12:57:42.416Z"
+  "finished": "2026-10-01T03:05:13.895Z"
 }

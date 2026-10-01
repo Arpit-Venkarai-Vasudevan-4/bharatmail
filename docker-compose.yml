@@ -1,5 +1,6 @@
-# PhoneMail — start the stack with: docker compose up -d
-# Services: PostgreSQL, API, Gmail-style web client, registration portal.
+# Bharatmail / PhoneMail — evaluator entry point: docker-compose up
+# Replace the ignored root .env with the separately supplied environment first.
+# Services: PostgreSQL, API, completed conversation web client, registration portal.
 # Mobile is Expo (./mobile). It is not started by default because it needs
 # a device or emulator. Optional: docker compose --profile mobile up -d
 
@@ -9,7 +10,7 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-phonemail}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-phonemail}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Supply POSTGRES_PASSWORD in the separately uploaded root .env}
       POSTGRES_DB: ${POSTGRES_DB:-phonemail}
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -24,13 +25,15 @@ services:
   backend:
     build: ./backend
     restart: unless-stopped
+    env_file:
+      - .env
     environment:
       PORT: 3000
-      DATABASE_URL: postgres://${POSTGRES_USER:-phonemail}:${POSTGRES_PASSWORD:-phonemail}@db:5432/${POSTGRES_DB:-phonemail}
+      DATABASE_URL: postgres://${POSTGRES_USER:-phonemail}:${POSTGRES_PASSWORD:?Supply POSTGRES_PASSWORD in root .env}@db:5432/${POSTGRES_DB:-phonemail}
       MAIL_DOMAIN: ${MAIL_DOMAIN:-phonemail.com}
       AUTH_METHOD: ${AUTH_METHOD:-password}
       OTP_PROVIDER: ${OTP_PROVIDER:-local}
-      JWT_SECRET: ${JWT_SECRET:-local-development-secret-change-this-32chars}
+      JWT_SECRET: ${JWT_SECRET:?Supply JWT_SECRET in the separately uploaded root .env}
       NODE_ENV: ${NODE_ENV:-development}
       PHONE_DEFAULT_COUNTRY: ${PHONE_DEFAULT_COUNTRY:-}
       CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080,http://localhost:8081}
@@ -89,20 +92,51 @@ services:
       start_period: 20s
 
   web-client:
-    build: ./web-client
+    build:
+      context: ./frontend
+      args: &frontend_args
+        VITE_PORTAL: "false"
+        VITE_TERMS_URL: ${VITE_TERMS_URL:-}
+        VITE_PRIVACY_URL: ${VITE_PRIVACY_URL:-}
+        VITE_TERMS_VERSION: ${VITE_TERMS_VERSION:-}
+        VITE_IVR_PUBLIC_NUMBER: ${VITE_IVR_PUBLIC_NUMBER:-}
+        VITE_IVR_REGISTRATION_ENABLED: ${VITE_IVR_REGISTRATION_ENABLED:-false}
+        VITE_IVR_SIGNIN_READY: ${VITE_IVR_SIGNIN_READY:-false}
     restart: unless-stopped
+    environment:
+      API_PROXY_TARGET: http://backend:3000
     ports:
       - "8080:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
   web-portal:
-    build: ./web-portal
+    build:
+      context: ./frontend
+      args:
+        <<: *frontend_args
+        VITE_PORTAL: "true"
     restart: unless-stopped
+    environment:
+      API_PROXY_TARGET: http://backend:3000
     ports:
       - "8081:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/portal.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
   mobile:
     profiles: ["mobile"]

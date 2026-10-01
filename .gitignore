@@ -1,4 +1,10 @@
 .env
+.env.*
+!.env.example
+auth-keys*.txt
+*environment-upload*.txt
+submission-private/
+*.zip
 node_modules/
 dist/
 .expo/

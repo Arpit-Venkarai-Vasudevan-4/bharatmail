@@ -1,0 +1,11 @@
+# Appearance preferences and scheduled-send audit
+
+The web client now offers White, Warm, and Dark using the established color design system. The saved default and optional daily schedule are stored locally in this browser. Schedule intervals use the device timezone and local wall clock; the interface shows the timezone, handles midnight crossings, treats end time as exclusive, and rejects overlaps. Opening the panel, reloading, switching tabs back into view, and the minute-boundary timer update the active theme. Reduce Motion and Effects retains the existing `phonemail-lite` preference and behavior.
+
+## Scheduled sending audit
+
+No safe schedule-delivery path exists in the current backend, so scheduled send is not exposed in the UI and no frontend timer was introduced. `POST /mail/compose` accepts only ordinary message content/recipients/attachments. `sendDraft` commits the message, creates recipient inbox state and notification rows, and queues external SMTP delivery inside the same transaction. Delaying the SMTP outbox job alone would still reveal local messages and notifications immediately. The generic outbox worker currently handles notification and SMTP delivery jobs, and its `available_at` is used for retry scheduling. E2EE send is a separate encrypted operation, with no durable scheduled ciphertext or cancellation contract.
+
+A safe backend vertical slice needs persistent schedule rows linked to an ordinary draft or immutable send operation, owner-scoped list/cancel/status routes, a worker that atomically claims only due rows and resolves cancellation races, and an idempotent transaction that publishes the message and enqueues existing deliveries at the due time. Encrypted scheduling needs separate approval and a ciphertext-only durable format. Before acceptance, tests must cover due-time and no-early delivery, closed-browser/restart behavior, cancellation racing claim, duplicate worker attempts, lost responses and retries, owner isolation, local visibility, attachments, and E2EE refusal or safe ciphertext delivery.
+
+Frontend/API acceptance evidence is in `appearance-results.json`. Browser clock runs use Playwright emulation and local disposable accounts. The theme suite does not send messages or use external providers.

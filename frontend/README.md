@@ -7,7 +7,7 @@ Responsive mailbox and separate registration portal using the existing PhoneMail
 Use Node 24.21.x (the package requires >=24.21.0 and <25). The backend is already running at http://localhost:3000; do not restart it for frontend work.
 
 ```sh
-cd /Users/shubhamchahar/Documents/buildfront/frontend
+cd frontend # from the Bharatmail repository root
 npm ci
 cp .env.example .env.local
 npm run dev -- --host localhost
