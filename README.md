@@ -4,6 +4,11 @@ Bharatmail provides a phone-number-addressed mailbox, a continuous conversation
 reader, and a separate registration portal. This delivery is the web application;
 native Android/iOS applications are not required for evaluation.
 
+## Project demonstration
+
+- [BharatMail project demonstration](https://youtu.be/rBTW4_eCycQ)
+- [BharatMail feature showcase](https://youtu.be/fWT9t5mJ51Y)
+
 ## Evaluator setup: one command
 
 1. Install and start Docker Desktop (or Docker Engine with Compose). Allow internet
